@@ -8,4 +8,7 @@
 "clink/zoxide.lua" = "~/AppData/Local/clink/zoxide.lua"
 
 [nvim.files]
-"nvim" = "~/AppData/Local/nvim"
+"nvim" = { target = "~/AppData/Local/nvim", type = "symbolic" }
+
+[kanata.files]
+"kanata/kanata.kbd" = "d:/amandin/customization/kanata/kanata.kbd"

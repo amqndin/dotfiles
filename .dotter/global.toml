@@ -1,6 +1,3 @@
-[helpers]
-color_hex2rgb = "dotter_settings/helpers/color_hex2rgb.rhai"
-
 [wezterm.files]
 "wezterm" = "~/.config/wezterm"
 

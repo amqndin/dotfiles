@@ -5,7 +5,10 @@ color_hex2rgb = "dotter_settings/helpers/color_hex2rgb.rhai"
 "wezterm" = "~/.config/wezterm"
 
 [clink.files]
-"clink" = "~/AppData/Local/clink"
+"clink/clink.lua" = "~/AppData/Local/clink/clink.lua"
+"clink/starship.lua" = "~/AppData/Local/clink/starship.lua"
+"clink/aliases.lua" = "~/AppData/Local/clink/aliases.lua"
+"clink/zoxide.lua" = "~/AppData/Local/clink/zoxide.lua"
 
 [nvim.files]
 "nvim" = "~/AppData/Local/nvim"

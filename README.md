@@ -1,2 +1,2 @@
 # dotfiles
-My config files
+My dotfiles for windows 10

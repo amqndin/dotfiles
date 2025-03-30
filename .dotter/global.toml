@@ -1,10 +1,11 @@
-# Helpers are user-defined functions that can be executed inside templates.
-# This section is optional.
 [helpers]
 color_hex2rgb = "dotter_settings/helpers/color_hex2rgb.rhai"
 
 [wezterm.files]
-"wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
+"wezterm" = "~/.config/wezterm"
 
 [clink.files]
 "clink" = "~/AppData/Local/clink"
+
+[nvim.files]
+"nvim" = "~/AppData/Local/nvim"

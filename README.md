@@ -1,2 +1,2 @@
 # dotfiles
-My dotfiles for windows 10
+My dotfiles 

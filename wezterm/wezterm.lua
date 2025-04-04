@@ -43,7 +43,7 @@ config.default_workspace = "main"
 config.leader = { key = "j", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	-- Send A-k when pressing A-k twice
-	{ key = "k", mods = "LEADER|ALT", action = act.SendKey({ key = "k", mods = "ALT" }) },
+	{ key = "j", mods = "LEADER|CTRL", action = act.SendKey({ key = "j", mods = "CTRL" }) },
 	{ key = "c", mods = "LEADER", action = act.ActivateCopyMode },
 	{ key = "l", mods = "ALT", action = act.CopyMode("Close") },
 	{ key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },

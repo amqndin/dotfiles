@@ -8,7 +8,9 @@
 "clink/zoxide.lua" = "~/AppData/Local/clink/zoxide.lua"
 
 [nvim.files]
-"nvim" = { target = "~/AppData/Local/nvim", type = "symbolic" }
+"nvim" =  "~/AppData/Local/nvim"
+"nvim/assets/presence/jmc.png" = { target = "~/AppData/Local/nvim/assets/presence/jmc.png", type = "symbolic" }
+"nvim/assets/presence/mcfunction.png" = { target = "~/AppData/Local/nvim/assets/presence/mcfunction.png", type = "symbolic" }
 
 [kanata.files]
 "kanata/kanata.kbd" = "d:/amandin/customization/kanata/kanata.kbd"

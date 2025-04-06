@@ -1,14 +1,14 @@
 [wezterm.files]
-"wezterm" = "~/.config/wezterm"
+wezterm = "~/.config/wezterm"
 
 [clink.files]
-"clink/clink.lua" = "~/AppData/Local/clink/clink.lua"
-"clink/starship.lua" = "~/AppData/Local/clink/starship.lua"
-"clink/aliases.lua" = "~/AppData/Local/clink/aliases.lua"
-"clink/zoxide.lua" = "~/AppData/Local/clink/zoxide.lua"
+clink = "~/AppData/Local/clink"
+
+[clink.variables]
+yazi_wrapper_path = "~/.dotfiles/clink/y.cmd"
 
 [nvim.files]
-"nvim" =  "~/AppData/Local/nvim"
+nvim = "~/AppData/Local/nvim"
 "nvim/assets/presence/jmc.png" = { target = "~/AppData/Local/nvim/assets/presence/jmc.png", type = "symbolic" }
 "nvim/assets/presence/mcfunction.png" = { target = "~/AppData/Local/nvim/assets/presence/mcfunction.png", type = "symbolic" }
 
@@ -17,5 +17,4 @@
 "kanata/kanata-tray.toml" = "~/AppData/Roaming/kanata-tray/kanata-tray.toml"
 
 [fastfetch.files]
-"fastfetch/config.jsonc" = { target = "~/.config/fastfetch/config.jsonc", type = "template" }
-"fastfetch/windows.txt" = { target = "~/.config/fastfetch/windows.txt", type = "template" }
+fastfetch = "~/.config/fastfetch"

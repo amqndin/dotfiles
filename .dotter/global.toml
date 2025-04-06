@@ -4,9 +4,6 @@ wezterm = "~/.config/wezterm"
 [clink.files]
 clink = "~/AppData/Local/clink"
 
-[clink.variables]
-yazi_wrapper_path = "~/.dotfiles/clink/y.cmd"
-
 [nvim.files]
 nvim = "~/AppData/Local/nvim"
 "nvim/assets/presence/jmc.png" = { target = "~/AppData/Local/nvim/assets/presence/jmc.png", type = "symbolic" }

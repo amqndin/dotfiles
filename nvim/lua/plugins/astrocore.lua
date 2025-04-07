@@ -37,10 +37,6 @@ return {
         wrap = false,
         mouse = "",
         showbreak = "↳ ",
-        list = true,
-        listchars = {
-          trail = "·",
-        },
       },
       g = {
         neovide_no_idle = true,

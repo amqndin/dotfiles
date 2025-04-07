@@ -1,7 +1,7 @@
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 local _guifont = "JetBrainsMonoNL Nerd Font Mono:h13:w0"
--- if vim.g.neovide then _guifont = "JetBrainsMono Nerd Font:h12.5:w0" end
+if vim.g.neovide then _guifont = "JetBrainsMono Nerd Font:h12.5:w0" end
 
 ---@type LazySpec
 return {
@@ -37,16 +37,39 @@ return {
         wrap = false,
         mouse = "",
         showbreak = "↳ ",
+        list = true,
+        listchars = {
+          trail = "·",
+        },
       },
       g = {
         neovide_no_idle = true,
       },
       o = {
-        -- guifont = _guifont,
+        guifont = _guifont,
       },
+    },
+    commands = {
+      Messages = {
+        function()
+          local scratch_buffer = vim.api.nvim_create_buf(false, true)
+          vim.bo[scratch_buffer].filetype = 'vim'
+          local messages = vim.split(vim.fn.execute('messages', 'silent'), '\n')
+          vim.api.nvim_buf_set_text(scratch_buffer, 0, 0, 0, 0, messages)
+          vim.cmd('vertical sbuffer ' .. scratch_buffer)
+          vim.opt_local.wrap = true
+          vim.bo.buflisted = false
+          vim.bo.bufhidden = 'wipe'
+          vim.keymap.set('n', 'q', '<cmd>close<CR>', { buffer = scratch_buffer })
+        end
+      }
     },
     filetypes = {
       extension = {
+        png = "image",
+        svg = "image",
+        jpg = "image",
+        jpeg = "image",
         mcfunction = "mcfunction",
         svx = "markdown",
         mcmeta = "json",

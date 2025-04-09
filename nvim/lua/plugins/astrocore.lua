@@ -46,7 +46,7 @@ return {
       },
     },
     commands = {
-      open_messages = {
+      Messages = {
         function()
           local scratch_buffer = vim.api.nvim_create_buf(false, true)
           vim.bo[scratch_buffer].filetype = 'vim'

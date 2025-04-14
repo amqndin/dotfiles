@@ -29,15 +29,15 @@
 (deflayermap (default)
   caps (tap-hold $tt $ht esc lctl)
 
-  a (tap-hold $tt $ht a lmet)
-  s (tap-hold $tt $ht s lalt)
-  d (tap-hold $tt $ht d lsft)
-  f (tap-hold $tt $ht f lctl)
+  a (tap-hold-release $tt $ht a lmet)
+  s (tap-hold-release $tt $ht s lalt)
+  d (tap-hold-release $tt $ht d lsft)
+  f (tap-hold-release $tt $ht f lctl)
   
-  j (tap-hold $tt $ht j rctl)
-  k (tap-hold $tt $ht k rsft)
-  l (tap-hold $tt $ht l lalt)
-  ; (tap-hold $tt $ht ; rmet) 
+  j (tap-hold-release $tt $ht j rctl)
+  k (tap-hold-release $tt $ht k rsft)
+  l (tap-hold-release $tt $ht l lalt)
+  ; (tap-hold-release $tt $ht ; rmet) 
 
   (template-expand double-tap-layer-switch grv transparent)
   spc (tap-hold $tt $ht spc (layer-while-held extended))

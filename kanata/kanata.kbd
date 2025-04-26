@@ -11,8 +11,8 @@
 )
 
 (defvar
-  tap-timeout 200
-  hold-timeout 180
+  tap-timeout 150
+  hold-timeout 150
 
   tt $tap-timeout
   ht $hold-timeout
@@ -61,6 +61,8 @@
   d lsft
   s lalt
   a lmet
+
+  r lrld
 )
 
-;; vim: syntax=lisp
+;; vim: set syntax=lisp

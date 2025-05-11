@@ -48,12 +48,12 @@ return {
     assets = {
       jmc = {
         name = "JMC",
-        icon = "https://github.com/amqndin/nvim/blob/main/assets/presence/jmc.png?raw=true",
+        icon = "https://github.com/amqndin/dotfiles/blob/main/nvim/assets/presence/jmc.png?raw=true",
         tooltip = "JMC",
       },
       mcfunction = {
         name = "MCFunction",
-        icon = "https://github.com/amqndin/nvim/blob/main/assets/presence/mcfunction.png?raw=true",
+        icon = "https://github.com/amqndin/dotfiles/blob/main/nvim/assets/presence/mcfunction.png?raw=true",
         tooltip = "MCFunction",
       },
     },

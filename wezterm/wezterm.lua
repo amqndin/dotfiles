@@ -40,14 +40,13 @@ config.default_workspace = "main"
 -- }
 
 -- Keys
-config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
-	{ key = "b", mods = "LEADER|CTRL", action = act.SendKey({ key = "b", mods = "CTRL" }) },
+	{ key = "s", mods = "LEADER|CTRL", action = act.SendKey({ key = "s", mods = "CTRL" }) },
 	{ key = "c", mods = "LEADER", action = act.ActivateCopyMode },
 	{ key = "l", mods = "ALT", action = act.CopyMode("Close") },
 	{ key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
 
-	-- Pane keybindings
 	{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
@@ -57,15 +56,13 @@ config.keys = {
 	{ key = "d", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
 	{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
-	-- We can make separate keybindings for resizing panes
-	-- But Wezterm offers custom "mode" in the name of "KeyTable"
+
 	{
 		key = "r",
 		mods = "LEADER",
 		action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }),
 	},
 
-	-- Tab keybindings
 	{ key = "n", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "H", mods = "LEADER|SHIFT", action = act.ActivateTabRelative(-1) },
 	{ key = "L", mods = "LEADER|SHIFT", action = act.ActivateTabRelative(1) },
@@ -88,22 +85,18 @@ config.keys = {
 			end),
 		}),
 	},
-	-- Key table for moving tabs around
 	{
 		key = "m",
 		mods = "LEADER",
 		action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }),
 	},
-	-- Or shortcuts to move tab w/o move_tab table.
 	{ key = "{", mods = "LEADER|SHIFT", action = act.MoveTabRelative(-1) },
 	{ key = "}", mods = "LEADER|SHIFT", action = act.MoveTabRelative(1) },
 
-	-- workspace
 	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
 
-	-- Search keybinding
 	{ key = "/", mods = "LEADER", action = act.Search({ CaseInSensitiveString = "" }, { Regex = "" }) },
-	-- Delete word
+
 	{ key = "Backspace", mods = "CTRL", action = wezterm.action.SendKey({ key = "w", mods = "CTRL" }) },
 }
 -- I can use the tab navigator (LDR t), but I also want to quickly navigate tabs with index

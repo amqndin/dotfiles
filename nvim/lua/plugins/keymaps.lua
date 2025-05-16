@@ -43,8 +43,8 @@ return {
     map.t["<A-j>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Toggle terminal" }
     map.n["<A-j>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Toggle terminal" }
 
-    map.t["<S-Space>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
-    map.n["<S-Space>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
+    map.t["<A-k>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
+    map.n["<A-k>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
 
     -- convenience maps
     map.x["g/"] = { "<Esc>/\\%V", desc = "Search within selection" }

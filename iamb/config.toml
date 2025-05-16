@@ -1,2 +1,12 @@
 [profiles.user]
 user_id = "@amandin:matrix.org"
+
+[macros.normal]
+"<Space>s" = "<C-w>m"
+"<Space>k" = ":chats<Enter>"
+"jj" = ":chats<Enter>"
+
+[macros.select]
+"r" = ":reply<Enter>"
+"e" = ":edit<Enter>"
+"d" = ":delete<Enter>"

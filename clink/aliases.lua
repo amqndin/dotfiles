@@ -4,6 +4,7 @@ local function get_full_path(relative_path)
 end
 
 local aliases = {
+	tarx = "tar -xf $1 -C $2",
 	nv = "neovide $*",
 	e = "explorer $*",
 	y = get_full_path("y.cmd") .. " $*",

@@ -1,12 +1,46 @@
 [profiles.user]
 user_id = "@amandin:matrix.org"
 
-[macros.normal]
-"<Space>s" = "<C-w>m"
-"<Space>k" = ":chats<Enter>"
-"jj" = ":chats<Enter>"
+[settings.users."@amandin:matrix.org"]
+name = "amandin"
+color = "light-magenta"
 
-[macros.select]
-"r" = ":reply<Enter>"
-"e" = ":edit<Enter>"
-"d" = ":delete<Enter>"
+[settings]
+notifications.enabled = true
+username_display = "displayname"
+
+[settings.image_preview]
+protocol.type = "halfblocks"
+protocol.font_size = [ 11, 26 ]
+size = { height = 10, width = 66 }
+
+[settings.sort]
+rooms = ["recent", "unread", "favorite", "lowpriority", "name"]
+
+[dirs]
+downloads = "D:/Downloads"
+
+[layout]
+style = "restore"
+
+# workaround to make use space for my prefix / leader key
+[macros."normal|select|visual"]
+"<Space>" = "\\"
+
+[macros."normal|visual"]
+"\\a" = ":react "
+"\\r" = ":reply<CR>"
+"\\e" = ":edit<CR>"
+"\\d" = ":redact<CR>"
+"\\o" = ":open<CR>"
+"s" = "<C-w>m"
+"<C-i>" = ":unreads<CR>"
+"<S-CR>" = "<C-v><C-j>"
+"<C-k>" = ":chats<CR>"
+"<C-c>" = ":cancel<CR>"
+"j" = "gj"
+"k" = "gk"
+"$" = "g$"
+"^" = "g^"
+"0" = "g0"
+"gp" = "\"+p"

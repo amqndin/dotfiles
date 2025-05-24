@@ -54,6 +54,9 @@ return {
     map.c["<C-BS>"] = { "<C-w>", desc = "Delete word" }
     map.t["<C-BS>"] = { "<C-w>", desc = "Delete word" }
 
+    map.c["<C-j>"] = { "<C-n>", desc = "Select next item" }
+    map.c["<C-k>"] = { "<C-p>", desc = "Select previous item" }
+
     for _, mode in ipairs { "n", "x", "v", "o" } do
       map[mode]["}"] = { function() move_to_paragraph "next" end, desc = "Move to next paragraph" }
       map[mode]["{"] = { function() move_to_paragraph "prev" end, desc = "Move to previous paragraph" }

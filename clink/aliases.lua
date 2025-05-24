@@ -14,4 +14,4 @@ for alias, command in pairs(aliases) do
 	os.execute("doskey " .. alias .. "=" .. command)
 end
 
-os.execute("clear && fastfetch")
+os.execute("clear")

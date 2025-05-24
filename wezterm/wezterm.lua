@@ -74,9 +74,9 @@ config.keys = {
 	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
 	{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 
-	{ key = "c", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "K", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
-	{ key = "J", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(1) },
+	{ key = "n", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+	{ key = "H", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
+	{ key = "L", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(1) },
 	{ key = "[", mods = "LEADER", action = act.ActivateTabRelative(-1) },
 	{ key = "]", mods = "LEADER", action = act.ActivateTabRelative(1) },
 	{ key = "t", mods = "LEADER", action = act.ShowTabNavigator },

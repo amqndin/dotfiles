@@ -1,5 +1,5 @@
--- wezterm api
 local wezterm = require 'wezterm'
+local color = require 'colors'
 local act = wezterm.action
 local mux = wezterm.mux
 local config = wezterm.config_builder()
@@ -10,11 +10,13 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 end)
 
--- configuration
 config.automatically_reload_config = true
 local color_scheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-color_scheme.tab_bar.active_tab.bg_color = "#89b4fa"
+color_scheme.tab_bar.active_tab.bg_color = color.blue
 color_scheme.tab_bar.active_tab.intensity = "Bold"
+color_scheme.cursor_bg = color.text
+color_scheme.cursor_fg = color.crust
+color_scheme.cursor_border = color.text
 
 config.color_schemes = { ["Catppuccin"] = color_scheme }
 config.color_scheme = "Catppuccin"
@@ -22,27 +24,39 @@ config.color_scheme = "Catppuccin"
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.window_padding = {left = 0, right = 0, top = 0, bottom = 0,}
-
 config.status_update_interval = 1000
+
 wezterm.on("update-status", function(window)
-	-- Workspace name
 	local stat = window:active_workspace()
-	local stat_color = "#89b4fa"
+	local stat_fg = color.crust
+	local stat_bg = color.blue
+
 	if window:active_key_table() then
 		stat = window:active_key_table()
-		stat_color = "#f38ba8"
+		stat_bg = color.mauve
 	end
 	if window:leader_is_active() then
 		stat = "leader"
-		stat_color = "#cba6f7"
+		stat_bg = color.green
 	end
 
-	-- Left status (left of the tab line)
-	window:set_left_status(wezterm.format({
-		{ Foreground = { Color = stat_color } },
-		{ Text = "  " },
-		{ Text = wezterm.nerdfonts.oct_table .. "  " .. stat },
-		{ Text = " | " },
+	local max_len = 8
+	local padding = ""
+	if stat == "search_mode" then stat = "search" end
+	if stat == "copy_mode" then stat = "drift" end
+	if #stat > max_len then
+		stat = stat:sub(1, max_len)
+	else
+		padding = string.rep(" ", max_len - #stat)
+	end
+
+	window:set_right_status(wezterm.format({
+		{ Attribute = { Intensity = "Bold" } },
+		{ Foreground = { Color = stat_fg } },
+		{ Background = { Color = stat_bg } },
+		{ Text = " " .. padding },
+		{ Text = stat .. " " .. wezterm.nerdfonts.oct_table .. " " },
+		{ Text = " " },
 	}))
 end)
 
@@ -82,18 +96,18 @@ config.keys = {
 	{ key = "t", mods = "LEADER", action = act.ShowTabNavigator },
 
 	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
-	{ key = "/", mods = "LEADER", action = act.Search({ CaseInSensitiveString = "" }, { Regex = "" }) },
+	{ key = "/", mods = "LEADER", action = act.Search({ CaseInSensitiveString = "" }) },
 	{ key = "Backspace", mods = "CTRL", action = wezterm.action.SendKey({ key = "w", mods = "CTRL" }) },
 
 	{
 		key = "r",
 		mods = "LEADER",
-		action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }),
+		action = act.ActivateKeyTable({ name = "resize", one_shot = false }),
 	},
 	{
 	  key = "m",
 	  mods = "LEADER",
-	  action = act.ActivateKeyTable({ name = "move_tab", one_shot = false })
+	  action = act.ActivateKeyTable({ name = "move", one_shot = false })
 	},
 }
 
@@ -106,7 +120,7 @@ for i = 1, 9 do
 end
 
 config.key_tables = {
-	resize_pane = {
+	resize = {
 		{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
 		{ key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
 		{ key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
@@ -114,7 +128,7 @@ config.key_tables = {
 		{ key = "Escape", action = "PopKeyTable" },
 		{ key = "Enter", action = "PopKeyTable" },
 	},
-	move_tab = {
+	move = {
 		{ key = "h", action = act.MoveTabRelative(-1) },
 		{ key = "k", action = act.MoveTabRelative(-1) },
 		{ key = "j", action = act.MoveTabRelative(1) },
@@ -122,7 +136,7 @@ config.key_tables = {
 		{ key = "Escape", action = "PopKeyTable" },
 		{ key = "Enter", action = "PopKeyTable" },
 	},
-	search_mode = {
+	search = {
 		{ key = "Escape", action = act.CopyMode("Close") },
 		{ key = "i", action = act.CopyMode("Close") },
 		{ key = "Enter", action = act.CopyMode("NextMatch") },

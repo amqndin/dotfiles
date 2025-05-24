@@ -17,6 +17,10 @@ color_scheme.tab_bar.active_tab.intensity = "Bold"
 color_scheme.cursor_bg = color.text
 color_scheme.cursor_fg = color.crust
 color_scheme.cursor_border = color.text
+color_scheme.selection_bg = color.blue
+color_scheme.selection_fg = color.base
+-- color_scheme.selection_bg = color.subtext0
+-- color_scheme.selection_fg = color.surface0
 
 config.color_schemes = { ["Catppuccin"] = color_scheme }
 config.color_scheme = "Catppuccin"

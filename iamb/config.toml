@@ -21,7 +21,12 @@ rooms = ["recent", "unread", "favorite", "lowpriority", "name"]
 downloads = "D:/Downloads"
 
 [layout]
-style = "restore"
+style = "config"
+
+[[layout.tabs]]
+split = [
+    { window = "@noend_:matrix.org" },
+]
 
 # workaround to make use space for my prefix / leader key
 [macros."normal|select|visual"]

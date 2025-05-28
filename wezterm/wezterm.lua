@@ -10,7 +10,6 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 end)
 
-config.automatically_reload_config = true
 local color_scheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
 color_scheme.tab_bar.active_tab.bg_color = color.blue
 color_scheme.tab_bar.active_tab.intensity = "Bold"
@@ -24,22 +23,20 @@ color_scheme.selection_fg = color.base
 config.color_schemes = { ["Catppuccin"] = color_scheme }
 config.color_scheme = "Catppuccin"
 
+config.automatically_reload_config = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.window_padding = {left = 0, right = 0, top = 0, bottom = 0,}
 config.status_update_interval = 1000
-
+config.custom_block_glyphs = false
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrainsMono Nerd Font", scale = 1.05, weight = "Medium" },
 })
-
 config.inactive_pane_hsb = {
   saturation = 0.8,
   brightness = 0.8,
 }
-
 config.window_decorations = "RESIZE"
-
 
 wezterm.on("update-status", function(window)
 	local stat = window:active_workspace()
@@ -76,11 +73,8 @@ wezterm.on("update-status", function(window)
 end)
 
 wezterm.on("clear-search", function(window, pane)
-  window:perform_action(
-    wezterm.action.Search({ CaseInSensitiveString = " " }),
-		pane,
-    wezterm.action.CopyMode("ClearPattern")
-  )
+  window:perform_action(wezterm.action.Search({ CaseInSensitiveString = " " }), pane)
+  window:perform_action(wezterm.action.CopyMode("ClearPattern"), pane)
 end)
 
 config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 2000 }

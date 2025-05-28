@@ -34,10 +34,6 @@ return {
       desc = "Previous buffer",
     }
 
-    -- quickfix list
-    map.n["<A-h>"] = { "<Cmd>cnext<CR>", desc = "Next qflist item" }
-    map.n["<A-l>"] = { "<Cmd>cprevious<CR>", desc = "Previous qflist item" }
-
     -- terminal 
     for _, mode in ipairs { "t", "i", "n" } do
       map[mode]["<F7>"] = false

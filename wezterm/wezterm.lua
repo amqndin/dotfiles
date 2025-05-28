@@ -16,11 +16,10 @@ color_scheme.tab_bar.active_tab.bg_color = color.blue
 color_scheme.tab_bar.active_tab.intensity = "Bold"
 color_scheme.cursor_bg = color.text
 color_scheme.cursor_fg = color.crust
+color_scheme.compose_cursor = color.green
 color_scheme.cursor_border = color.text
 color_scheme.selection_bg = color.blue
 color_scheme.selection_fg = color.base
--- color_scheme.selection_bg = color.subtext0
--- color_scheme.selection_fg = color.surface0
 
 config.color_schemes = { ["Catppuccin"] = color_scheme }
 config.color_scheme = "Catppuccin"
@@ -29,6 +28,18 @@ config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.window_padding = {left = 0, right = 0, top = 0, bottom = 0,}
 config.status_update_interval = 1000
+
+config.font = wezterm.font_with_fallback({
+	{ family = "JetBrainsMono Nerd Font", scale = 1.05, weight = "Medium" },
+})
+
+config.inactive_pane_hsb = {
+  saturation = 0.8,
+  brightness = 0.8,
+}
+
+config.window_decorations = "RESIZE"
+
 
 wezterm.on("update-status", function(window)
 	local stat = window:active_workspace()
@@ -47,7 +58,7 @@ wezterm.on("update-status", function(window)
 	local max_len = 8
 	local padding = ""
 	if stat == "search_mode" then stat = "search" end
-	if stat == "copy_mode" then stat = "drift" end
+	if stat == "copy_mode" then stat = "yank" end
 	if #stat > max_len then
 		stat = stat:sub(1, max_len)
 	else
@@ -64,16 +75,13 @@ wezterm.on("update-status", function(window)
 	}))
 end)
 
-config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font", scale = 1.05, weight = "Medium" },
-})
-
-config.inactive_pane_hsb = {
-  saturation = 0.8,
-  brightness = 0.8,
-}
-
-config.window_decorations = "RESIZE"
+wezterm.on("clear-search", function(window, pane)
+  window:perform_action(
+    wezterm.action.Search({ CaseInSensitiveString = " " }),
+		pane,
+    wezterm.action.CopyMode("ClearPattern")
+  )
+end)
 
 config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
@@ -100,7 +108,7 @@ config.keys = {
 	{ key = "t", mods = "LEADER", action = act.ShowTabNavigator },
 
 	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
-	{ key = "/", mods = "LEADER", action = act.Search({ CaseInSensitiveString = "" }) },
+	{ key = "/", mods = "LEADER", action = act.EmitEvent("clear-search") },
 	{ key = "Backspace", mods = "CTRL", action = wezterm.action.SendKey({ key = "w", mods = "CTRL" }) },
 
 	{
@@ -123,6 +131,18 @@ for i = 1, 9 do
 	})
 end
 
+local copy_mode = {}
+local copy_mode_expand = {
+	{ key = "Escape", action = act.CopyMode("Close") },
+	{ key = "i", action = act.CopyMode("Close") },
+}
+if wezterm.gui then
+  copy_mode = wezterm.gui.default_key_tables().copy_mode
+  for _, entry in ipairs(copy_mode_expand) do
+    table.insert(copy_mode, entry)
+  end
+end
+
 config.key_tables = {
 	resize = {
 		{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
@@ -140,9 +160,9 @@ config.key_tables = {
 		{ key = "Escape", action = "PopKeyTable" },
 		{ key = "Enter", action = "PopKeyTable" },
 	},
-	search = {
+	copy_mode = copy_mode,
+	search_mode = {
 		{ key = "Escape", action = act.CopyMode("Close") },
-		{ key = "i", action = act.CopyMode("Close") },
 		{ key = "Enter", action = act.CopyMode("NextMatch") },
 		{ key = "Enter", mods = "SHIFT", action = act.CopyMode("PriorMatch") },
 		{ key = "l", mods = "CTRL", action = act.CopyMode("ClearPattern") },

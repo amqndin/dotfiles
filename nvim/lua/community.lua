@@ -13,7 +13,6 @@ return {
   { import = "astrocommunity.pack.python" },
 
   -- features
-  { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.recipes.neovide" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },

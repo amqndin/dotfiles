@@ -7,6 +7,7 @@ local aliases = {
 	tarx = "tar -xf $1 -C $2",
 	nv = "neovide $*",
 	e = "explorer $*",
+	clear = "cowsay -f dragon \"Nuh-uh! Stop clearing the screen!\"",
 	y = get_full_path("y.cmd") .. " $*",
 }
 

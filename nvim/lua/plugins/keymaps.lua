@@ -34,7 +34,11 @@ return {
       desc = "Previous buffer",
     }
 
-    -- terminal maps
+    -- quickfix list
+    map.n["<A-h>"] = { "<Cmd>cnext<CR>", desc = "Next qflist item" }
+    map.n["<A-l>"] = { "<Cmd>cprevious<CR>", desc = "Previous qflist item" }
+
+    -- terminal 
     for _, mode in ipairs { "t", "i", "n" } do
       map[mode]["<F7>"] = false
     end
@@ -43,16 +47,19 @@ return {
     map.t["<A-j>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Toggle terminal" }
     map.n["<A-j>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Toggle terminal" }
 
+    map.n["<Leader>ts"] = { "<Cmd>ToggleTerm direction=horizontal<CR>", desc = "Toggle horizontal terminal" }
+    map.n["<Leader>tv"] = { "<Cmd>ToggleTerm direction=vertical<CR>", desc = "Toggle vertical terminal" }
+
     map.t["<A-k>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
     map.n["<A-k>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
 
-    -- convenience maps
-    map.x["g/"] = { "<Esc>/\\%V", desc = "Search within selection" }
+    -- fun stuff
     map.n["<Leader>um"] = { "<Cmd>RenderMarkdown toggle<CR>", desc = "Toggle markdown render" }
+    map.x["g/"] = { "<Esc>/\\%V", desc = "Search within selection" }
 
-    map.i["<C-BS>"] = { "<C-w>", desc = "Delete word" }
-    map.c["<C-BS>"] = { "<C-w>", desc = "Delete word" }
-    map.t["<C-BS>"] = { "<C-w>", desc = "Delete word" }
+    for _, mode in ipairs { "t", "i", "c" } do
+      map[mode]["<C-BS>"] = { "<C-w>", desc = "Delete word" }
+    end
 
     map.c["<C-j>"] = { "<C-n>", desc = "Select next item" }
     map.c["<C-k>"] = { "<C-p>", desc = "Select previous item" }
@@ -82,7 +89,7 @@ return {
           desc = "between " .. char,
         }
         map[mode]["a" .. char] = {
-          string.format(":<C-u>silent! normal! f%sF%svf%s<CR>", char, char, char),
+          string.format(":<C-u>silent! normal! f%sF%slvf%s<CR>", char, char, char),
           desc = "around " .. char,
         }
       end

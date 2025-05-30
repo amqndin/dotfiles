@@ -38,6 +38,7 @@ split = [
 "\\e" = ":edit<CR>"
 "\\d" = ":redact<CR>"
 "\\o" = ":open<CR>"
+"\\O" = ":download<CR>"
 "\\q" = ":qa<CR>"
 "s" = "<C-w>m"
 "gp" = "\"+p"

@@ -16,10 +16,6 @@ return {
     opts = { mappings = { toggle = "gs" } },
   },
   {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = { render_modes = { "n", "c", "t", "i" } },
-  },
-  {
     "supermaven-inc/supermaven-nvim",
     event = "User AstroFile",
     opts = {

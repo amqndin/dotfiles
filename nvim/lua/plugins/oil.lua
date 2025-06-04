@@ -67,7 +67,11 @@ return {
           "icon",
           default_file = get_icon "DefaultFile",
           directory = get_icon "FolderClosed",
-        }
+        },
+      },
+      keymaps = {
+        ["<A-h>"] = "actions.parent",
+        ["<A-l>"] = "actions.select",
       },
       skip_confirm_for_simple_edits = true,
     }

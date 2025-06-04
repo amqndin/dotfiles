@@ -162,7 +162,7 @@ return {
         maps.n["<Leader>ff"] = {
           function()
             require("snacks").picker.files {
-              hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
+              -- hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
             }
           end,
           desc = "Find files",

@@ -63,6 +63,7 @@
   a lmet
 
   r lrld
+  e caps
 )
 
 ;; vim: set syntax=lisp

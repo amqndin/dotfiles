@@ -70,8 +70,8 @@ return {
         },
       },
       keymaps = {
-        ["<A-h>"] = "actions.parent",
-        ["<A-l>"] = "actions.select",
+        ["<S-h>"] = "actions.parent",
+        ["<S-l>"] = "actions.select",
       },
       skip_confirm_for_simple_edits = true,
     }

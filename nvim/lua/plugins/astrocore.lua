@@ -30,6 +30,7 @@ return {
         signcolumn = "yes",
         sidescrolloff = 10,
         timeout = false,
+        conceallevel = 1,
         scrolloff = 8,
         cmdheight = 1,
         number = true,

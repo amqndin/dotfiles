@@ -30,7 +30,7 @@ return {
         signcolumn = "yes",
         sidescrolloff = 10,
         timeout = false,
-        conceallevel = 1,
+        conceallevel = 0,
         scrolloff = 8,
         cmdheight = 1,
         number = true,
@@ -76,6 +76,13 @@ return {
       },
     },
     autocmds = {
+      jmc_commentstring = {
+        {
+          event = "FileType",
+          pattern = "jmc",
+          callback = function() vim.opt.commentstring = "// %s" end,
+        },
+      },
       mcfunction_commentstring = {
         {
           event = "FileType",

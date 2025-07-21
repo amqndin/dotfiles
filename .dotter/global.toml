@@ -10,8 +10,11 @@ nvim = "~/AppData/Local/nvim"
 "nvim/assets/presence/mcfunction.png" = { target = "~/AppData/Local/nvim/assets/presence/mcfunction.png", type = "symbolic" }
 
 [kanata.files]
-"kanata/kanata.kbd" = "d:/amandin/customization/kanata/kanata.kbd"
+"kanata/kanata.kbd" = "~/.config/kanata/kanata.kbd"
 "kanata/kanata-tray.toml" = "~/AppData/Roaming/kanata-tray/kanata-tray.toml"
+
+[kanata.variables]
+kanata_version = "1.9.0"
 
 [fastfetch.files]
 fastfetch = "~/.config/fastfetch"

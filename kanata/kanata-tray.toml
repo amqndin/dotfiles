@@ -13,16 +13,6 @@ defaults.tcp_port = 5829
 
 
 [presets.'Main']
-kanata_executable = 'C:\Users\User\scoop\apps\kanata\1.8.0\kanata.exe'
-kanata_config = 'D:\amandin\customization\kanata\kanata.kbd'
+kanata_executable = 'C:\Users\Amandin\scoop\apps\kanata\1.9.0\kanata.exe'
+kanata_config = 'C:\Users\Amandin\.config\kanata\kanata.kbd'
 autorun = true
-
-[presets.'Arsenik']
-kanata_executable = 'C:\Users\User\scoop\apps\kanata\1.8.0\kanata.exe'
-kanata_config = 'D:\amandin\customization\kanata\arsenik\kanata.kbd'
-autorun = false
-
-[presets.'Test']
-kanata_executable = 'C:\Users\User\scoop\apps\kanata\1.8.0\kanata.exe'
-kanata_config = 'D:\amandin\customization\kanata\test.kbd'
-autorun = false

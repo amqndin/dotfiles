@@ -55,7 +55,7 @@ wezterm.on("update-status", function(window)
 	local max_len = 8
 	local padding = ""
 	if stat == "search_mode" then stat = "search" end
-	if stat == "copy_mode" then stat = "yank" end
+	if stat == "copy_mode" then stat = "copy" end
 	if #stat > max_len then
 		stat = stat:sub(1, max_len)
 	else
@@ -77,10 +77,16 @@ wezterm.on("clear-search", function(window, pane)
   window:perform_action(wezterm.action.CopyMode("ClearPattern"), pane)
 end)
 
+wezterm.on("clear-copy", function(window, pane)
+  window:perform_action(wezterm.action.ActivateCopyMode, pane)
+  window:perform_action(wezterm.action.CopyMode("ClearPattern"), pane)
+  window:perform_action(wezterm.action.CopyMode("ClearSelectionMode"), pane)
+end)
+
 config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
 	{ key = "s", mods = "LEADER|CTRL", action = act.SendKey({ key = "s", mods = "CTRL" }) },
-	{ key = "f", mods = "LEADER", action = act.ActivateCopyMode },
+	{ key = "f", mods = "LEADER", action = act.EmitEvent("clear-copy") },
 	{ key = "phys:Space", mods = "LEADER", action = act.ActivateCommandPalette },
 
 	{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },

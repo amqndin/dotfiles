@@ -10,6 +10,7 @@ return {
   -- languages support
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.python" },
 
   -- features

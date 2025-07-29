@@ -1,7 +1,7 @@
 @echo off
 rem This batch file creates a directory and then changes into it.
 rem %* captures all arguments passed to the batch file.
-mkdir %* -p
+mkdir %*
 if exist %* (
     cd /d %*
 ) else (

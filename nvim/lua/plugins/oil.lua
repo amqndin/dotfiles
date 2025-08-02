@@ -62,6 +62,7 @@ return {
     local config = {}
 
     config = {
+      delete_to_trash = true,
       columns = {
         {
           "icon",
@@ -72,6 +73,7 @@ return {
       keymaps = {
         ["<S-h>"] = "actions.parent",
         ["<S-l>"] = "actions.select",
+        ["g,"] = "actions.toggle_trash",
       },
       skip_confirm_for_simple_edits = true,
     }

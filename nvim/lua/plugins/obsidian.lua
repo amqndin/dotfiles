@@ -31,6 +31,7 @@ return {
   opts = function(_, opts)
     local astrocore = require "astrocore"
     return astrocore.extend_tbl(opts, {
+      legacy_commands = false,
       workspaces = {
         {
           path = vim.env.HOME .. "/notes", -- specify the vault location. no need to call 'vim.fn.expand' here
@@ -56,6 +57,8 @@ return {
         nvim_cmp = astrocore.is_available "nvim-cmp",
         blink = astrocore.is_available "blink",
       },
+
+      disable_frontmatter = true,
 
       note_frontmatter_func = function(note)
         -- This is equivalent to the default frontmatter function.

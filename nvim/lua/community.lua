@@ -23,5 +23,6 @@ return {
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.completion.supermaven-nvim" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+  { import = "astrocommunity.quickfix.quicker-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
 }

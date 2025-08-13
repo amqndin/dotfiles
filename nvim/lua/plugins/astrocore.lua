@@ -90,14 +90,16 @@ return {
           callback = function() vim.opt.commentstring = "# %s" end,
         },
       },
-      markdown_wrap = {
+      markdown_file = {
         {
           event = "FileType",
           callback = function()
             if vim.bo.filetype == "markdown" then
               vim.opt.wrap = true
+              vim.opt.textwidth = 80
             else
               vim.opt.wrap = false
+              vim.opt.textwidth = 0
             end
           end,
         },

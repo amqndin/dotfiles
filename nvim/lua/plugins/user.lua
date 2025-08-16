@@ -15,10 +15,10 @@ return {
     keys = { { "gs", mode = { "n", "v" } } },
     opts = { mappings = { toggle = "gs" } },
   },
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = { render_modes = { "n", "c", "t", "i" } },
-  },
+  -- {
+  --   "MeanderingProgrammer/render-markdown.nvim",
+  --   opts = { render_modes = { "n", "c", "t", "i" } },
+  -- },
   {
     "supermaven-inc/supermaven-nvim",
     event = "User AstroFile",

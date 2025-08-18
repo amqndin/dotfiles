@@ -1,0 +1,3 @@
+[files]
+nvim = "~/.config/nvim"
+"kanata/kanata.kbd" = "~/.config/kanata/kanata.kbd"

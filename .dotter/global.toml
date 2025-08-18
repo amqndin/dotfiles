@@ -11,7 +11,6 @@ nvim = "~/AppData/Local/nvim"
 
 [kanata.files]
 "kanata/kanata.kbd" = "~/.config/kanata/kanata.kbd"
-"kanata/kanata-tray.toml" = "~/AppData/Roaming/kanata-tray/kanata-tray.toml"
 
 [kanata.variables]
 kanata_version = "1.9.0"

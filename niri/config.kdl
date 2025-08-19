@@ -156,7 +156,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 2
+        width 3
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -297,9 +297,16 @@ window-rule {
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    open-maximized true
-    // default-column-width {}
+    default-column-width {}
 }
+
+// // Zen notifications
+// window-rule {
+//     match app-id=r#"zen$"# title=""
+//     open-floating true
+//     open-focused false
+//     default-floating-position x=50 y=50 relative-to="top-right"
+// }
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -366,6 +373,7 @@ binds {
     Mod+O repeat=false { toggle-overview; }
 
     Mod+Q { close-window; }
+    // Mod+Shift+Q { switch-focus-between-floating-and-tiling; close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -588,8 +596,8 @@ binds {
 }
 
 cursor {
-    // xcursor-theme "breeze_cursors"
-    // xcursor-size 100
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 20
 
     hide-when-typing
     hide-after-inactive-ms 1000

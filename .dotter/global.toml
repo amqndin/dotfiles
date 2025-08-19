@@ -17,6 +17,9 @@ nvim = "~/.config/nvim"
 [niri.files]
 niri = "~/.config/niri"
 
+[fish.files]
+fish = "~/.config/fish"
+
 [kanata.files]
 "kanata/kanata.kbd" = "~/.config/kanata/kanata.kbd"
 

@@ -237,7 +237,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1.9,
+            "zoom": 4.6,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -483,7 +483,8 @@
             "chatIconLeftClickAction": "channel",
             "chatIconMiddleClickAction": "settings",
             "chatIconRightClickAction": "global",
-            "hideChatBoxTypingIndicators": false
+            "hideChatBoxTypingIndicators": false,
+            "chatContextMenu": true
         },
         "SortFriendRequests": {
             "enabled": false
@@ -1242,7 +1243,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1755594502580
+        "settingsSyncVersion": 1755629649640
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

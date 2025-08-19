@@ -1,0 +1,9 @@
+packages = [
+  "nvim",
+  "wezterm",
+  "kanata",
+  "starship",
+  "discord",
+  "niri",
+  "fish",
+]

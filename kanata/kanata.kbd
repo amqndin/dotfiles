@@ -32,13 +32,13 @@
   l (tap-hold-release $tt $ht l lalt)
   ; (tap-hold-release $tt $ht ; rmet) 
 
-  pgdn (layer-switch transparent)
+  ralt (layer-switch transparent)
   spc (tap-hold-release $tt $ht spc (layer-while-held extended))
 )
 
 
 (deflayermap (transparent)
-  pgdn (layer-switch default)
+  ralt (layer-switch default)
 )
 
 (deflayermap (extended)

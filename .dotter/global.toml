@@ -5,9 +5,17 @@ wezterm = "~/.config/wezterm"
 clink = "~/AppData/Local/clink"
 
 [nvim.files]
-nvim = "~/AppData/Local/nvim"
-"nvim/assets/presence/jmc.png" = { target = "~/AppData/Local/nvim/assets/presence/jmc.png", type = "symbolic" }
-"nvim/assets/presence/mcfunction.png" = { target = "~/AppData/Local/nvim/assets/presence/mcfunction.png", type = "symbolic" }
+nvim = "~/.config/nvim"
+"nvim/assets/presence/jmc.png" = { target = "~/.config/nvim/assets/presence/jmc.png", type = "symbolic" }
+"nvim/assets/presence/mcfunction.png" = { target = "~/.config/nvim/assets/presence/mcfunction.png", type = "symbolic" }
+
+[discord.files]
+"discord/settings/settings.json" = { target = "~/.config/equibop/settings/settings.json", type = "symbolic" }
+"discord/settings/quickCss.css" = "~/.config/equibop/settings/quickCss.css"
+"discord/themes" = "~/.config/equibop/themes"
+
+[niri.files]
+niri = "~/.config/niri"
 
 [kanata.files]
 "kanata/kanata.kbd" = "~/.config/kanata/kanata.kbd"

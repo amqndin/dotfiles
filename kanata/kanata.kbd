@@ -1,54 +1,87 @@
 (defcfg
   process-unmapped-keys yes
+  danger-enable-cmd yes
+  allow-hardware-repeat false
+  concurrent-tap-hold yes
+  log-layer-changes no
 )
 
-(defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]   \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
-)
+(defsrc)
 
 (defvar
-  tap-timeout 180
-  hold-timeout 180
+  repress-timeout 180
+  hold-delay 180
 
-  tt $tap-timeout
-  ht $hold-timeout
+  tt $repress-timeout
+  ht $hold-delay
 )
 
-(deflayermap (default)
+(deftemplate layer (tap-action layer-name)
+  (tap-hold-release $repress-timeout $hold-delay $tap-action (layer-while-held $layer-name))
+)
+
+(deftemplate tap-holdy (tap-action hold-action)
+  (tap-hold-release $repress-timeout $hold-delay $tap-action $hold-action)
+)
+
+(deflayermap (base)
   caps esc
-
-  a (tap-hold-release $tt $ht a lmet)
-  s (tap-hold-release $tt $ht s lalt)
-  d (tap-hold-release $tt $ht d lsft)
-  f (tap-hold-release $tt $ht f lctl)
-  
-  j (tap-hold-release $tt $ht j rctl)
-  k (tap-hold-release $tt $ht k rsft)
-  l (tap-hold-release $tt $ht l lalt)
-  ; (tap-hold-release $tt $ht ; rmet) 
-
   ralt (layer-switch transparent)
-  spc (tap-hold-release $tt $ht spc (layer-while-held extended))
+  lmet (t! layer bspc numbers)
+  rmet (t! layer enter numbers)
+  spc (t! layer spc navigation)
+  m (t! layer m mdown)
+  v (t! layer v vdown)
+
+  a (t! tap-holdy a lmet)  
+  s (t! tap-holdy s lalt)  
+  d (t! tap-holdy d lsft)  
+  f (t! tap-holdy f lctl)  
+                           
+  j (t! tap-holdy j rctl)  
+  k (t! tap-holdy k rsft)  
+  l (t! tap-holdy l lalt)  
+  ; (t! tap-holdy ; rmet)  
 )
 
+(deflayermap (mdown)
+  f bspc
+  d C-bspc
+)
+
+(deflayermap (vdown)
+  k (cmd fish -c "~/dotfiles/scripts/internal/switch_audio_output.fish")
+  m (cmd fish -c "fnottctl dismiss")
+)
 
 (deflayermap (transparent)
-  ralt (layer-switch default)
+  ralt (layer-switch base)
 )
 
-(deflayermap (extended)
-  u pgdn
-  i pgup
+(deflayermap (numbers)
+  a (t! tap-holdy 1 lmet)
+  s (t! tap-holdy 2 lalt)
+  d (t! tap-holdy 3 lsft)
+  f (t! tap-holdy 4 lctl)
+  g (t! tap-holdy 5 5)
+  h (t! tap-holdy 6 6)
+  j (t! tap-holdy 7 rctl)
+  k (t! tap-holdy 8 rsft)
+  l (t! tap-holdy 9 lalt)
+  ; (t! tap-holdy 0 rmet)
 
+  u -
+  i =
+)
+
+(deflayermap (navigation)
   h left
   j down
   k up
   l rght
+
+  u pgdn
+  i pgup
 
   f lctl
   d lsft
@@ -58,5 +91,3 @@
   r lrld
   e caps
 )
-
-;; vim: set syntax=lisp

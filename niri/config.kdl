@@ -42,10 +42,8 @@ input {
 
     mouse {
         // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
+        accel-profile "flat"
+        // scroll-button-lock
     }
 
     trackpoint {
@@ -291,6 +289,18 @@ animations {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
+// Block out notifications from screencasts.
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+
+// Move steam notifications to the bottom right.
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -308,18 +318,6 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
-}
-
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
 }
 
 // Example: enable rounded corners for all windows.
@@ -370,7 +368,6 @@ binds {
     Mod+O repeat=false { toggle-overview; }
 
     Mod+D { close-window; }
-    // Mod+Shift+Q { switch-focus-between-floating-and-tiling; close-window; }
 
     // Mod+Left  { focus-column-left; }
     // Mod+Down  { focus-window-down; }
@@ -545,8 +542,6 @@ binds {
     Mod+Shift+L { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
-    // Mod+Shift+Minus { set-window-height "-10%"; }
-    // Mod+Shift+Equal { set-window-height "+10%"; }
     Mod+Shift+K { set-window-height "-10%"; }
     Mod+Shift+J { set-window-height "+10%"; }
 
@@ -558,14 +553,6 @@ binds {
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
     Mod+W { toggle-column-tabbed-display; }
-
-    // Actions to switch layouts.
-    // Note: if you uncomment these, make sure you do NOT have
-    // a matching layout switch hotkey configured in xkb options above.
-    // Having both at once on the same hotkey will break the switching,
-    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    // Mod+Space       { switch-layout "next"; }
-    // Mod+Shift+Space { switch-layout "prev"; }
 
     Mod+S { screenshot; }
     Mod+Ctrl+S { screenshot-screen; }

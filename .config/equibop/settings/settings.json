@@ -486,7 +486,8 @@
             "chatIconMiddleClickAction": "settings",
             "chatIconRightClickAction": "global",
             "hideChatBoxTypingIndicators": false,
-            "chatContextMenu": true
+            "chatContextMenu": true,
+            "enabledGlobally": true
         },
         "SortFriendRequests": {
             "enabled": false
@@ -677,7 +678,15 @@
             "enabled": false
         },
         "BetterActivities": {
-            "enabled": false
+            "enabled": true,
+            "memberList": false,
+            "iconSize": 15,
+            "specialFirst": true,
+            "renderGifs": true,
+            "removeGameActivityStatus": false,
+            "userPopout": true,
+            "hideTooltip": true,
+            "allActivitiesStyle": "carousel"
         },
         "BetterAudioPlayer": {
             "enabled": false
@@ -845,7 +854,7 @@
             "enabled": false
         },
         "GoogleThat": {
-            "enabled": false
+            "enabled": true
         },
         "GuildPickerDumper": {
             "enabled": false
@@ -1233,6 +1242,15 @@
         },
         "WebContextMenus": {
             "enabled": true
+        },
+        "ImageFilename": {
+            "enabled": false
+        },
+        "Animalese": {
+            "enabled": false
+        },
+        "Downloadify": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1245,7 +1263,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1756022034048
+        "settingsSyncVersion": 1756044618164
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

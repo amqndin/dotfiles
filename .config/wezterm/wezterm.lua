@@ -100,7 +100,7 @@ config.keys = {
 	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
 	{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 
-	{ key = "n", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+	{ key = "n", mods = "LEADER", action = wezterm.action.SpawnCommandInNewTab({ cwd = wezterm.home_dir })},
 	{ key = "H", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
 	{ key = "L", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(1) },
 	{ key = "[", mods = "LEADER", action = act.ActivateTabRelative(-1) },

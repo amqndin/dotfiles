@@ -71,33 +71,33 @@ set -l commit_message ""
 set -l has_changes false
 
 if test (count $added_files) -gt 0
-    set commit_message "$commit_message\n\nAdded:"
+    set commit_message "$commit_message Added:"
     for file in $added_files
-        set commit_message "$commit_message\n  - $file"
+        set commit_message "$commit_message - $file"
     end
     set has_changes true
 end
 
 if test (count $modified_files) -gt 0
-    set commit_message "$commit_message\n\nModified:"
+    set commit_message "$commit_message Modified:"
     for file in $modified_files
-        set commit_message "$commit_message\n  - $file"
+        set commit_message "$commit_message - $file"
     end
     set has_changes true
 end
 
 if test (count $deleted_files) -gt 0
-    set commit_message "$commit_message\n\nDeleted:"
+    set commit_message "$commit_message Deleted:"
     for file in $deleted_files
-        set commit_message "$commit_message\n  - $file"
+        set commit_message "$commit_message - $file"
     end
     set has_changes true
 end
 
 if test (count $renamed_files) -gt 0
-    set commit_message "$commit_message\n\nRenamed:"
+    set commit_message "$commit_message Renamed:"
     for file in $renamed_files
-        set commit_message "$commit_message\n  - $file"
+        set commit_message "$commit_message - $file"
     end
     set has_changes true
 end

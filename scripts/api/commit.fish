@@ -67,7 +67,7 @@ for line in $status_output
 end
 
 # Build the commit message string
-set -l commit_message "Auto-commit: Repository state update"
+set -l commit_message ""
 set -l has_changes false
 
 if test (count $added_files) -gt 0

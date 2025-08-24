@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-if not giv rev-parse --is-inside-work-tree >/dev/null 2>&1
+if not git rev-parse --is-inside-work-tree >/dev/null 2>&1
   echo "Error: Not in a repo"
   exit 1
 end

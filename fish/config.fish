@@ -4,6 +4,7 @@ end
 
 alias nv="nvim"
 alias cat="bat"
+alias ls="eza --icons --color=always --group-directories-first"
 
 set -gx QT_QPA_PLATFORM "wayland;xcb"
 set -gx EDITOR "nvim"

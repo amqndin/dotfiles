@@ -214,7 +214,7 @@
             "enabled": false
         },
         "FullUserInChatbox": {
-            "enabled": false
+            "enabled": true
         },
         "GameActivityToggle": {
             "enabled": true,
@@ -239,7 +239,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 17.200000000000003,
+            "zoom": 6.400000000000001,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -1263,7 +1263,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1756044618164
+        "settingsSyncVersion": 1756103368421
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

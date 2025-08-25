@@ -27,8 +27,11 @@
 (deflayermap (base)
   caps esc
   ralt (layer-switch transparent)
-  lmet (t! layer bspc numbers)
-  rmet (t! layer enter numbers)
+  left (tap-dance 300 (
+    (cmd systemctl suspend)
+    (cmd systemctl reboot)
+    (cmd systemctl poweroff)
+  ))
   spc (t! layer spc navigation)
   m (t! layer m mdown)
   v (t! layer v vdown)
@@ -56,22 +59,6 @@
 
 (deflayermap (transparent)
   ralt (layer-switch base)
-)
-
-(deflayermap (numbers)
-  a (t! tap-holdy 1 lmet)
-  s (t! tap-holdy 2 lalt)
-  d (t! tap-holdy 3 lsft)
-  f (t! tap-holdy 4 lctl)
-  g (t! tap-holdy 5 5)
-  h (t! tap-holdy 6 6)
-  j (t! tap-holdy 7 rctl)
-  k (t! tap-holdy 8 rsft)
-  l (t! tap-holdy 9 lalt)
-  ; (t! tap-holdy 0 rmet)
-
-  u -
-  i =
 )
 
 (deflayermap (navigation)

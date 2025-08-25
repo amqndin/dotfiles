@@ -17,7 +17,7 @@ input {
             options "grp:win_space_toggle,compose:ralt"
         }
 
-        repeat-delay 190
+        repeat-delay 200
         repeat-rate 20
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -312,19 +312,16 @@ window-rule {
     default-column-width {}
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Open the Zen picture-in-picture player as floating by default.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 15
+    geometry-corner-radius 16
     clip-to-geometry true
 }
 

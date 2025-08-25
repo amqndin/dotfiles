@@ -1,5 +1,6 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+  # Commands to run in interactive sessions can go here
+  source $HOME/.config/television/shell/integration.fish
 end
 
 fish_config theme choose "Catppuccin Mocha"
@@ -12,6 +13,7 @@ alias refish="source ~/.config/fish/config.fish"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias ls="eza --icons --color=always --group-directories-first"
+alias astronvim="NVIM_APPNAME='astronvim' nvim"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -27,8 +29,17 @@ function cdn
 end
 
 set -gx QT_QPA_PLATFORM "wayland;xcb"
+set -gx QT_QPA_PLATFORMTHEME "kde"
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
+set -gx FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#89B4FA,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#89B4FA,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
 
 starship init fish | source
 zoxide init fish --cmd cd | source
+fzf --fish | source
+tv init fish | source

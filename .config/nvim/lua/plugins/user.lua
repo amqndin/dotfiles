@@ -15,10 +15,10 @@ return {
     keys = { { "gs", mode = { "n", "v" } } },
     opts = { mappings = { toggle = "gs" } },
   },
-  -- {
-  --   "MeanderingProgrammer/render-markdown.nvim",
-  --   opts = { render_modes = { "n", "c", "t", "i" } },
-  -- },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = { render_modes = { "n", "c", "t", "i" } },
+  },
   {
     "supermaven-inc/supermaven-nvim",
     event = "User AstroFile",
@@ -31,9 +31,4 @@ return {
       ignore_filetypes = { "markdown", "neo-tree-popup" },
     },
   },
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function() require("lsp_signature").setup() end,
-  -- },
 }

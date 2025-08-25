@@ -30,7 +30,7 @@ config.window_padding = {left = 0, right = 0, top = 0, bottom = 0,}
 config.status_update_interval = 1000
 config.custom_block_glyphs = false
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font", scale = 1.05, weight = "Medium" },
+	{ family = "JetBrainsMono Nerd Font", scale = 1.04, weight = "Medium" },
 })
 config.inactive_pane_hsb = {
   saturation = 0.8,

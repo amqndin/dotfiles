@@ -13,7 +13,6 @@ alias refish="source ~/.config/fish/config.fish"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias ls="eza --icons --color=always --group-directories-first"
-alias astronvim="NVIM_APPNAME='astronvim' nvim"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")

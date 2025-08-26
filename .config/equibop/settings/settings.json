@@ -1253,7 +1253,8 @@
             "enabled": true
         },
         "ImageFilename": {
-            "enabled": true
+            "enabled": true,
+            "showFullUrl": false
         },
         "Animalese": {
             "enabled": false
@@ -1272,7 +1273,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1756145878291
+        "settingsSyncVersion": 1756229767908
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

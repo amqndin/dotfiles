@@ -43,7 +43,7 @@ input {
     mouse {
         // off
         accel-profile "flat"
-        accel-speed 0.2
+        accel-speed 0.0
         // scroll-button-lock
     }
 
@@ -315,6 +315,7 @@ window-rule {
 // Open the Zen picture-in-picture player as floating by default.
 window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    default-floating-position x=32 y=32 relative-to="top-right"
     open-floating true
 }
 

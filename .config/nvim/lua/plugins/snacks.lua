@@ -37,7 +37,7 @@ return {
     -- configure image support
     -- if require("snacks.image").supports_terminal() then opts.image = { doc = { enabled = false } } end
     opts.image = {
-      doc = { enabled = false },
+      -- doc = { enabled = false },
       enabled = false,
     }
 

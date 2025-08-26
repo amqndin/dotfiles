@@ -25,14 +25,8 @@ return {
     local vcount = vim.v.count
 
     -- switch between buffers
-    map.n["L"] = {
-      function() buffer.nav(vcount > 0 and vcount or 1) end,
-      desc = "Next buffer",
-    }
-    map.n["H"] = {
-      function() buffer.nav(-(vcount > 0 and vcount or 1)) end,
-      desc = "Previous buffer",
-    }
+    map.n["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" }
+    map.n["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" }
 
     -- terminal 
     for _, mode in ipairs { "t", "i", "n" } do

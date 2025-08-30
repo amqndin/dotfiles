@@ -178,7 +178,8 @@
             "useHyperLinks": true,
             "disableEmbedPermissionCheck": false,
             "emojiSize": 48,
-            "useEmojiHyperLinks": true
+            "useEmojiHyperLinks": true,
+            "useStickerHyperLinks": true
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -294,7 +295,8 @@
             "ignoreSelf": true,
             "ignoreUsers": "",
             "ignoreChannels": "",
-            "ignoreGuilds": ""
+            "ignoreGuilds": "",
+            "showEditDiffs": false
         },
         "MessageTags": {
             "enabled": false
@@ -321,7 +323,7 @@
             "enabled": false
         },
         "NoOnboardingDelay": {
-            "enabled": false
+            "enabled": true
         },
         "NoPendingCount": {
             "enabled": false
@@ -563,7 +565,9 @@
             "enabled": false
         },
         "USRBG": {
-            "enabled": false
+            "enabled": true,
+            "voiceBackground": true,
+            "nitroFirst": true
         },
         "ValidReply": {
             "enabled": true
@@ -1190,7 +1194,8 @@
             "enabled": false
         },
         "UserPFP": {
-            "enabled": false
+            "enabled": true,
+            "preferNitro": true
         },
         "UwUifier": {
             "enabled": false
@@ -1273,9 +1278,10 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1756235555880
+        "settingsSyncVersion": 1756539026655
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
-    "userCssVars": {}
+    "userCssVars": {},
+    "themeNames": {}
 }

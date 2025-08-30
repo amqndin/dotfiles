@@ -317,6 +317,7 @@ window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     default-floating-position x=32 y=32 relative-to="top-right"
     open-floating true
+    open-focused false
 }
 
 // Example: enable rounded corners for all windows.

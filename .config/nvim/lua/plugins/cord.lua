@@ -74,54 +74,15 @@ return {
     assets = {
       jmc = {
         name = "JMC",
-        icon = "https://github.com/amqndin/dotfiles/blob/main/nvim/assets/presence/jmc.png?raw=true",
+        icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/jmc.png?raw=true",
         tooltip = "JMC",
       },
       mcfunction = {
         name = "MCFunction",
-        icon = "https://github.com/amqndin/dotfiles/blob/main/nvim/assets/presence/mcfunction.png?raw=true",
+        icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/mcfunction.png?raw=true",
         tooltip = "MCFunction",
       },
     },
-    variables = nil,
-    hooks = {
-      ready = nil,
-      shutdown = nil,
-      pre_activity = nil,
-      post_activity = nil,
-      idle_enter = nil,
-      idle_leave = nil,
-      workspace_change = nil,
-    },
     plugins = nil,
-    advanced = {
-      plugin = {
-        autocmds = true,
-        cursor_update = 'on_hold',
-        match_in_mappings = true,
-      },
-      server = {
-        update = 'fetch',
-        pipe_path = nil,
-        executable_path = nil,
-        timeout = 300000,
-      },
-      discord = {
-        pipe_paths = nil,
-        reconnect = {
-          enabled = false,
-          interval = 5000,
-          initial = true,
-        },
-      },
-      workspace = {
-        root_markers = {
-          '.git',
-          '.hg',
-          '.svn',
-        },
-        limit_to_cwd = false,
-      },
-    },
   },
 }

@@ -20,27 +20,7 @@ return {
           function() require("resession").load(vim.fn.getcwd(), { dir = "dirsession" }) end,
           desc = "Load current dirsession",
         }
-        opts.autocmds.resession_auto_save = {
-          {
-            event = "VimLeavePre",
-            desc = "Save session on close",
-            callback = function()
-              local buf_utils = require "astrocore.buffer"
-              local autosave = require("astrocore").config.sessions.autosave
-              if autosave and buf_utils.is_valid_session() then
-                local save = require("resession").save
-                if autosave.last then save("Last Session", { notify = false }) end
-                if autosave.cwd then save(vim.fn.getcwd(), { dir = "dirsession", notify = false }) end
-              end
-            end,
-          },
-        }
       end,
     },
-  },
-  opts = {
-    buf_filter = function(bufnr) return require("astrocore.buffer").is_restorable(bufnr) end,
-    tab_buf_filter = function(tabpage, bufnr) return vim.tbl_contains(vim.t[tabpage].bufs, bufnr) end,
-    extensions = { astrocore = { enable_in_tab = true } },
   },
 }

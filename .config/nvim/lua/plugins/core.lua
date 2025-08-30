@@ -1,17 +1,11 @@
 local minecraft_icon = {
   color = "#a6e3a1",
   icon = "󰍳",
-  deviconscterm_color = "65",
-  name = "minecraft",
+  name = "Minecraft",
 }
 
 ---@type LazySpec
 return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-    opts = { window = { position = "float" } },
-  },
   {
     "nvim-tree/nvim-web-devicons",
     opts = {
@@ -21,8 +15,6 @@ return {
       },
     },
   },
-  {
-    "max397574/better-escape.nvim",
-    enabled = false,
-  }
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false, },
+  { "max397574/better-escape.nvim", enabled = false, }
 }

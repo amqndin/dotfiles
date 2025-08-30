@@ -12,10 +12,9 @@ return {
       -- add more arguments for adding more treesitter parsers
     })
 
-    opts.indent = {
-      enable = true,
-      disable = { "jmc" },
-    }
+    opts.indent = require("astrocore").extend_tbl(opts.indent, {
+      disable = { "javascript" },
+    })
 
     vim.treesitter.language.register("javascript", "jmc")
     vim.treesitter.language.register("c", "hjmc")

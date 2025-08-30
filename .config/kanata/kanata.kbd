@@ -26,7 +26,7 @@
 
 (deflayermap (base)
   caps esc
-  ralt (layer-switch transparent)
+  lmet (layer-switch transparent)
   left (tap-dance 300 (
     (cmd systemctl suspend)
     (cmd systemctl reboot)
@@ -58,7 +58,7 @@
 )
 
 (deflayermap (transparent)
-  ralt (layer-switch base)
+  lmet (layer-switch base)
 )
 
 (deflayermap (navigation)

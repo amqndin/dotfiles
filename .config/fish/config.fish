@@ -29,9 +29,11 @@ end
 
 set -gx QT_QPA_PLATFORM "wayland;xcb"
 set -gx QT_QPA_PLATFORMTHEME "qt6ct"
+set -gx ELECTRON_OZONE_PLATFORM_HINT "auto"
 set -gx EDITOR "nvim"
+set -gx BROWSER "zen-browser"
 set -gx VISUAL "nvim"
-set -gx DISPLAY ":0"
+set -gx DISPLAY ":1"
 set -gx FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#89B4FA,pointer:#F5E0DC \

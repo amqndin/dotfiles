@@ -260,6 +260,16 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "zen-browser"
 
+// environment {
+//     ELECTRON_OZONE_PLATFORM_HINT "auto"
+//     QT_QPA_PLATFORM "wayland;xcb"
+//     QT_QPA_PLATFORMTHEME "qt5ct;qt6ct"
+//     EDITOR "nvim"
+//     VISUAL "nvim"
+//     BROWSER "zen-browser"
+//     DISPLAY ":1"
+// }
+
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.

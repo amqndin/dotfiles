@@ -1,0 +1,22 @@
+/* Extension tag */
+/* #identity-box[pageproxystate="valid"]:is(.notSecureText, */
+/*   .chromeUI, */
+/*   .extensionPage), */
+/* #urlbar-label-box { */
+/*   margin-inline-end: var(--urlbar-container-padding) !important; */
+/* } */
+
+/* Bookmark button alignment fix */
+.urlbar-page-action {
+  width: auto !important;
+  height: auto !important;
+  padding: 2px !important;
+  margin-left: 2px !important;
+}
+
+/* Hide shortcuts 
+* The settings toggle breaks selecting words by double-clicking on the url bar.
+*/
+div.urlbarView-row[role="presentation"][type="top_site"] {
+  display: none !important;
+}

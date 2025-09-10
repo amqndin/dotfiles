@@ -1,0 +1,51 @@
+
+/**
+ * @name Clean up
+*/
+
+/**
+ * @name Clean user panel
+*/
+
+@import url(https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css);
+
+
+/**
+ * @name Clean input box
+*/
+
+.buttons__74017 {
+  display: none;
+}
+
+.jumpToPresentBar__0f481 {
+  display: none;
+}
+
+/**
+ * @name Make space for narrow windows
+*/
+
+@media (max-width: 1100px) {
+  [class*="sidebar_"] {
+    width: 200px;
+
+    .vc-typing-indicator,
+    .vc-channelemojis-emoji,
+    [class*="guildIconV2Container_"] {
+      display: none;
+    }
+
+    [class*="containerDefault_"] {
+      [role="img"] {
+        display: none;
+      }
+    }
+  }
+
+  [class*="chat_"] {
+    [class*="container_"]:has(> [class*="membersWrap_"]) {
+      display: none;
+    }
+  }
+}

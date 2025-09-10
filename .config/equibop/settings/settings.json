@@ -7,7 +7,8 @@
     ],
     "eagerPatches": false,
     "enabledThemes": [
-        "midnight-catppuccin-mocha.theme.css"
+        "midnight-catppuccin-mocha.theme.css",
+        "clean.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -157,7 +158,8 @@
             "enabled": false
         },
         "Experiments": {
-            "enabled": false
+            "enabled": true,
+            "toolbarDevMenu": false
         },
         "ExpressionCloner": {
             "enabled": false
@@ -241,7 +243,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1.9,
+            "zoom": 2.8,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -270,7 +272,8 @@
         "MemberCount": {
             "enabled": true,
             "memberList": true,
-            "toolTip": true
+            "toolTip": true,
+            "voiceActivity": true
         },
         "MentionAvatars": {
             "enabled": false
@@ -1266,6 +1269,21 @@
         },
         "Downloadify": {
             "enabled": false
+        },
+        "ChatButtonsPlus": {
+            "enabled": false
+        },
+        "ClipsEnhancements": {
+            "enabled": false
+        },
+        "NoRPC": {
+            "enabled": false
+        },
+        "QuestCompleter": {
+            "enabled": false
+        },
+        "ShowMessageEmbeds": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1278,7 +1296,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1756539026655
+        "settingsSyncVersion": 1757516278486
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

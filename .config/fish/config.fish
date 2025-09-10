@@ -1,6 +1,5 @@
 if status is-interactive
   # Commands to run in interactive sessions can go here
-  source $HOME/.config/television/shell/integration.fish
 end
 
 fish_config theme choose "Catppuccin Mocha"
@@ -27,13 +26,13 @@ function cdn
     mkdir -p $argv[1]; and cd $argv[1]
 end
 
-set -gx QT_QPA_PLATFORM "wayland;xcb"
-set -gx QT_QPA_PLATFORMTHEME "qt6ct"
-set -gx ELECTRON_OZONE_PLATFORM_HINT "auto"
+# set -gx DISPLAY ":1"
+# set -gx QT_QPA_PLATFORM "wayland;xcb"
+# set -gx QT_QPA_PLATFORMTHEME "qt6ct"
+# set -gx ELECTRON_OZONE_PLATFORM_HINT "auto"
 set -gx EDITOR "nvim"
-set -gx BROWSER "zen-browser"
 set -gx VISUAL "nvim"
-set -gx DISPLAY ":1"
+set -gx BROWSER "zen-browser"
 set -gx FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#89B4FA,pointer:#F5E0DC \

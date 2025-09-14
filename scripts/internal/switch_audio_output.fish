@@ -24,8 +24,8 @@ echo current_default_id $current_default_id
 
 if test "$current_default_id" = "$internal_sink_id"
     wpctl set-default $headphone_sink_id
-    notify-send -i ~/Downloads/headphones.png "Audio Switched" "Headphones selected."
+    notify-send -i "Audio Switched" "Headphones selected."
 else
     wpctl set-default $internal_sink_id
-    notify-send -i ~/Downloads/speaker.png "Audio Switched" "Speakers selected."
+    notify-send -i "Audio Switched" "Speakers selected."
 end

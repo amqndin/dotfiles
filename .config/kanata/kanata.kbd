@@ -54,6 +54,7 @@
 
 (deflayermap (vdown)
   k (cmd fish -c "~/dotfiles/scripts/internal/switch_audio_output.fish")
+  j (cmd fish -c "fnottctl dismiss-with-default-action")
   m (cmd fish -c "fnottctl dismiss")
 )
 

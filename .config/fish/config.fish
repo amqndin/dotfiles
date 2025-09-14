@@ -26,10 +26,10 @@ function cdn
     mkdir -p $argv[1]; and cd $argv[1]
 end
 
-# set -gx DISPLAY ":1"
-# set -gx QT_QPA_PLATFORM "wayland;xcb"
-# set -gx QT_QPA_PLATFORMTHEME "qt6ct"
 # set -gx ELECTRON_OZONE_PLATFORM_HINT "auto"
+# set -gx DISPLAY ":1"
+set -gx QT_QPA_PLATFORM "wayland;xcb"
+set -gx QT_QPA_PLATFORMTHEME "kde"
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 set -gx BROWSER "zen-browser"

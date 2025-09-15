@@ -18,7 +18,7 @@ size = { height = 10, width = 66 }
 rooms = ["recent", "unread", "favorite", "lowpriority", "name"]
 
 [dirs]
-downloads = "D:/Downloads"
+downloads = "~/Downloads"
 
 [layout]
 style = "config"
@@ -51,3 +51,6 @@ split = [
 "$" = "g$"
 "^" = "g^"
 "0" = "g0"
+
+[macros.insert]
+"<S-CR>" = "<C-v><C-j>"

@@ -243,7 +243,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 7.300000000000001,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -360,7 +360,8 @@
             "channelToAffect": "both_dms",
             "allowMentions": false,
             "allowEveryone": false,
-            "ignoreUsers": ""
+            "ignoreUsers": "",
+            "alwaysPlaySound": false
         },
         "OpenInApp": {
             "enabled": false
@@ -932,9 +933,6 @@
         "JellyfinRichPresence": {
             "enabled": false
         },
-        "JumpToStart": {
-            "enabled": false
-        },
         "Jumpscare": {
             "enabled": false
         },
@@ -1255,7 +1253,9 @@
             "enabled": true
         },
         "EquicordHelper": {
-            "enabled": true
+            "enabled": true,
+            "disableCreateDMButton": false,
+            "disableDMContextMenu": false
         },
         "WebContextMenus": {
             "enabled": true
@@ -1287,6 +1287,9 @@
         },
         "ToneIndicators": {
             "enabled": false
+        },
+        "JumpTo": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1299,7 +1302,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1757865270245
+        "settingsSyncVersion": 1758157748780
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

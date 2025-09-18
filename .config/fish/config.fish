@@ -13,6 +13,10 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias ls="eza --icons --color=always --group-directories-first"
 
+function man
+    command man $argv | nvim -c "se syn=man"
+end
+
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"

@@ -1,7 +1,5 @@
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
-local _guifont = "JetBrainsMonoNL Nerd Font Mono:h13:w0"
-if vim.g.neovide then _guifont = "JetBrainsMono Nerd Font:h12.5:w0" end
 
 ---@type LazySpec
 return {
@@ -38,12 +36,6 @@ return {
         wrap = false,
         mouse = "",
         showbreak = "↳ ",
-      },
-      g = {
-        neovide_no_idle = true,
-      },
-      o = {
-        guifont = _guifont,
       },
     },
     commands = {
@@ -93,13 +85,22 @@ return {
       markdown_file = {
         {
           event = "FileType",
+          pattern = "markdown",
           callback = function()
-            if vim.bo.filetype == "markdown" then
-              vim.opt.wrap = true
-              vim.opt.textwidth = 80
+            vim.opt_local.wrap = true
+            vim.opt_local.linebreak = true
+            vim.opt_local.textwidth = 0
+          end,
+        },
+      },
+      chafa_image = {
+        {
+          event = "BufEnter",
+          callback = function()
+            if vim.bo.filetype == "image" then
+              require("snacks.indent").disable()
             else
-              vim.opt.wrap = false
-              vim.opt.textwidth = 0
+              require("snacks.indent").enable()
             end
           end,
         },

@@ -2,6 +2,7 @@ return {
   "folke/snacks.nvim",
   opts = function(_, opts)
     local get_icon = require("astroui").get_icon
+    opts.image = nil
     opts.dashboard = require("astrocore").extend_tbl(opts.dashboard, {
       preset = {
         keys = {

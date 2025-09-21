@@ -22,11 +22,11 @@ return {
   )
     local map = opts.mappings
     local buffer = require "astrocore.buffer"
-    local vcount = vim.v.count
+    local vcount = vim.v.count1
 
     -- switch between buffers
-    map.n["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" }
-    map.n["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" }
+    map.n["L"] = { function() buffer.nav(vcount) end, desc = "Next buffer" }
+    map.n["H"] = { function() buffer.nav(-vcount) end, desc = "Previous buffer" }
 
     -- terminal 
     for _, mode in ipairs { "t", "i", "n" } do

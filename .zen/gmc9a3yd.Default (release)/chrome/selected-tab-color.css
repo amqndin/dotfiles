@@ -1,5 +1,0 @@
-/* Restore colored border around the selected tab
-* that was broken in Zen v1.14b */
-:root {
-  --tab-selected-outline-color: var(--zen-primary-color) !important;
-}

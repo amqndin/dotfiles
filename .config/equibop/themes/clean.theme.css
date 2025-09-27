@@ -12,11 +12,8 @@
  * @name Clean input box
 */
 
+.jumpToPresentBar__0f481,
 .buttons__74017 {
-  display: none;
-}
-
-.jumpToPresentBar__0f481 {
   display: none;
 }
 
@@ -40,4 +37,12 @@
       display: none;
     }
   }
+}
+
+/**
+ * @name Remove chat bar gradient shadow
+*/
+
+[class*="chatGradient_"] {
+    display: none !important;
 }

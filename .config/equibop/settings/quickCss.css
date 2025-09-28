@@ -1,0 +1,20 @@
+/* Fix chat bar being shifted up and too tall */
+[class*="attachWrapper_"] {
+  padding: 10px !important;
+
+  & [aria-label="More message options"] {
+    width: 38px !important;
+    height: 26px !important;
+    margin: 0 !important;
+  }
+
+  & [class*="attachButton_"]:hover {
+    background-color: transparent !important;
+  }
+}
+
+[class*="channelTextArea_"]
+  > [class*="scrollableContainer_"]
+  > [class*="inner_"] {
+  padding-left: 0 !important;
+}

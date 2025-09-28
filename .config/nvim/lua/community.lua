@@ -25,7 +25,7 @@ return {
   { import = "astrocommunity.quickfix.quicker-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
-  { import = "astrocommunity.recipes.disable-tabline" },
+  -- { import = "astrocommunity.recipes.disable-tabline" },
   -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
 }

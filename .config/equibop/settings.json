@@ -7,5 +7,9 @@
     "trayMainOverride": false,
     "splashColor": "rgb(186, 194, 222)",
     "splashBackground": "rgb(30, 30, 46)",
-    "disableMinSize": true
+    "disableMinSize": true,
+    "spellCheckLanguages": [
+        "en-US",
+        "en"
+    ]
 }

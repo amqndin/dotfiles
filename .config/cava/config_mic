@@ -79,11 +79,11 @@
 # For jack 'source' will be the name of the JACK server to connect to, e.g. 'foobar'. Default: 'default'.
 # README.md contains further information on how to setup CAVA for JACK.
 #
-; method = pulse
-; source = auto
-
-method = pipewire
+method = pulse
 source = alsa_input.pci-0000_00_1f.3.analog-stereo
+
+; method = pipewire
+; source = alsa_input.pci-0000_00_1f.3.analog-stereo
 
 ; method = alsa
 ; source = hw:Loopback,1

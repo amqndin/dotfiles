@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 fish_config theme choose "Catppuccin Mocha"
+set -U fish_greeting ""
 
 alias nv="nvim"
 alias cat="bat"

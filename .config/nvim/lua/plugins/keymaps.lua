@@ -71,6 +71,8 @@ return {
     map.x["<"] = { "<gv", desc = "Deindent line" }
     map.x[">"] = { ">gv", desc = "Indent line" }
 
+    map.n["<Leader>fn"] = { function() require("snacks").notifier.show_history() end, desc = "Notifications" }
+
     -- add more text objects for "in" and "around"
     for _, char in ipairs { "_", ".", ":", ",", ";", "|", "/", "\\", "*", "+", "%", "`", "?", "$" } do
       for _, mode in ipairs { "x", "o" } do

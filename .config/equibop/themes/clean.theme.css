@@ -43,6 +43,10 @@
  * @name Remove chat bar gradient shadow
 */
 
-[class*="chatGradient_"] {
-    display: none !important;
+/* [class*="chatGradient_"] { */
+/*     display: none !important; */
+/* } */
+
+[class*="chatGradient"] {
+  display: none !important;
 }

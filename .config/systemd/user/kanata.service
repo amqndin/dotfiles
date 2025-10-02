@@ -1,0 +1,12 @@
+[Unit]
+Description=Kanata
+StartLimitBurst=0
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=/usr/bin/kanata --cfg %h/.config/kanata/kanata.kbd
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=graphical-session.target

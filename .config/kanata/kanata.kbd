@@ -25,16 +25,12 @@
 )
 
 (deflayermap (base)
-  caps esc
   lmet (layer-switch transparent)
-  left (tap-dance 300 (
-    (cmd systemctl suspend)
-    (cmd systemctl reboot)
-    (cmd systemctl poweroff)
-  ))
   spc (t! layer spc navigation)
   m (t! layer m mdown)
   v (t! layer v vdown)
+
+  caps esc
 
   a (t! tap-holdy a lmet)  
   s (t! tap-holdy s lalt)  
@@ -45,6 +41,12 @@
   k (t! tap-holdy k rsft)  
   l (t! tap-holdy l lalt)  
   ; (t! tap-holdy ; rmet)  
+
+  left (tap-dance 300 (
+    (cmd systemctl suspend)
+    (cmd systemctl reboot)
+    (cmd systemctl poweroff)
+  ))
 )
 
 (deflayermap (mdown)
@@ -53,7 +55,7 @@
 )
 
 (deflayermap (vdown)
-  k (cmd fish -c "~/dotfiles/scripts/internal/switch_audio_output.fish")
+  k (cmd fish -c "~/dotfiles/scripts/internal/switch-audio-output.fish")
   j (cmd fish -c "fnottctl dismiss-with-default-action")
   m (cmd fish -c "fnottctl dismiss")
 )

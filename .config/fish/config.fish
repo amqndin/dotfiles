@@ -14,6 +14,17 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias ls="eza --icons --color=always --group-directories-first"
 
+# Set a consistent name for your main session
+set -l session_name "main"
+
+if not set -q TMUX
+    # Check if a session with the name "main-session" exists.
+    # If it does, attach (-t) to it.
+    # If it does NOT exist, create (-s) a new one with that name.
+    # The -d option detaches the current shell after the new session starts.
+    tmux attach-session -t $session_name || tmux new-session -s $session_name
+end
+
 function man
     command man $argv | nvim -c "se syn=man"
 end

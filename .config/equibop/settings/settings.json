@@ -522,7 +522,35 @@
             "enabled": false
         },
         "TextReplace": {
-            "enabled": false
+            "enabled": true,
+            "stringRules": [
+                {
+                    "find": "",
+                    "replace": "",
+                    "onlyIfIncludes": "",
+                    "scope": "myMessages"
+                }
+            ],
+            "regexRules": [
+                {
+                    "find": "/https?:\\/\\/(www\\.)?reddit\\.com/",
+                    "replace": "https://rxddit.com",
+                    "onlyIfIncludes": "",
+                    "scope": "othersMessages"
+                },
+                {
+                    "find": "/https?:\\/\\/(www\\.)?(twitter|x)\\.com/",
+                    "replace": "fixupx.com",
+                    "onlyIfIncludes": "",
+                    "scope": "othersMessages"
+                },
+                {
+                    "find": "",
+                    "replace": "",
+                    "onlyIfIncludes": "",
+                    "scope": "myMessages"
+                }
+            ]
         },
         "ThemeAttributes": {
             "enabled": false
@@ -1317,7 +1345,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1759320283819
+        "settingsSyncVersion": 1759411674491
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

@@ -73,11 +73,13 @@ return {
     },
     assets = {
       jmc = {
+        type = "language",
         name = "JMC",
         icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/jmc.png?raw=true",
         tooltip = "JMC",
       },
       mcfunction = {
+        type = "language",
         name = "MCFunction",
         icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/mcfunction.png?raw=true",
         tooltip = "MCFunction",

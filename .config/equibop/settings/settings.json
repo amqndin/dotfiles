@@ -298,10 +298,11 @@
             "inlineEdits": false,
             "ignoreBots": true,
             "ignoreSelf": true,
-            "ignoreUsers": "",
+            "ignoreUsers": "1306952949225885806",
             "ignoreChannels": "",
             "ignoreGuilds": "",
-            "showEditDiffs": false
+            "showEditDiffs": false,
+            "separatedDiffs": false
         },
         "MessageTags": {
             "enabled": false
@@ -865,7 +866,7 @@
             "enabled": false
         },
         "FriendshipRanks": {
-            "enabled": false
+            "enabled": true
         },
         "FullVCPFP": {
             "enabled": false
@@ -999,7 +1000,28 @@
             "enabled": false
         },
         "MessageLoggerEnhanced": {
-            "enabled": false
+            "enabled": false,
+            "saveMessages": true,
+            "saveImages": false,
+            "sortNewest": true,
+            "cacheMessagesFromServers": false,
+            "ignoreBots": false,
+            "ignoreWebhooks": false,
+            "ignoreSelf": false,
+            "ignoreMutedGuilds": false,
+            "ignoreMutedCategories": false,
+            "ignoreMutedChannels": false,
+            "alwaysLogDirectMessages": true,
+            "alwaysLogCurrentChannel": true,
+            "permanentlyRemoveLogByDefault": false,
+            "ShowLogsButton": true,
+            "messagesToDisplayAtOnceInLogs": 100,
+            "messageLimit": 200,
+            "attachmentSizeLimitInMegabytes": 12,
+            "attachmentFileExtensions": "png,jpg,jpeg,gif,webp,mp4,webm,mp3,ogg,wav",
+            "cacheLimit": 1000,
+            "whitelistedIds": "",
+            "blacklistedIds": ""
         },
         "MessageTranslate": {
             "enabled": false
@@ -1071,7 +1093,8 @@
             "enabled": false
         },
         "PlatformSpoofer": {
-            "enabled": false
+            "enabled": false,
+            "platform": "android"
         },
         "PolishWording": {
             "enabled": false
@@ -1107,7 +1130,14 @@
             "enabled": false
         },
         "RPCStats": {
-            "enabled": false
+            "enabled": false,
+            "assetURL": "",
+            "RPCTitle": "RPCStats",
+            "statDisplay": 0,
+            "lastFMApiKey": "",
+            "lastFMUsername": "",
+            "albumCoverImage": true,
+            "lastFMStatFormat": "Top album this week: \"$album - $artist\""
         },
         "SaveFavoriteGIFs": {
             "enabled": false
@@ -1332,6 +1362,12 @@
         },
         "RemixRevived": {
             "enabled": false
+        },
+        "RecentDMSwitcher": {
+            "enabled": false
+        },
+        "StatusWhileActive": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1345,7 +1381,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1759411674491
+        "settingsSyncVersion": 1759748268921
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

@@ -16,6 +16,10 @@
 [class*="channelTextArea_"]
   > [class*="scrollableContainer_"]
   > [class*="inner_"] {
-  padding-left: 0 !important;
+  padding-left: 50 !important;
 }
 
+[class*="attachWrapper_"] {
+  padding-left: 0px !important;
+  padding-right: 5px !important;
+}

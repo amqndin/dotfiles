@@ -245,7 +245,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 4.6,
+            "zoom": 4,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -298,7 +298,7 @@
             "inlineEdits": false,
             "ignoreBots": true,
             "ignoreSelf": true,
-            "ignoreUsers": "1306952949225885806",
+            "ignoreUsers": "",
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "showEditDiffs": false,
@@ -537,13 +537,13 @@
                     "find": "/https?:\\/\\/(www\\.)?reddit\\.com/",
                     "replace": "https://rxddit.com",
                     "onlyIfIncludes": "",
-                    "scope": "othersMessages"
+                    "scope": "allMessages"
                 },
                 {
                     "find": "/https?:\\/\\/(www\\.)?(twitter|x)\\.com/",
-                    "replace": "fixupx.com",
+                    "replace": "https://fixupx.com",
                     "onlyIfIncludes": "",
-                    "scope": "othersMessages"
+                    "scope": "allMessages"
                 },
                 {
                     "find": "",
@@ -1000,9 +1000,9 @@
             "enabled": false
         },
         "MessageLoggerEnhanced": {
-            "enabled": false,
+            "enabled": true,
             "saveMessages": true,
-            "saveImages": false,
+            "saveImages": true,
             "sortNewest": true,
             "cacheMessagesFromServers": false,
             "ignoreBots": false,
@@ -1021,7 +1021,9 @@
             "attachmentFileExtensions": "png,jpg,jpeg,gif,webp,mp4,webm,mp3,ogg,wav",
             "cacheLimit": 1000,
             "whitelistedIds": "",
-            "blacklistedIds": ""
+            "blacklistedIds": "",
+            "imageCacheDir": "/home/amandin/.config/equibop/MessageLoggerData/savedImages",
+            "logsDir": "/home/amandin/.config/equibop/MessageLoggerData"
         },
         "MessageTranslate": {
             "enabled": false
@@ -1176,7 +1178,10 @@
             "enabled": false
         },
         "SoundBoardLogger": {
-            "enabled": false
+            "enabled": false,
+            "FileType": ".ogg",
+            "soundVolume": 0.5,
+            "IconLocation": "toolbar"
         },
         "SplitLargeMessages": {
             "enabled": false
@@ -1309,7 +1314,8 @@
             "enabled": true,
             "disableCreateDMButton": false,
             "disableDMContextMenu": false,
-            "noMirroredCamera": false
+            "noMirroredCamera": false,
+            "removeActivitySection": false
         },
         "WebContextMenus": {
             "enabled": true
@@ -1346,7 +1352,7 @@
             "enabled": false
         },
         "AudioPlayerAPI": {
-            "enabled": false
+            "enabled": true
         },
         "SortFriends": {
             "enabled": false
@@ -1368,6 +1374,9 @@
         },
         "StatusWhileActive": {
             "enabled": false
+        },
+        "ZipPreview": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1381,7 +1390,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1760179985806
+        "settingsSyncVersion": 1760378719740
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

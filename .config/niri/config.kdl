@@ -297,6 +297,7 @@ layout {
 // spawn-at-startup "waybar"
 spawn-at-startup "zen-browser"
 spawn-at-startup "foot"
+spawn-at-startup "~/.config/autostart/startup.sh"
 
 // environment {
 //     ELECTRON_OZONE_PLATFORM_HINT "auto"

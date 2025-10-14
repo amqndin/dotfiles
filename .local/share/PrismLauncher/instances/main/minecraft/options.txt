@@ -54,7 +54,7 @@ highContrastBlockOutline:false
 narratorHotkey:true
 resourcePacks:["vanilla","fabric","file/SodiumTranslations.zip","file/Mod Menu Helper.zip","file/Chat Reporting Helper.zip","continuity:glass_pane_culling_fix","continuity:default","file/Catppuccin Mocha Blue.zip"]
 incompatibleResourcePacks:[]
-lastServer:play.minemalia.com
+lastServer:stray.gg
 lang:en_us
 chatVisibility:0
 chatOpacity:1.0

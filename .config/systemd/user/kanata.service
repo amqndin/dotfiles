@@ -4,7 +4,7 @@ StartLimitBurst=0
 StartLimitIntervalSec=0
 
 [Service]
-ExecStart=/usr/bin/kanata --cfg %h/.config/kanata/kanata.kbd
+ExecStart=env fish -c "kanata --cfg %h/.config/kanata/kanata.kbd"
 Restart=always
 Type=simple
 

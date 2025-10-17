@@ -29,6 +29,7 @@
   spc (t! layer spc navigation)
   m (t! layer m mdown)
   v (t! layer v vdown)
+  e (t! layer e edown)
 
   caps esc
 
@@ -58,6 +59,15 @@
   k (cmd fish -c "~/dotfiles/scripts/internal/switch-audio-output.fish")
   j (cmd fish -c "fnottctl dismiss-with-default-action")
   m (cmd fish -c "fnottctl dismiss")
+)
+
+(deflayermap (edown)
+  j (cmd fish -c "niri msg action focus-workspace 1")
+  k (cmd fish -c "niri msg action focus-workspace 2")
+  l (cmd fish -c "niri msg action focus-workspace 3")
+  ; (cmd fish -c "niri msg action focus-workspace 4")
+  i (cmd fish -c "niri msg action focus-workspace 5")
+  m (cmd fish -c "niri msg action focus-workspace 6")
 )
 
 (deflayermap (transparent)

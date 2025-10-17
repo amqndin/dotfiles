@@ -1,0 +1,10 @@
+[Unit]
+Description=Set mem_sleep to s2idle
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo s2idle > /sys/power/mem_sleep'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

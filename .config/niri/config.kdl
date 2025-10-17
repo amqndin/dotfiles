@@ -351,8 +351,19 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
-debug {
-  honor-xdg-activation-with-invalid-serial
+window-rule {
+    match app-id="foot"
+    open-on-workspace "terminal"
+}
+
+window-rule {
+    match app-id="zen"
+    open-on-workspace "browser"
+}
+
+window-rule {
+    match app-id="equibop"
+    open-on-workspace "discord"
 }
 
 // Open the Zen picture-in-picture player as floating by default.
@@ -629,3 +640,13 @@ cursor {
     hide-when-typing
     hide-after-inactive-ms 1000
 }
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+workspace "terminal" {}
+
+workspace "browser" {}
+
+workspace "discord" {}

@@ -297,7 +297,7 @@ layout {
 // spawn-at-startup "waybar"
 spawn-at-startup "zen-browser"
 spawn-at-startup "foot"
-spawn-at-startup "~/.config/autostart/startup.sh"
+spawn-at-startup "~/scripts/internal/startup.sh"
 
 // environment {
 //     ELECTRON_OZONE_PLATFORM_HINT "auto"
@@ -357,13 +357,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id="zen"
-    open-on-workspace "browser"
+    match app-id="equibop"
+    open-on-workspace "discord"
 }
 
 window-rule {
-    match app-id="equibop"
-    open-on-workspace "discord"
+    match app-id="zen"
+    open-on-workspace "browser"
 }
 
 // Open the Zen picture-in-picture player as floating by default.
@@ -615,6 +615,6 @@ debug {
 
 workspace "terminal" {}
 
-workspace "browser" {}
-
 workspace "discord" {}
+
+workspace "browser" {}

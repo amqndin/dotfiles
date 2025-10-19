@@ -2,9 +2,11 @@
 Description=Kanata
 StartLimitBurst=0
 StartLimitIntervalSec=0
+After=graphical-session.target niri.service
+PartOf=niri.service
 
 [Service]
-ExecStart=env fish -c "kanata --cfg %h/.config/kanata/kanata.kbd"
+ExecStart=/usr/bin/kanata --cfg %h/.config/kanata/kanata.kbd
 Restart=always
 Type=simple
 

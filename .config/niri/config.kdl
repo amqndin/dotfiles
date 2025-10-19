@@ -334,8 +334,7 @@ animations {
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
     workspace-switch {
-        duration-ms 200
-        curve "ease-out-expo"
+        spring damping-ratio=1.0 stiffness=3000 epsilon=0.0001
     }
 }
 

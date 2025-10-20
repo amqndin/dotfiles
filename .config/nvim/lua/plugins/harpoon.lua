@@ -20,15 +20,16 @@ return {
           function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end,
           desc = "Toggle quick menu",
         }
-        maps.n["<C-x>"] = {
-          function()
-            vim.ui.input({ prompt = "Harpoon mark index: " }, function(input)
-              local num = tonumber(input)
-              if num then require("harpoon"):list():select(num) end
-            end)
-          end,
-          desc = "Goto index of mark",
-        }
+        maps.n["<C-x>"] = false
+        -- maps.n["<C-x>"] = {
+        --   function()
+        --     vim.ui.input({ prompt = "Harpoon mark index: " }, function(input)
+        --       local num = tonumber(input)
+        --       if num then require("harpoon"):list():select(num) end
+        --     end)
+        --   end,
+        --   desc = "Goto index of mark",
+        -- }
         maps.n["<C-p>"] = { function() require("harpoon"):list():prev() end, desc = "Goto previous mark" }
         maps.n["<C-n>"] = { function() require("harpoon"):list():next() end, desc = "Goto next mark" }
       end,

@@ -4,4 +4,4 @@ After=graphical-session.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/amandin/scripts/internal/daily.sh
+ExecStart=/home/amandin/dotfiles/scripts/internal/daily.sh

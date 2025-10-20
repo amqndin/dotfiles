@@ -78,6 +78,10 @@
   ; (cmd fish -c "niri msg action focus-workspace 4")
   i (cmd fish -c "niri msg action focus-workspace 5")
   m (cmd fish -c "niri msg action focus-workspace 6")
+  o (cmd fish -c "niri msg action focus-workspace 7")
+  u (cmd fish -c "niri msg action focus-workspace 8")
+  . (cmd fish -c "niri msg action focus-workspace 9")
+  , (cmd fish -c "niri msg action focus-workspace 10")
 )
 
 (deflayermap (transparent)

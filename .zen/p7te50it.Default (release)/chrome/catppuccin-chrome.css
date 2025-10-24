@@ -133,3 +133,17 @@
     color: #cdd6f4 !important;
   }
 }
+
+:root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
+
+  & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer,
+  & #tabbrowser-tabpanels[dragging-split="true"] {
+    &.browserSidebarContainer {
+      & browser[type="content"] {
+        &:not([transparent="true"]) {
+          background: var(--zen-main-browser-background) !important;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,0 @@
-[Unit]
-Wants=graphical-session.target
-After=graphical-session.target
-
-[Service]
-Type=oneshot
-ExecStart=/home/amandin/dotfiles/scripts/internal/daily.sh

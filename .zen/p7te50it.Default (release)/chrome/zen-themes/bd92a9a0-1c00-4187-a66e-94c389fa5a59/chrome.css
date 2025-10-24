@@ -169,6 +169,7 @@
     border-radius: 8px !important;
     /* Ensure child elements don't overflow */
     overflow: hidden !important;
+    padding-top: 0px !important;
   }
 
   #navigator-toolbox[zen-right-side="true"] {

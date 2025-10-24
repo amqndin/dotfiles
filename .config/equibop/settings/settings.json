@@ -176,7 +176,7 @@
             "enableEmojiBypass": true,
             "transformEmojis": true,
             "transformStickers": true,
-            "transformCompoundSentence": false,
+            "transformCompoundSentence": true,
             "stickerSize": 160,
             "hyperLinkText": "{{NAME}}",
             "useHyperLinks": true,
@@ -245,7 +245,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 7.599999999999999,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -462,7 +462,9 @@
             "enabled": false
         },
         "ShowConnections": {
-            "enabled": true
+            "enabled": true,
+            "iconSpacing": 1,
+            "iconSize": 32
         },
         "ShowHiddenChannels": {
             "enabled": false
@@ -1380,6 +1382,9 @@
         },
         "KeyboardNavigation": {
             "enabled": false
+        },
+        "AutoZipper": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1393,7 +1398,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1760859092347
+        "settingsSyncVersion": 1761322143506
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

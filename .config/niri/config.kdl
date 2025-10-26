@@ -362,7 +362,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="foot"
+    match app-id="foot" at-startup=true
     open-on-workspace "terminal"
 }
 

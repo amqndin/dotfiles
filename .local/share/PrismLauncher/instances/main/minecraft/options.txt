@@ -16,7 +16,7 @@ fullscreen:false
 gamma:1.0
 graphicsMode:0
 guiScale:2
-maxFps:260
+maxFps:130
 inactivityFpsLimit:"afk"
 mipmapLevels:4
 narrator:0

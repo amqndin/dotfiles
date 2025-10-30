@@ -26,7 +26,7 @@ if not set -q TMUX
 end
 
 function man
-    command man $argv | nvim -c "se syn=man"
+    command man $argv | bat -l man
 end
 
 function y

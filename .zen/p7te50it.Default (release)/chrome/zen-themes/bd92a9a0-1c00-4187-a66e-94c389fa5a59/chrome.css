@@ -73,12 +73,12 @@
 
       &[pinned]:not([zen-essential]):hover .tab-reset-button,
       &[pinned][visuallyselected]:not([zen-essential]) .tab-reset-button {
-        display: block !important;
+        display: none !important;
       }
 
       &:not([pinned]):hover .tab-close-button,
       &[visuallyselected]:not([pinned]) .tab-close-button {
-        display: block !important;
+        display: none !important;
       }
 
       &[zen-essential] {

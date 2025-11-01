@@ -381,6 +381,8 @@ window-rule {
 window-rule {
     match app-id="Minecraft"
     match app-id="prismlauncher"
+    match app-id="lunarclient"
+    match app-id="Lunar Client"
     open-on-workspace "game"
 }
 

@@ -27,13 +27,13 @@
             "enabled": true
         },
         "MemberListDecoratorsAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MessageAccessoriesAPI": {
             "enabled": true
         },
         "MessageDecorationsAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MessageEventsAPI": {
             "enabled": true
@@ -394,7 +394,13 @@
             "enabled": true
         },
         "PlatformIndicators": {
-            "enabled": false
+            "enabled": true,
+            "list": true,
+            "profiles": true,
+            "messages": false,
+            "colorMobileIndicator": true,
+            "showBots": false,
+            "ConsoleIcon": "vencord"
         },
         "PreviewMessage": {
             "enabled": false
@@ -669,7 +675,7 @@
             "enabled": false
         },
         "NicknameIconsAPI": {
-            "enabled": false
+            "enabled": true
         },
         "ILoveSpam": {
             "enabled": false
@@ -1097,7 +1103,7 @@
             "enabled": false
         },
         "PlatformSpoofer": {
-            "enabled": false,
+            "enabled": true,
             "platform": "android"
         },
         "PolishWording": {
@@ -1401,7 +1407,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1761752647080
+        "settingsSyncVersion": 1761819250365
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

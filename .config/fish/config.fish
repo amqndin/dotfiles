@@ -26,7 +26,7 @@ if not set -q TMUX
 end
 
 function man
-    command man $argv | bat -l man
+    command man $argv | bat -p -l man
 end
 
 function y

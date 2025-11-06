@@ -430,7 +430,7 @@
             "enabled": false
         },
         "ReverseImageSearch": {
-            "enabled": false
+            "enabled": true
         },
         "ReviewDB": {
             "enabled": false
@@ -1031,7 +1031,8 @@
             "whitelistedIds": "",
             "blacklistedIds": "",
             "imageCacheDir": "/home/amandin/.config/equibop/MessageLoggerData/savedImages",
-            "logsDir": "/home/amandin/.config/equibop/MessageLoggerData"
+            "logsDir": "/home/amandin/.config/equibop/MessageLoggerData",
+            "hideMessageFromMessageLoggers": false
         },
         "MessageTranslate": {
             "enabled": false
@@ -1103,7 +1104,7 @@
             "enabled": false
         },
         "PlatformSpoofer": {
-            "enabled": true,
+            "enabled": false,
             "platform": "android"
         },
         "PolishWording": {
@@ -1394,6 +1395,18 @@
         },
         "arRPCBun": {
             "enabled": true
+        },
+        "Boo": {
+            "enabled": false
+        },
+        "CleanUserArea": {
+            "enabled": false
+        },
+        "SongLink": {
+            "enabled": false
+        },
+        "UniversalMention": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1407,7 +1420,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1761819250365
+        "settingsSyncVersion": 1762435141663
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

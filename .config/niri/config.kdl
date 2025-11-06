@@ -142,7 +142,6 @@ output "eDP-1" {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
-    background-color "transparent"
     // Set gaps around windows in logical pixels.
     gaps 16
 
@@ -348,19 +347,6 @@ animations {
 layer-rule {
     match namespace="^notifications$"
     block-out-from "screencast"
-}
-
-// Put swaybg inside the overview backdrop.
-layer-rule {
-    match namespace="swww-daemon"
-    place-within-backdrop true
-}
-
-// Optionally, disable the workspace shadows in the overview.
-overview {
-    workspace-shadow {
-        off
-    }
 }
 
 // Move steam notifications to the bottom right.

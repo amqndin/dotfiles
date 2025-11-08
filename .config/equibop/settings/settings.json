@@ -2,9 +2,7 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [
-        "https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css"
-    ],
+    "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
         "midnight-catppuccin-mocha.theme.css",
@@ -290,13 +288,13 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": true,
+            "enabled": false,
             "deleteStyle": "overlay",
             "logDeletes": true,
             "collapseDeleted": false,
             "logEdits": true,
             "inlineEdits": false,
-            "ignoreBots": true,
+            "ignoreBots": false,
             "ignoreSelf": true,
             "ignoreUsers": "",
             "ignoreChannels": "",
@@ -1008,12 +1006,12 @@
             "enabled": false
         },
         "MessageLoggerEnhanced": {
-            "enabled": true,
+            "enabled": false,
             "saveMessages": true,
             "saveImages": true,
             "sortNewest": true,
             "cacheMessagesFromServers": false,
-            "ignoreBots": false,
+            "ignoreBots": true,
             "ignoreWebhooks": false,
             "ignoreSelf": false,
             "ignoreMutedGuilds": false,
@@ -1032,7 +1030,9 @@
             "blacklistedIds": "",
             "imageCacheDir": "/home/amandin/.config/equibop/MessageLoggerData/savedImages",
             "logsDir": "/home/amandin/.config/equibop/MessageLoggerData",
-            "hideMessageFromMessageLoggers": false
+            "hideMessageFromMessageLoggers": false,
+            "ShowWhereMessageIsFrom": false,
+            "hideMessageFromMessageLoggersDeletedMessage": "redacted eh"
         },
         "MessageTranslate": {
             "enabled": false
@@ -1407,6 +1407,9 @@
         },
         "UniversalMention": {
             "enabled": false
+        },
+        "Snowfall": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1420,7 +1423,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1762435141663
+        "settingsSyncVersion": 1762599844121
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

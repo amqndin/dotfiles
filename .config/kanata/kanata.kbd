@@ -30,7 +30,6 @@
   m (t! layer m mdown)
   v (t! layer v vdown)
   e (t! layer e edown)
-  ;; i (t! layer i idown)
 
   caps esc
 
@@ -61,19 +60,6 @@
   j (cmd fish -c "fnottctl dismiss-with-default-action")
   m (cmd fish -c "fnottctl dismiss")
 )
-
-;; (deflayermap (idown)
-;;   f (cmd fish -c "niri msg action focus-workspace 1")
-;;   d (cmd fish -c "niri msg action focus-workspace 2")
-;;   s (cmd fish -c "niri msg action focus-workspace 3")
-;;   a (cmd fish -c "niri msg action focus-workspace 4")
-;;   e (cmd fish -c "niri msg action focus-workspace 5")
-;;   w (cmd fish -c "niri msg action focus-workspace 6")
-;;   r (cmd fish -c "niri msg action focus-workspace 7")
-;;   v (cmd fish -c "niri msg action focus-workspace 8")
-;;   c (cmd fish -c "niri msg action focus-workspace 9")
-;;   x (cmd fish -c "niri msg action focus-workspace 10")
-;; )
 
 (deflayermap (edown)
   j (cmd fish -c "niri msg action focus-workspace 1")

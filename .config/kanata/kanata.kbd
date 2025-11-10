@@ -1,7 +1,7 @@
 (defcfg
   process-unmapped-keys yes
   danger-enable-cmd yes
-  allow-hardware-repeat false
+  ;; allow-hardware-repeat false
   concurrent-tap-hold yes
   log-layer-changes no
 )
@@ -25,7 +25,7 @@
 )
 
 (deflayermap (base)
-  lmet (layer-switch transparent)
+  lmet (layer-switch empty)
   spc (t! layer spc navigation)
   m (t! layer m mdown)
   v (t! layer v vdown)
@@ -53,6 +53,7 @@
 (deflayermap (mdown)
   f bspc
   d C-bspc
+  s del
 )
 
 (deflayermap (vdown)
@@ -74,7 +75,7 @@
   u (cmd fish -c "niri msg action focus-workspace 10")
 )
 
-(deflayermap (transparent)
+(deflayermap (empty)
   lmet (layer-switch base)
 )
 
@@ -86,11 +87,6 @@
 
   u pgdn
   i pgup
-
-  f lctl
-  d lsft
-  s lalt
-  a lmet
 
   r lrld
   e caps

@@ -47,6 +47,8 @@ return {
     map.n["<Leader>um"] = { "<Cmd>RenderMarkdown toggle<CR>", desc = "Toggle markdown render" }
     map.x["g/"] = { "<Esc>/\\%V", desc = "Search within selection" }
 
+    map.n["<Leader>Ml"] = { "<Cmd>OverseerLoadBundle<CR>", desc = "Load bundle" }
+
     for _, mode in ipairs { "t", "i", "c" } do
       map[mode]["<C-BS>"] = { "<C-w>", desc = "Delete word" }
     end

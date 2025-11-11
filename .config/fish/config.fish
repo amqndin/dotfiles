@@ -14,6 +14,7 @@ alias cava-mic="cava -p ~/.config/cava/config_mic"
 alias refish="source ~/.config/fish/config.fish"
 alias cp="cp -i"
 alias mv="mv -i"
+alias npm="pnpm"
 alias ls="eza --icons --color=always --group-directories-first"
 
 # Set a consistent name for your main session
@@ -61,4 +62,3 @@ set -gx FZF_DEFAULT_OPTS "\
 starship init fish | source
 zoxide init fish --cmd cd | source
 fzf --fish | source
-thefuck --alias | source

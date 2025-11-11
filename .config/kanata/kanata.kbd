@@ -1,7 +1,7 @@
 (defcfg
   process-unmapped-keys yes
   danger-enable-cmd yes
-  ;; allow-hardware-repeat false
+  allow-hardware-repeat false
   concurrent-tap-hold yes
   log-layer-changes no
 )

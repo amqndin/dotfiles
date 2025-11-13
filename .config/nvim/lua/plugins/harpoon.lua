@@ -15,21 +15,20 @@ return {
         maps.n["<A-L>"] = { function() require("harpoon"):list():select(3) end, desc = "Select mark 3" }
         maps.n["<A-:>"] = { function() require("harpoon"):list():select(4) end, desc = "Select mark 4" }
 
-        maps.n[prefix .. "a"] = { function() require("harpoon"):list():add() end, desc = "Add file" }
-        maps.n[prefix .. "e"] = {
+        maps.n[prefix .. "f"] = { function() require("harpoon"):list():add() end, desc = "Add file" }
+        maps.n[prefix .. "d"] = {
           function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end,
           desc = "Toggle quick menu",
         }
-        maps.n["<C-x>"] = false
-        -- maps.n["<C-x>"] = {
-        --   function()
-        --     vim.ui.input({ prompt = "Harpoon mark index: " }, function(input)
-        --       local num = tonumber(input)
-        --       if num then require("harpoon"):list():select(num) end
-        --     end)
-        --   end,
-        --   desc = "Goto index of mark",
-        -- }
+        maps.n[prefix .. "s"] = {
+          function()
+            vim.ui.input({ prompt = "Harpoon mark index: " }, function(input)
+              local num = tonumber(input)
+              if num then require("harpoon"):list():select(num) end
+            end)
+          end,
+          desc = "Goto index of mark",
+        }
         maps.n["<C-p>"] = { function() require("harpoon"):list():prev() end, desc = "Goto previous mark" }
         maps.n["<C-n>"] = { function() require("harpoon"):list():next() end, desc = "Goto next mark" }
       end,

@@ -1396,9 +1396,6 @@
         "arRPCBun": {
             "enabled": true
         },
-        "Boo": {
-            "enabled": false
-        },
         "CleanUserArea": {
             "enabled": false
         },
@@ -1409,6 +1406,9 @@
             "enabled": false
         },
         "Snowfall": {
+            "enabled": false
+        },
+        "Ghosted": {
             "enabled": false
         }
     },
@@ -1423,7 +1423,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1762599844121
+        "settingsSyncVersion": 1763029525065
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

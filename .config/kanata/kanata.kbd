@@ -11,9 +11,6 @@
 (defvar
   repress-timeout 180
   hold-delay 180
-
-  tt $repress-timeout
-  ht $hold-delay
 )
 
 (deftemplate layer (tap-action layer-name)

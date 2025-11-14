@@ -21,12 +21,17 @@
   (tap-hold-release $repress-timeout $hold-delay $tap-action $hold-action)
 )
 
+(deftemplate niri (action argument)
+  (cmd "niri" "msg" "action" $action $argument)
+)
+
 (deflayermap (base)
   lmet (layer-switch empty)
   spc (t! layer spc navigation)
   m (t! layer m mdown)
   v (t! layer v vdown)
   e (t! layer e edown)
+  i (t! layer i idown)
 
   caps esc
 
@@ -47,6 +52,10 @@
   ))
 )
 
+(deflayermap (idown)
+  f (cmd wl-kbptr -o modes=tile,bisect,click)
+)
+
 (deflayermap (mdown)
   f bspc
   d C-bspc
@@ -60,16 +69,16 @@
 )
 
 (deflayermap (edown)
-  j (cmd fish -c "niri msg action focus-workspace 1")
-  k (cmd fish -c "niri msg action focus-workspace 2")
-  l (cmd fish -c "niri msg action focus-workspace 3")
-  ; (cmd fish -c "niri msg action focus-workspace 4")
-  i (cmd fish -c "niri msg action focus-workspace 5")
-  o (cmd fish -c "niri msg action focus-workspace 7")
-  m (cmd fish -c "niri msg action focus-workspace 6")
-  . (cmd fish -c "niri msg action focus-workspace 8")
-  , (cmd fish -c "niri msg action focus-workspace 9")
-  u (cmd fish -c "niri msg action focus-workspace 10")
+  j (t! niri focus-workspace 1)
+  k (t! niri focus-workspace 2)
+  l (t! niri focus-workspace 3)
+  ; (t! niri focus-workspace 4)
+  i (t! niri focus-workspace 5)
+  o (t! niri focus-workspace 7)
+  m (t! niri focus-workspace 6)
+  . (t! niri focus-workspace 8)
+  , (t! niri focus-workspace 9)
+  u (t! niri focus-workspace 10)
 )
 
 (deflayermap (empty)

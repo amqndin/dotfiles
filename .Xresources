@@ -1,2 +1,6 @@
 Xcursor.theme: Bibata-Modern-Classic
 Xcursor.size: 20
+XTerm*faceName: JetBrainsMono Nerd Font
+XTerm*faceSize: 12.5
+XTerm*foreground: #cdd6f4
+XTerm*background: #1e1e2e

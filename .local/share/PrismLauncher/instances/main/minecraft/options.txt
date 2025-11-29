@@ -130,11 +130,11 @@ key_key.hotbar.1:key.keyboard.1
 key_key.hotbar.2:key.keyboard.2
 key_key.hotbar.3:key.keyboard.3
 key_key.hotbar.4:key.keyboard.4
-key_key.hotbar.5:key.keyboard.5
-key_key.hotbar.6:key.keyboard.6
-key_key.hotbar.7:key.keyboard.7
-key_key.hotbar.8:key.keyboard.8
-key_key.hotbar.9:key.keyboard.9
+key_key.hotbar.5:key.keyboard.z
+key_key.hotbar.6:key.keyboard.x
+key_key.hotbar.7:key.keyboard.c
+key_key.hotbar.8:key.keyboard.v
+key_key.hotbar.9:key.keyboard.b
 key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
 key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.fabrishot.screenshot:key.keyboard.f9

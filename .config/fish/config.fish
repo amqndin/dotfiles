@@ -1,6 +1,4 @@
-if status is-interactive
-  # Commands to run in interactive sessions can go here
-end
+not status is-interactive && return
 
 fish_vi_key_bindings
 fish_config theme choose "Catppuccin Mocha"
@@ -8,6 +6,7 @@ set fish_cursor_insert block
 set -U fish_greeting ""
 
 alias nv="nvim"
+alias ff="fastfetch"
 alias cat="bat"
 alias grep="rg"
 alias cava-mic="cava -p ~/.config/cava/config_mic"
@@ -16,15 +15,11 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias npm="pnpm"
 alias ls="eza --icons --color=always --group-directories-first"
+abbr -a topgrade topgrade -y --no-self-update
 
-# Set a consistent name for your main session
 set -l session_name "main"
 
 if not set -q TMUX
-    # Check if a session with the name "main-session" exists.
-    # If it does, attach (-t) to it.
-    # If it does NOT exist, create (-s) a new one with that name.
-    # The -d option detaches the current shell after the new session starts.
     tmux attach-session -t $session_name || tmux new-session -s $session_name
 end
 

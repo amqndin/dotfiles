@@ -53,7 +53,7 @@
 )
 
 (deflayermap (idown)
-  f (cmd wl-kbptr -o modes=tile,bisect,click)
+  f (cmd wl-kbptr)
 )
 
 (deflayermap (mdown)
@@ -64,8 +64,8 @@
 
 (deflayermap (vdown)
   k (cmd fish -c "~/dotfiles/scripts/internal/switch-audio-output.fish")
-  j (cmd fish -c "fnottctl dismiss-with-default-action")
-  m (cmd fish -c "fnottctl dismiss")
+  j (cmd fnottctl dismiss-with-default-action)
+  m (cmd fnottctl dismiss)
 )
 
 (deflayermap (edown)

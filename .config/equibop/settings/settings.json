@@ -222,7 +222,8 @@
         },
         "GameActivityToggle": {
             "enabled": true,
-            "oldIcon": false
+            "oldIcon": false,
+            "location": "PANEL"
         },
         "GifPaste": {
             "enabled": false
@@ -243,7 +244,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 2.2,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -377,9 +378,6 @@
             "enabled": false
         },
         "PermissionsViewer": {
-            "enabled": false
-        },
-        "petpet": {
             "enabled": false
         },
         "PictureInPicture": {
@@ -1131,9 +1129,6 @@
         "RemixMe": {
             "enabled": false
         },
-        "RepeatMessage": {
-            "enabled": false
-        },
         "ReplyPingControl": {
             "enabled": false
         },
@@ -1263,7 +1258,9 @@
         },
         "UserPFP": {
             "enabled": true,
-            "preferNitro": true
+            "preferNitro": true,
+            "dbSource": "https://userpfp.github.io/UserPFP/source/data.json",
+            "databaseSource": "https://userpfp.github.io/UserPFP/source/data.json"
         },
         "UwUifier": {
             "enabled": false
@@ -1410,6 +1407,30 @@
         },
         "Ghosted": {
             "enabled": false
+        },
+        "PetPet": {
+            "enabled": false
+        },
+        "RepeatMessages": {
+            "enabled": false
+        },
+        "MessageNotifier": {
+            "enabled": false
+        },
+        "BetterUserArea": {
+            "enabled": false
+        },
+        "GlobalNicknames": {
+            "enabled": false
+        },
+        "RichMagnetLinks": {
+            "enabled": false
+        },
+        "VoiceRejoin": {
+            "enabled": false
+        },
+        "ExitSounds": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1423,10 +1444,14 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1763029525065
+        "settingsSyncVersion": 1764358980406
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
     "userCssVars": {},
-    "themeNames": {}
+    "themeNames": {},
+    "uiElements": {
+        "chatBarButtons": {},
+        "messagePopoverButtons": {}
+    }
 }

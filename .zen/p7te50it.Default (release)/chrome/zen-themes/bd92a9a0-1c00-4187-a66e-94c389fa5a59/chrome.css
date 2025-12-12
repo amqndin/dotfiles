@@ -130,6 +130,10 @@
     justify-content: unset !important;
   }
 
+  .pinned-tabs-container-separator {
+    display: none !important;
+  }
+
   /* ====== MODIFICATIONS START ====== */
   /* When toolbar is NOT expanded (collapsed state) */
   #navigator-toolbox:not([zen-has-hover], [has-popup-menu], [movingtab]) #titlebar:not(#titlebar:hover,

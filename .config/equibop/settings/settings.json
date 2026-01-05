@@ -6,7 +6,8 @@
     "eagerPatches": false,
     "enabledThemes": [
         "midnight-catppuccin-mocha.theme.css",
-        "clean.theme.css"
+        "clean.theme.css",
+        "catppuccin-mocha.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -80,7 +81,8 @@
             "enabled": true
         },
         "BetterGifPicker": {
-            "enabled": true
+            "enabled": true,
+            "keepOpen": false
         },
         "BetterNotesBox": {
             "enabled": false
@@ -197,7 +199,8 @@
             "enabled": false
         },
         "FixImagesQuality": {
-            "enabled": true
+            "enabled": true,
+            "originalImagesInChat": false
         },
         "FixSpotifyEmbeds": {
             "enabled": false
@@ -244,7 +247,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 3.999999999999996,
+            "zoom": 1,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -583,7 +586,8 @@
             "enabled": true,
             "alternativeFormatting": true,
             "showRoleColors": true,
-            "showAvatars": true
+            "showAvatars": true,
+            "amITyping": true
         },
         "Unindent": {
             "enabled": false
@@ -664,9 +668,6 @@
         "IloveSpam": {
             "enabled": false
         },
-        "Oneko": {
-            "enabled": false
-        },
         "EquicordToolbox": {
             "enabled": false
         },
@@ -696,9 +697,6 @@
         },
         "AlwaysExpandProfiles": {
             "enabled": false
-        },
-        "AmITyping": {
-            "enabled": true
         },
         "Anammox": {
             "enabled": false
@@ -733,7 +731,7 @@
             "enabled": false
         },
         "BetterBlockedUsers": {
-            "enabled": false
+            "enabled": true
         },
         "BetterCommands": {
             "enabled": false
@@ -846,7 +844,7 @@
             "enabled": false
         },
         "FollowVoiceUser": {
-            "enabled": false
+            "enabled": true
         },
         "FontLoader": {
             "enabled": false
@@ -977,7 +975,7 @@
             "enabled": false
         },
         "LimitMiddleClickPaste": {
-            "enabled": false
+            "enabled": true
         },
         "LoginWithQR": {
             "enabled": false
@@ -1260,7 +1258,8 @@
             "enabled": true,
             "preferNitro": true,
             "dbSource": "https://userpfp.github.io/UserPFP/source/data.json",
-            "databaseSource": "https://userpfp.github.io/UserPFP/source/data.json"
+            "databaseSource": "https://userpfp.github.io/UserPFP/source/data.json",
+            "overrideServerAvatars": true
         },
         "UwUifier": {
             "enabled": false
@@ -1321,7 +1320,10 @@
             "disableCreateDMButton": false,
             "disableDMContextMenu": false,
             "noMirroredCamera": false,
-            "removeActivitySection": false
+            "removeActivitySection": false,
+            "showYourOwnActivityButtons": false,
+            "noDefaultHangStatus": false,
+            "refreshSlashCommands": false
         },
         "WebContextMenus": {
             "enabled": true
@@ -1440,6 +1442,21 @@
         },
         "UrlHighlighter": {
             "enabled": false
+        },
+        "IdleAutoRestart": {
+            "enabled": false
+        },
+        "UserAreaAPI": {
+            "enabled": true
+        },
+        "MicLoopbackTester": {
+            "enabled": false
+        },
+        "MoreQuickReactions": {
+            "enabled": false
+        },
+        "CursorBuddy": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1453,7 +1470,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1765276248450
+        "settingsSyncVersion": 1767602026678
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
@@ -1462,5 +1479,7 @@
     "uiElements": {
         "chatBarButtons": {},
         "messagePopoverButtons": {}
-    }
+    },
+    "enableOnlineThemes": true,
+    "pinnedThemes": []
 }

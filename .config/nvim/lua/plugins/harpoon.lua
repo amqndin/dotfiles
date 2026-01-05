@@ -7,7 +7,7 @@ return {
       "AstroNvim/astrocore",
       opts = function(_, opts)
         local maps = opts.mappings
-        local prefix = "<Leader>j"
+        local prefix = "<Leader>h"
         maps.n[prefix] = { desc = require("astroui").get_icon("Harpoon", 1, true) .. "Harpoon" }
 
         maps.n["<A-J>"] = { function() require("harpoon"):list():select(1) end, desc = "Select mark 1" }

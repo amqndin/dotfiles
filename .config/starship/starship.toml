@@ -5,12 +5,12 @@
 add_newline = false
 
 # A minimal left prompt
-format = """$python$directory
+format = """$python$directory$status$cmd_duration$git_branch${custom.git_status_dirty}$git_status
 $character"""
 
 # move the rest of the prompt to the right
 #right_format = """$status$git_branch${custom.git_status_dirty}$git_status"""
-right_format = """$status$cmd_duration$git_branch${custom.git_status_dirty}$git_status"""
+# right_format = """$status$cmd_duration$git_branch${custom.git_status_dirty}$git_status"""
 
 palette="catppuccin_mocha"
 
@@ -44,9 +44,9 @@ mantle = "#181825"
 crust = "#11111b"
 
 [character]
-success_symbol = "[❯](blue)"
+success_symbol = "[❯](mauve)"
 error_symbol = "[❯](red)"
-vicmd_symbol = "[❮](mauve)"
+vicmd_symbol = "[❮](green)"
 
 [python]
 format = '[(\($virtualenv\) )]($style)'

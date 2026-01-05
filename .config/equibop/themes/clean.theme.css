@@ -12,8 +12,8 @@
  * @name Clean input box
 */
 
-.jumpToPresentBar__0f481,
-.buttons__74017 {
+._0f481cbbd7530492-jumpToPresentBar,
+._740174f3d6a2c8fe-buttons {
   display: none;
 }
 
@@ -22,20 +22,30 @@
 */
 
 @media (max-width: 1100px) {
-  [class*="sidebar_"] {
+  [class$="sidebar"] {
     width: 200px;
 
     .vc-typing-indicator,
     .vc-channelemojis-emoji,
-    [class*="guildIconV2Container_"] {
+    [class$="guildIconV2Container"] {
+      display: none;
+    }
+
+    [class$="containerDefault"] {
+      [role="img"] {
+        display: none;
+      }
+    }
+  }
+
+  [class$="chat"] {
+    [class$="container"]:has(> [class*="-membersWrap"]) {
       display: none;
     }
   }
 
-  [class*="chat_"] {
-    [class*="container_"]:has(> [class*="membersWrap_"]) {
-      display: none;
-    }
+  [class$="channelTextArea"] [class$="buttons"] {
+    display: none !important;
   }
 }
 

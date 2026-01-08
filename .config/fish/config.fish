@@ -20,7 +20,25 @@ abbr -a topgrade topgrade -y --no-self-update
 set -l session_name "main"
 
 if not set -q TMUX
-    tmux attach-session -t $session_name || tmux new-session -s $session_name
+    # 1. Look for a session that is NOT currently attached to any window
+    set -l zombie_session (tmux list-sessions -F "#{session_name} #{session_attached}" 2>/dev/null | string match -r '.* 0$' | head -n 1 | cut -d' ' -f1)
+
+    if test -n "$zombie_session"
+        # 2. If a session exists but isn't being used, take it
+        exec tmux attach-session -t "$zombie_session"
+    else
+        # 3. If all sessions are in use, or none exist, create a new one
+        set -l session_count (tmux list-sessions 2>/dev/null | count)
+        
+        if test "$session_count" -eq 0
+            # Brand new start
+            exec tmux new-session -s "main"
+        else
+            # Create a unique window session that dies when the window closes
+            set -l session_id "fish_$fish_pid"
+            exec tmux new-session -s "$session_id" \; set-option destroy-unattached on
+        end
+    end
 end
 
 function man

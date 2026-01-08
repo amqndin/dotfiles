@@ -1,4 +1,4 @@
 --no-folding
 --ignore=.stowrc
---ignore=./scripts/*
---ignore=./wallpaper/*
+--ignore=scripts/*
+--ignore=wallpaper/*

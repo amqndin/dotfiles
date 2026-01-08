@@ -342,6 +342,7 @@ window-rule {
 
 window-rule {
     match app-id="equibop"
+    match app-id="discord"
     open-on-workspace "discord"
 }
 

@@ -15,7 +15,6 @@
     "middleClickAutoscroll": true,
     "arRPCDisabled": false,
     "arRPCProcessScanning": true,
-    "enableSplashScreen": true,
-    "arRPCDebug": false,
-    "hardwareAcceleration": false
+    "enableSplashScreen": false,
+    "arRPCDebug": false
 }

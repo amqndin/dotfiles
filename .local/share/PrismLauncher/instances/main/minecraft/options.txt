@@ -63,9 +63,9 @@ damageTiltStrength:0.0
 highContrast:false
 highContrastBlockOutline:false
 narratorHotkey:true
-resourcePacks:["vanilla","file/SodiumTranslations.zip","file/Mod Menu Helper.zip","file/Chat Reporting Helper.zip","file/Catppuccin Mocha Blue.zip"]
+resourcePacks:["vanilla","programmer_art","file/§lzOverlay.zip","file/PvP Basics 1.3.1.zip","continuity:default","continuity:glass_pane_culling_fix","file/Catppuccin Mocha Blue.zip","file/Verbose.Subtitles.1.21.6.zip"]
 incompatibleResourcePacks:[]
-lastServer:stray.gg
+lastServer:mc.prostotrainer.space
 lang:en_us
 chatVisibility:0
 chatOpacity:1.0

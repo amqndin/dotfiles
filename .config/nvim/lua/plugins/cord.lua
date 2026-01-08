@@ -14,7 +14,7 @@ return {
   build = ":Cord update",
   opts = {
     enabled = true,
-    log_level = vim.log.levels.OFF,
+    log_level = vim.log.levels.INFO,
     editor = {
       client = 'neovim',
       tooltip = 'The Superior Text Editor',

@@ -1,6 +1,4 @@
-local blacklist = {
-  "antbot",
-}
+local blacklist = { }
 
 local function is_blacklisted(opts)
   for _, workspace in ipairs(blacklist) do

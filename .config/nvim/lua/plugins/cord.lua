@@ -69,20 +69,28 @@ return {
         url = function(opts) return opts.repo_url end,
       },
     },
-    assets = {
-      jmc = {
-        type = "language",
-        name = "JMC",
-        icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/jmc.png?raw=true",
-        tooltip = "JMC",
-      },
-      mcfunction = {
-        type = "language",
-        name = "MCFunction",
-        icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/mcfunction.png?raw=true",
-        tooltip = "MCFunction",
-      },
+    hooks = {
+      pre_activity = function(opts)
+        if opts.filetype == 'toggleterm' then
+          local ft = opts.filename:match '^%d+:([^%s;]+)'
+          if ft and ft ~= '' then opts.force_filetype = ft end
+        end
+      end,
     },
+    -- assets = {
+    --   jmc = {
+    --     type = "language",
+    --     name = "JMC",
+    --     icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/jmc.png?raw=true",
+    --     tooltip = "JMC",
+    --   },
+    --   mcfunction = {
+    --     type = "language",
+    --     name = "MCFunction",
+    --     icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/mcfunction.png?raw=true",
+    --     tooltip = "MCFunction",
+    --   },
+    -- },
     plugins = nil,
   },
 }

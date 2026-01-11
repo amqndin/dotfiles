@@ -561,7 +561,7 @@ binds {
     // rather than stacked on top of each other.
     Mod+W { toggle-column-tabbed-display; }
 
-    Mod+S { screenshot; }
+    Mod+S { screenshot show-pointer=false; }
     Mod+Ctrl+S { screenshot-screen; }
     Mod+Shift+S { screenshot-window; }
 

@@ -247,7 +247,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 2.8000000000000003,
+            "zoom": 1,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -975,7 +975,9 @@
             "enabled": false
         },
         "LimitMiddleClickPaste": {
-            "enabled": true
+            "enabled": true,
+            "threshold": 100,
+            "scope": "always"
         },
         "LoginWithQR": {
             "enabled": false
@@ -1476,7 +1478,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1768157018358
+        "settingsSyncVersion": 1768659369389
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

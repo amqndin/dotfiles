@@ -26,7 +26,7 @@
 )
 
 (deflayermap (base)
-  lmet (layer-switch empty)
+  lmet (t! tap-holdy (layer-switch empty) lmet)
   spc (t! layer spc navigation)
   m (t! layer m mdown)
   v (t! layer v vdown)
@@ -82,7 +82,7 @@
 )
 
 (deflayermap (empty)
-  lmet (layer-switch base)
+  lmet (t! tap-holdy (layer-switch empty) lmet)
 )
 
 (deflayermap (navigation)

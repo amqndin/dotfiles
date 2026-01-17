@@ -103,7 +103,7 @@ panoramaScrollSpeed:1.0
 telemetryOptInExtra:false
 onboardAccessibility:false
 menuBackgroundBlurriness:5
-startedCleanly:true
+startedCleanly:false
 musicToast:"never"
 musicFrequency:"DEFAULT"
 key_key.attack:key.mouse.left
@@ -171,6 +171,7 @@ key_key.fabrishot.screenshot:key.keyboard.f9
 key_key.commandkeys.main.edit:key.keyboard.k
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.entityculling.toggleBoxes:key.keyboard.unknown
+key_key.debug.reloadLanguages:key.keyboard.j
 key_key.modmenu.open_menu:key.keyboard.unknown
 key_key.optigui.inspect:key.keyboard.unknown
 key_zoomify.key.zoom:key.keyboard.c

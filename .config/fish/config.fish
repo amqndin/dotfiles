@@ -15,7 +15,6 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias npm="pnpm"
 alias ls="eza --icons --color=always --group-directories-first"
-abbr -a topgrade topgrade -y --no-self-update
 
 set -l session_name "main"
 

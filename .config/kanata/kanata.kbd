@@ -82,7 +82,7 @@
 )
 
 (deflayermap (empty)
-  lmet (t! tap-holdy (layer-switch empty) lmet)
+  lmet (t! tap-holdy (layer-switch base) lmet)
 )
 
 (deflayermap (navigation)

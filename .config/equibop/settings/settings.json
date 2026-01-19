@@ -6,8 +6,8 @@
     "eagerPatches": false,
     "enabledThemes": [
         "midnight-catppuccin-mocha.theme.css",
-        "clean.theme.css",
-        "catppuccin-mocha.theme.css"
+        "catppuccin-mocha.theme.css",
+        "clean.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -247,7 +247,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 2.8000000000000003,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -1478,7 +1478,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1768659369389
+        "settingsSyncVersion": 1768752118650
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

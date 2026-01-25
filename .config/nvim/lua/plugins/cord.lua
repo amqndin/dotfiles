@@ -60,7 +60,7 @@ return {
       test = function(opts) return 'Testing in ' .. opts.name end,
       diagnostics = function(opts) return 'Fixing problems in ' .. opts.name end,
       games = function(opts) return 'Playing ' .. opts.name end,
-      terminal = function(opts) return 'Running commands in ' .. opts.name end,
+      terminal = function(opts) return 'Executing in ' .. opts.name end,
       dashboard = 'Home',
     },
     buttons = {

@@ -6,8 +6,8 @@
     "eagerPatches": false,
     "enabledThemes": [
         "midnight-catppuccin-mocha.theme.css",
-        "clean.theme.css",
-        "catppuccin-mocha.theme.css"
+        "catppuccin-mocha.theme.css",
+        "clean.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -1484,7 +1484,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1769312243639
+        "settingsSyncVersion": 1769424733314
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

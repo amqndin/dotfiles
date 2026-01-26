@@ -12,26 +12,25 @@
  * @name Custom font
 */
 
-* {
-  --font-primary: "Inter" !important;
-  --font-code: "JetBrainsMono Nerd Font" !important;
-  /* font-size: 16px !important; */
-}
+/* * { */
+/*   --font-primary: "Inter" !important; */
+/*   --font-code: "JetBrainsMono Nerd Font" !important; */
+/*   /* font-size: 16px !important; */ */
+/* } */
 
-code.inline {
-  font-size: 14px !important;
-}
+/* code.inline { */
+/*   font-size: 14px !important; */
+/* } */
 
-._752971923a1e6683-markup {
-  font-size: 16px !important;
-}
+/* .markup__75297 { */
+/*   font-size: 16px !important; */
+/* } */
 
 /**
  * @name Clean input box
 */
 
-._0f481cbbd7530492-jumpToPresentBar,
-._740174f3d6a2c8fe-buttons {
+.buttons__74017 {
   display: none;
 }
 
@@ -65,16 +64,4 @@ code.inline {
   [class$="channelTextArea"] [class$="buttons"] {
     display: none !important;
   }
-}
-
-/**
- * @name Remove chat bar gradient shadow
-*/
-
-/* [class*="chatGradient_"] { */
-/*     display: none !important; */
-/* } */
-
-[class*="chatGradient"] {
-  display: none !important;
 }

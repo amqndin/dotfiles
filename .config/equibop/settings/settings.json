@@ -247,7 +247,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 4,
+            "zoom": 1,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -444,7 +444,7 @@
             "enabled": false
         },
         "SendTimestamps": {
-            "enabled": true,
+            "enabled": false,
             "replaceMessageContents": true
         },
         "ServerInfo": {
@@ -634,7 +634,9 @@
             "enabled": false
         },
         "VoiceMessages": {
-            "enabled": true
+            "enabled": true,
+            "echoCancellation": true,
+            "noiseSuppression": true
         },
         "VolumeBooster": {
             "enabled": false
@@ -977,7 +979,8 @@
         "LimitMiddleClickPaste": {
             "enabled": true,
             "threshold": 100,
-            "scope": "always"
+            "scope": "always",
+            "preventLinkOpen": false
         },
         "LoginWithQR": {
             "enabled": false
@@ -1471,6 +1474,12 @@
         },
         "VoiceMessageTranscriber": {
             "enabled": false
+        },
+        "FavouriteAnything": {
+            "enabled": false
+        },
+        "FileUpload": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1484,7 +1493,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1769424733314
+        "settingsSyncVersion": 1769598952424
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

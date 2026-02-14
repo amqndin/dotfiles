@@ -68,6 +68,10 @@ return {
         label = 'View Repository',
         url = function(opts) return opts.repo_url end,
       },
+      {
+        label = 'View Icon Theme',
+        url = 'https://github.com/funcfusion/mc-dp-icons',
+      }
     },
     hooks = {
       pre_activity = function(opts)

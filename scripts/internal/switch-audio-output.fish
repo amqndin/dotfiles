@@ -1,31 +1,53 @@
 #!/usr/bin/env fish
 
-set -l internal_sink_id (wpctl status | string match -r -- '(\d+)\..*Built-in Audio Analog.*' | head -n 1)
-set -l internal_sink_id (string sub -l 2 -- $internal_sink_id)
-set -l headphone_sink_id (wpctl status | string match -r -- '(\d+)\..*Headset Adapter Analog.*' | head -n 1)
-set -l headphone_sink_id (string sub -l 2 -- $headphone_sink_id)
+set -l internal "Built-in Audio Analog Stereo"
+set -l wired "AB13X Headset Adapter Analog Stereo"
+set -l bluetooth "soundcore P30i"
 
-if not set -q internal_sink_id
-    notify-send -u critical "Audio Error" "Internal speakers not found."
-    exit 1
+function get_id
+    set -l term $argv[1]
+    
+    if test "$term" = "soundcore P30i"
+        set -l filter (wpctl status | grep -A 20 "Filters:" | grep "bluez_output" | grep -oE '[0-9]{2,3}' | head -n 1)
+        if test -n "$filter"
+            echo $filter
+            return 0
+        end
+    end
+
+    set -l fallback (wpctl status | sed 's/.//' | grep -i "$term" | grep -oE '[0-9]+' | head -n 1)
+    
+    if test -n "$fallback"
+        echo $fallback
+        return 0
+    end
+    
+    return 1
 end
 
-if not set -q headphone_sink_id
-    notify-send -u critical "Audio Error" "Headphones not found. Is it plugged in?"
-    exit 1
-end
+set -l current (wpctl inspect @DEFAULT_AUDIO_SINK@ | grep -oE 'id [0-9]+' | grep -oE '[0-9]+' | head -n 1)
 
-set -l current_default_id (wpctl status | string match -r -- '\*\s+(\d+)\.' | head -n 1)
-set -l current_default_id (string sub --start 5 -- $current_default_id)
-set -l current_default_id (string sub -l 2 -- $current_default_id)
-echo internal_sink_id $internal_sink_id
-echo headphone_sink_id $headphone_sink_id
-echo current_default_id $current_default_id
+set -l speaker (get_id "$internal")
+set -l headset (get_id "$wired")
+set -l buds (get_id "$bluetooth")
 
-if test "$current_default_id" = "$internal_sink_id"
-    wpctl set-default $headphone_sink_id
-    notify-send -i "Audio Switched" "Headphones selected."
+if test "$current" = "$speaker"
+    if test -n "$headset"
+        wpctl set-default $headset
+        notify-send "Audio Switched" "Wired Headphones"
+    else if test -n "$buds"
+        wpctl set-default $buds
+        notify-send "Audio Switched" "Soundcore BT"
+    end
+else if test "$current" = "$headset"
+    if test -n "$buds"
+        wpctl set-default $buds
+        notify-send "Audio Switched" "Soundcore BT"
+    else
+        wpctl set-default $speaker
+        notify-send "Audio Switched" "Internal Speakers"
+    end
 else
-    wpctl set-default $internal_sink_id
-    notify-send -i "Audio Switched" "Speakers selected."
+    wpctl set-default $speaker
+    notify-send "Audio Switched" "Internal Speakers"
 end

@@ -1443,7 +1443,7 @@
             "enabled": false
         },
         "HeaderBarAPI": {
-            "enabled": false
+            "enabled": true
         },
         "ScheduledMessages": {
             "enabled": false
@@ -1480,6 +1480,21 @@
         },
         "FileUpload": {
             "enabled": false
+        },
+        "MessagePeek": {
+            "enabled": false
+        },
+        "ProfileSets": {
+            "enabled": false
+        },
+        "CleanerChannelGroups": {
+            "enabled": false
+        },
+        "Dragify": {
+            "enabled": false
+        },
+        "WaitForSlot": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1493,7 +1508,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1769598952424
+        "settingsSyncVersion": 1771069133721
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

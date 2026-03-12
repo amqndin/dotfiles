@@ -1,4 +1,20 @@
-not status is-interactive && return
+if not status is-interactive
+    return
+end
+
+set -gx TERMINAL "foot"
+set -gx TERM "foot"
+set -gx QT_QPA_PLATFORM "wayland;xcb"
+set -gx QT_QPA_PLATFORMTHEME "kde"
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
+set -gx BROWSER "zen-browser"
+set -gx FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#89B4FA,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#89B4FA,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
 
 fish_vi_key_bindings
 fish_config theme choose "Catppuccin Mocha"
@@ -18,28 +34,6 @@ alias ls="eza --icons --color=always --group-directories-first"
 
 set -l session_name "main"
 
-if not set -q TMUX
-    # 1. Look for a session that is NOT currently attached to any window
-    set -l zombie_session (tmux list-sessions -F "#{session_name} #{session_attached}" 2>/dev/null | string match -r '.* 0$' | head -n 1 | cut -d' ' -f1)
-
-    if test -n "$zombie_session"
-        # 2. If a session exists but isn't being used, take it
-        exec tmux attach-session -t "$zombie_session"
-    else
-        # 3. If all sessions are in use, or none exist, create a new one
-        set -l session_count (tmux list-sessions 2>/dev/null | count)
-        
-        if test "$session_count" -eq 0
-            # Brand new start
-            exec tmux new-session -s "main"
-        else
-            # Create a unique window session that dies when the window closes
-            set -l session_id "fish_$fish_pid"
-            exec tmux new-session -s "$session_id" \; set-option destroy-unattached on
-        end
-    end
-end
-
 function man
     command man $argv | bat -p -l man
 end
@@ -57,19 +51,27 @@ function cdn
     mkdir -p $argv[1]; and cd $argv[1]
 end
 
-# set -gx ELECTRON_OZONE_PLATFORM_HINT "auto"
-# set -gx DISPLAY ":1"
-set -gx QT_QPA_PLATFORM "wayland;xcb"
-set -gx QT_QPA_PLATFORMTHEME "kde"
-set -gx EDITOR "nvim"
-set -gx VISUAL "nvim"
-set -gx BROWSER "zen-browser"
-set -gx FZF_DEFAULT_OPTS "\
---color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
---color=fg:#CDD6F4,header:#F38BA8,info:#89B4FA,pointer:#F5E0DC \
---color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#89B4FA,hl+:#F38BA8 \
---color=selected-bg:#45475A \
---color=border:#6C7086,label:#CDD6F4"
+if not set -q TMUX
+    set -l unattached_session (
+        tmux list-sessions -F "#{session_name} #{session_attached}" 2>/dev/null \
+        | string match -r '.* 0$' \
+        | head -n 1 \
+        | string split " " -f 1
+    )
+
+    if test -n "$unattached_session"
+        exec tmux attach-session -t "$unattached_session"
+    else
+        set -l session_count (tmux list-sessions 2>/dev/null | count)
+        
+        if test "$session_count" -eq 0
+            exec tmux new-session -s "main"
+        else
+            set -l session_id "sesh_$fish_pid"
+            exec tmux new-session -s "$session_id" \; set-option destroy-unattached on
+        end
+    end
+end
 
 starship init fish | source
 zoxide init fish --cmd cd | source

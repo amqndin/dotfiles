@@ -564,7 +564,7 @@ binds {
 
     Mod+S { screenshot show-pointer=false; }
     Mod+Ctrl+S { screenshot-screen; }
-    Mod+Shift+S { screenshot-window; }
+    Mod+Shift+S { spawn "~/dotfiles/scripts/internal/screenshot.fish"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

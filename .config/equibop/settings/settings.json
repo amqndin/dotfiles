@@ -88,7 +88,7 @@
             "enabled": false
         },
         "BetterRoleContext": {
-            "enabled": false
+            "enabled": true
         },
         "BetterRoleDot": {
             "enabled": false
@@ -97,7 +97,10 @@
             "enabled": false
         },
         "BetterSettings": {
-            "enabled": false
+            "enabled": true,
+            "disableFade": true,
+            "organizeMenu": true,
+            "eagerLoad": true
         },
         "BetterUploadButton": {
             "enabled": false
@@ -283,7 +286,8 @@
             "enabled": false
         },
         "MessageClickActions": {
-            "enabled": false
+            "enabled": false,
+            "addAdditionalReacts": false
         },
         "MessageLatency": {
             "enabled": false
@@ -299,7 +303,7 @@
             "logEdits": true,
             "inlineEdits": false,
             "ignoreBots": true,
-            "ignoreSelf": true,
+            "ignoreSelf": false,
             "ignoreUsers": "",
             "ignoreChannels": "",
             "ignoreGuilds": "",
@@ -976,12 +980,6 @@
         "LastActive": {
             "enabled": false
         },
-        "LimitMiddleClickPaste": {
-            "enabled": true,
-            "threshold": 100,
-            "scope": "always",
-            "preventLinkOpen": false
-        },
         "LoginWithQR": {
             "enabled": false
         },
@@ -1007,14 +1005,14 @@
             "enabled": false
         },
         "MessageLoggerEnhanced": {
-            "enabled": false,
+            "enabled": true,
             "saveMessages": true,
             "saveImages": true,
             "sortNewest": true,
-            "cacheMessagesFromServers": false,
+            "cacheMessagesFromServers": true,
             "ignoreBots": true,
-            "ignoreWebhooks": false,
-            "ignoreSelf": false,
+            "ignoreWebhooks": true,
+            "ignoreSelf": true,
             "ignoreMutedGuilds": false,
             "ignoreMutedCategories": false,
             "ignoreMutedChannels": false,
@@ -1331,7 +1329,11 @@
             "showYourOwnActivityButtons": false,
             "noDefaultHangStatus": false,
             "refreshSlashCommands": false,
-            "forceRoleIcon": false
+            "forceRoleIcon": false,
+            "accountStandingButton": false,
+            "restoreFileDownloadButton": false,
+            "noModalAnimation": false,
+            "noBulletPoints": false
         },
         "WebContextMenus": {
             "enabled": true
@@ -1427,9 +1429,6 @@
         "MessageNotifier": {
             "enabled": false
         },
-        "BetterUserArea": {
-            "enabled": false
-        },
         "GlobalNicknames": {
             "enabled": false
         },
@@ -1495,6 +1494,29 @@
         },
         "WaitForSlot": {
             "enabled": false
+        },
+        "MiddleClickTweaks": {
+            "enabled": true,
+            "pasteScope": "always",
+            "pasteThreshold": 100
+        },
+        "HideMessages": {
+            "enabled": false
+        },
+        "NoPushToTalk": {
+            "enabled": false
+        },
+        "TriviaAI": {
+            "enabled": false
+        },
+        "Declutter": {
+            "enabled": false
+        },
+        "SongSpotlight": {
+            "enabled": false
+        },
+        "ClickableRoles": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1508,7 +1530,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1771069133721
+        "settingsSyncVersion": 1773308513241
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
@@ -1519,5 +1541,6 @@
         "messagePopoverButtons": {}
     },
     "enableOnlineThemes": true,
-    "pinnedThemes": []
+    "pinnedThemes": [],
+    "mainWindowFrameless": false
 }

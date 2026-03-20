@@ -310,9 +310,6 @@
             "showEditDiffs": false,
             "separatedDiffs": false
         },
-        "MessageTags": {
-            "enabled": false
-        },
         "MutualGroupDMs": {
             "enabled": false
         },
@@ -421,7 +418,7 @@
             "enabled": false
         },
         "RelationshipNotifier": {
-            "enabled": false
+            "enabled": true
         },
         "ReplaceGoogleSearch": {
             "enabled": false
@@ -540,7 +537,8 @@
                     "find": "",
                     "replace": "",
                     "onlyIfIncludes": "",
-                    "scope": "myMessages"
+                    "scope": "myMessages",
+                    "id": "d8668254-0808-4f9d-9a1a-4bb4d7fa24a2"
                 }
             ],
             "regexRules": [
@@ -548,19 +546,22 @@
                     "find": "/https?:\\/\\/(www\\.)?reddit\\.com/",
                     "replace": "https://rxddit.com",
                     "onlyIfIncludes": "",
-                    "scope": "allMessages"
+                    "scope": "allMessages",
+                    "id": "6f464869-05c0-4ad6-b792-cd538bfd715a"
                 },
                 {
                     "find": "/https?:\\/\\/(www\\.)?(twitter|x)\\.com/",
                     "replace": "https://fixupx.com",
                     "onlyIfIncludes": "",
-                    "scope": "allMessages"
+                    "scope": "allMessages",
+                    "id": "f3726bf0-454e-46af-bf6b-8d29a959220e"
                 },
                 {
                     "find": "",
                     "replace": "",
                     "onlyIfIncludes": "",
-                    "scope": "myMessages"
+                    "scope": "myMessages",
+                    "id": "2140cfaa-63e6-4c1c-84d9-e51b69b627f6"
                 }
             ]
         },
@@ -1517,6 +1518,15 @@
         },
         "ClickableRoles": {
             "enabled": false
+        },
+        "NoDefaultHangStatus": {
+            "enabled": false
+        },
+        "RichPresence": {
+            "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1530,7 +1540,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1773308513241
+        "settingsSyncVersion": 1773981968060
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

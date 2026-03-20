@@ -67,7 +67,6 @@ output "HDMI-A-2" {
     mode "1920x1080@74.973"
     scale 1.0
     transform "normal"
-    variable-refresh-rate
     focus-at-startup
 }
 
@@ -273,15 +272,16 @@ spawn-at-startup "zen-browser"
 spawn-at-startup "foot"
 spawn-at-startup "~/dotfiles/scripts/internal/startup.sh"
 
-// environment {
-//     ELECTRON_OZONE_PLATFORM_HINT "auto"
-//     QT_QPA_PLATFORM "wayland;xcb"
-//     QT_QPA_PLATFORMTHEME "qt5ct;qt6ct"
-//     EDITOR "nvim"
-//     VISUAL "nvim"
-//     BROWSER "zen-browser"
-//     DISPLAY ":1"
-// }
+environment {
+    TERMINAL "foot"
+    TERM "foot"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland;xcb"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    EDITOR "nvim"
+    VISUAL "nvim"
+    BROWSER "zen-browser"
+}
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.

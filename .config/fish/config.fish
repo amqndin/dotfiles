@@ -2,13 +2,6 @@ if not status is-interactive
     return
 end
 
-set -gx TERMINAL "foot"
-set -gx TERM "foot"
-set -gx QT_QPA_PLATFORM "wayland;xcb"
-set -gx QT_QPA_PLATFORMTHEME "kde"
-set -gx EDITOR "nvim"
-set -gx VISUAL "nvim"
-set -gx BROWSER "zen-browser"
 set -gx FZF_DEFAULT_OPTS "\
 --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
 --color=fg:#CDD6F4,header:#F38BA8,info:#89B4FA,pointer:#F5E0DC \

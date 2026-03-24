@@ -44,6 +44,8 @@ return {
     map.n["<A-k>"] = { function() switch_terminal_mode() end, desc = "Switch terminal mode" }
 
     -- fun stuff
+    map.n["о"] = { "gj" }
+    map.n["л"] = { "gk" }
     map.n["<Leader>um"] = { "<Cmd>RenderMarkdown toggle<CR>", desc = "Toggle markdown render" }
     map.x["g/"] = { "<Esc>/\\%V", desc = "Search within selection" }
 

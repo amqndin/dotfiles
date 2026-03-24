@@ -3,5 +3,5 @@ if pgrep -x "wlsunset" > /dev/null
 then
     pkill wlsunset
 else
-    wlsunset
+    wlsunset -T 4001
 fi

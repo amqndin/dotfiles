@@ -1,0 +1,2 @@
+[binds]
+w = exec swww img $imv_current_file

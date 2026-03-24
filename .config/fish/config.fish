@@ -16,6 +16,7 @@ set -U fish_greeting ""
 
 alias nv="nvim"
 alias ff="fastfetch"
+alias gg="lazygit"
 alias cat="bat"
 alias grep="rg"
 alias cava-mic="cava -p ~/.config/cava/config_mic"

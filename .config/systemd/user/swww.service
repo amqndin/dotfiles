@@ -6,7 +6,7 @@ StartLimitBurst=0
 StartLimitIntervalSec=0
 
 [Service]
-ExecStart=/usr/bin/swww-daemon
+ExecStart=/usr/bin/awww-daemon
 Restart=always
 Type=exec
 

@@ -1,2 +1,2 @@
 [binds]
-w = exec swww img $imv_current_file
+w = exec awww img $imv_current_file

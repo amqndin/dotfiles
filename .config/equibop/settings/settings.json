@@ -1339,7 +1339,8 @@
             "accountStandingButton": false,
             "restoreFileDownloadButton": false,
             "noModalAnimation": false,
-            "noBulletPoints": false
+            "noBulletPoints": false,
+            "disableAdoptTagPrompt": true
         },
         "WebContextMenus": {
             "enabled": true
@@ -1532,6 +1533,12 @@
         },
         "CustomCommands": {
             "enabled": false
+        },
+        "VoiceChannelLog": {
+            "enabled": false
+        },
+        "ProfileCollectionsAPI": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1545,7 +1552,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1774343044782
+        "settingsSyncVersion": 1774426109961
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

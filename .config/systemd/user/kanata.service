@@ -2,8 +2,6 @@
 Description=Kanata
 StartLimitBurst=0
 StartLimitIntervalSec=0
-After=graphical-session.target niri.service
-PartOf=niri.service
 
 [Service]
 ExecStart=/usr/bin/kanata --cfg %h/.config/kanata/kanata.kbd

@@ -3,7 +3,7 @@ return {
   event = "User AstroFile",
   keys = {
     {
-      "<Leader>j",
+      "<Leader>k",
       function () require("snipe").open_buffer_menu() end,
       desc = "Open Snipe buffer menu"
     }

@@ -250,7 +250,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1.6,
+            "zoom": 1,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -1485,7 +1485,21 @@
             "enabled": false
         },
         "FileUpload": {
-            "enabled": false
+            "enabled": true,
+            "serviceType": "catbox",
+            "serviceUrl": "",
+            "ziplineToken": "",
+            "folderId": "",
+            "stripQueryParams": false,
+            "apngToGif": false,
+            "autoCopy": true,
+            "disableFallbacks": false,
+            "autoSend": false,
+            "autoFormat": false,
+            "interceptDiscordUpload": false,
+            "interceptDiscordUploadOnlyOverLimit": true,
+            "uploadTimeoutMs": 300000,
+            "catboxUserhash": "ee5451f2519d46e4dd375da9f"
         },
         "MessagePeek": {
             "enabled": false
@@ -1552,7 +1566,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1774437000236
+        "settingsSyncVersion": 1774790388374
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

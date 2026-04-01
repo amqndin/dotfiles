@@ -308,7 +308,8 @@
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "showEditDiffs": false,
-            "separatedDiffs": false
+            "separatedDiffs": false,
+            "ignoreSelfEdits": false
         },
         "MutualGroupDMs": {
             "enabled": false
@@ -1553,6 +1554,9 @@
         },
         "ProfileCollectionsAPI": {
             "enabled": false
+        },
+        "EquibopStreamFixes": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1566,7 +1570,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1774856520654
+        "settingsSyncVersion": 1775047163192
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

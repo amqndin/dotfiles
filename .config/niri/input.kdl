@@ -1,0 +1,28 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:win_space_toggle,compose:ralt"
+        }
+
+        repeat-delay 200
+        repeat-rate 20
+    }
+
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+        accel-speed 0.2
+        accel-profile "adaptive"
+        scroll-method "two-finger"
+        disabled-on-external-mouse
+    }
+
+    mouse {
+        accel-profile "flat"
+        accel-speed 0.2
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}

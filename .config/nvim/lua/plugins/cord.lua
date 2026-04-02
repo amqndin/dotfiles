@@ -81,6 +81,14 @@ return {
         end
       end,
     },
+    advanced = {
+      discord = {
+        sync = {
+          interval = 15000
+        }
+      }
+    },
+    plugins = nil,
     -- assets = {
     --   jmc = {
     --     type = "language",
@@ -95,6 +103,5 @@ return {
     --     tooltip = "MCFunction",
     --   },
     -- },
-    plugins = nil,
   },
 }

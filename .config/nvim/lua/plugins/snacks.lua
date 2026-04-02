@@ -1,6 +1,16 @@
 return {
   "folke/snacks.nvim",
   opts = function(_, opts)
+    opts.picker.win.input.keys = {
+      ["<C-BS>"] = {
+        function()
+          vim.api.nvim_input("<C-w>")
+        end,
+        mode = "i",
+        desc = "Delete word backward",
+      },
+    }
+
     local get_icon = require("astroui").get_icon
     opts.image = nil
     opts.dashboard = require("astrocore").extend_tbl(opts.dashboard, {

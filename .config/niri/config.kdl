@@ -2,32 +2,3 @@ include "input.kdl"
 include "keymaps.kdl"
 include "options.kdl"
 include "layout.kdl"
-
-layout {
-    gaps 16
-    background-color "transparent"
-    center-focused-column "never"
-
-    preset-column-widths {
-        proportion 0.5
-        proportion 1.0
-    }
-
-    preset-window-heights {
-        proportion 0.5
-        proportion 1.0
-    }
-
-    default-column-width { proportion 1.0; }
-
-    border {
-        width 4
-        active-gradient from="#89b4fa" to="#cba6f7" angle=45
-        inactive-color "#6c7086"
-        urgent-color "#f38ba8"
-    }
-
-    focus-ring {
-        off
-    }
-}

@@ -33,6 +33,8 @@
   e (t! layer e edown)
   i (t! layer i idown)
 
+  bspc XX
+
   caps esc
 
   a (t! tap-holdy a lmet)  

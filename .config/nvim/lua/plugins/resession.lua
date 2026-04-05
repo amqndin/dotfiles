@@ -6,6 +6,7 @@ return {
       "AstroNvim/astrocore",
       opts = function(_, opts)
         local maps = opts.mappings
+        maps.n["<Leader>S"] = false
         maps.n["<Leader>s"] = vim.tbl_get(opts, "_map_sections", "S")
         maps.n["<Leader>sl"] = { function() require("resession").load "Last Session" end, desc = "Load last session" }
         maps.n["<Leader>ss"] = {

@@ -109,7 +109,9 @@
             "enabled": false
         },
         "BlurNSFW": {
-            "enabled": false
+            "enabled": true,
+            "blurAmount": 10,
+            "blurAllChannels": false
         },
         "CallTimer": {
             "enabled": false
@@ -1521,7 +1523,8 @@
         "MiddleClickTweaks": {
             "enabled": true,
             "pasteScope": "always",
-            "pasteThreshold": 100
+            "pasteThreshold": 100,
+            "openScope": "none"
         },
         "HideMessages": {
             "enabled": false
@@ -1571,17 +1574,32 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1775389794219
+        "settingsSyncVersion": 1776334026295
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
     "userCssVars": {},
     "themeNames": {},
     "uiElements": {
-        "chatBarButtons": {},
-        "messagePopoverButtons": {}
+        "chatBarButtons": {
+            "SilentTyping": {
+                "enabled": false
+            },
+            "Translate": {
+                "enabled": false
+            }
+        },
+        "messagePopoverButtons": {
+            "Translate": {
+                "enabled": false
+            },
+            "ViewRaw": {
+                "enabled": false
+            }
+        }
     },
     "enableOnlineThemes": true,
     "pinnedThemes": [],
-    "mainWindowFrameless": false
+    "mainWindowFrameless": false,
+    "themeActivationModes": {}
 }

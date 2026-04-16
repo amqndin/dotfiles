@@ -15,7 +15,7 @@ glintSpeed:0.5
 glintStrength:0.75
 graphicsPreset:"custom"
 prioritizeChunkUpdates:0
-fullscreen:false
+fullscreen:true
 gamma:1.0
 guiScale:2
 maxAnisotropyBit:2
@@ -63,7 +63,7 @@ damageTiltStrength:0.0
 highContrast:false
 highContrastBlockOutline:false
 narratorHotkey:true
-resourcePacks:["vanilla","programmer_art","file/§lzOverlay.zip","file/PvP Basics 1.3.1.zip","continuity:default","continuity:glass_pane_culling_fix","file/Catppuccin Mocha Blue.zip","file/Verbose.Subtitles.1.21.6.zip"]
+resourcePacks:["vanilla","programmer_art","continuity:default","continuity:glass_pane_culling_fix"]
 incompatibleResourcePacks:[]
 lastServer:mc.prostotrainer.space
 lang:en_us
@@ -100,10 +100,11 @@ allowServerListing:true
 onlyShowSecureChat:false
 saveChatDrafts:false
 panoramaScrollSpeed:1.0
+debugifyTelemetry:0
 telemetryOptInExtra:false
 onboardAccessibility:false
 menuBackgroundBlurriness:5
-startedCleanly:false
+startedCleanly:true
 musicToast:"never"
 musicFrequency:"DEFAULT"
 key_key.attack:key.mouse.left
@@ -168,7 +169,6 @@ key_key.debug.networkCharts:key.keyboard.3
 key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
 key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.fabrishot.screenshot:key.keyboard.f9
-key_key.commandkeys.main.edit:key.keyboard.k
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.entityculling.toggleBoxes:key.keyboard.unknown
 key_key.debug.reloadLanguages:key.keyboard.j

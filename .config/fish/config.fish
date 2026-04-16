@@ -16,6 +16,7 @@ fish_config theme choose "Catppuccin Mocha"
 set fish_cursor_insert block
 set -U fish_greeting ""
 
+alias anime="anipy-cli"
 alias nv="nvim"
 alias ff="fastfetch"
 alias gg="lazygit"

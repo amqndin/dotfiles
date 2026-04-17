@@ -69,6 +69,6 @@ vim.keymap.set('n', '<Leader>d', '<Cmd>quit<CR>', { desc = 'Quit buffer' })
 
 -- convenience
 vim.keymap.set('v', 'g/', [[/\%V]], { desc = 'Search in selection' })
-vim.keymap.set({'i', 'l'}, '<C-BS>', '<C-w>')
+vim.keymap.set({'i', 'l', 'c'}, '<C-BS>', '<C-w>')
 
 -- vim: ts=2 sts=2 sw=2 et

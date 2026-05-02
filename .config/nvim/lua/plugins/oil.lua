@@ -193,7 +193,7 @@ return {
     },
   },
   -- Optional dependencies
-  dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
+  -- dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
   keys = {
     { '<leader>e', '<cmd>Oil<cr>', desc = 'Open Parent Directory' },
   },

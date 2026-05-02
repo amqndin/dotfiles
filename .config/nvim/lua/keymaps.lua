@@ -23,14 +23,6 @@ vim.diagnostic.config {
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -69,6 +61,48 @@ vim.keymap.set('n', '<Leader>d', '<Cmd>quit<CR>', { desc = 'Quit buffer' })
 
 -- convenience
 vim.keymap.set('v', 'g/', [[/\%V]], { desc = 'Search in selection' })
-vim.keymap.set({'i', 'l', 'c'}, '<C-BS>', '<C-w>')
+vim.keymap.set({ 'i', 't', 'c' }, '<C-BS>', '<C-w>')
+
+local state = {
+  buf = -1,
+  win = -1,
+}
+
+local function toggle_terminal()
+  if not vim.api.nvim_buf_is_valid(state.buf) then state.buf = vim.api.nvim_create_buf(false, true) end
+
+  if vim.api.nvim_win_is_valid(state.win) then
+    vim.api.nvim_win_hide(state.win)
+  else
+    local width = math.floor(vim.o.columns * 0.8)
+    local height = math.floor(vim.o.lines * 0.8)
+    state.win = vim.api.nvim_open_win(state.buf, true, {
+      relative = 'editor',
+      width = width,
+      height = height,
+      col = math.floor((vim.o.columns - width) / 2),
+      row = math.floor((vim.o.lines - height) / 2),
+      style = 'minimal',
+      border = 'rounded',
+    })
+
+    if vim.bo[state.buf].buftype ~= 'terminal' then vim.cmd.term() end
+    vim.cmd 'startinsert'
+  end
+end
+
+vim.keymap.set({ 'n', 't' }, '<A-j>', toggle_terminal)
+
+local function toggle_terminal_mode()
+  if vim.bo.buftype == 'terminal' then
+    if vim.api.nvim_get_mode().mode == 't' then
+      vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<C-\\><C-n>', true, true, true), 'n', true)
+    else
+      vim.cmd 'startinsert'
+    end
+  end
+end
+
+vim.keymap.set({ 'n', 't' }, '<A-k>', toggle_terminal_mode)
 
 -- vim: ts=2 sts=2 sw=2 et

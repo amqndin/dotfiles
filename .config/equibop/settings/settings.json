@@ -6,8 +6,8 @@
     "eagerPatches": false,
     "enabledThemes": [
         "midnight-catppuccin-mocha.theme.css",
-        "catppuccin-mocha.theme.css",
-        "clean.theme.css"
+        "clean.theme.css",
+        "catppuccin-mocha.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -179,7 +179,7 @@
             "enableStickerBypass": true,
             "enableStreamQualityBypass": true,
             "enableEmojiBypass": true,
-            "transformEmojis": true,
+            "transformEmojis": false,
             "transformStickers": true,
             "transformCompoundSentence": true,
             "stickerSize": 160,
@@ -252,7 +252,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 2.7999999999999994,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -642,7 +642,8 @@
         },
         "ViewRaw": {
             "enabled": true,
-            "clickMethod": "Left"
+            "clickMethod": "Left",
+            "messageContextMenu": false
         },
         "VoiceDownload": {
             "enabled": false
@@ -1043,7 +1044,8 @@
             "ShowWhereMessageIsFrom": false,
             "hideMessageFromMessageLoggersDeletedMessage": "redacted eh",
             "timeBasedCleanupMinutes": 0,
-            "preserveCurrentChannel": true
+            "preserveCurrentChannel": true,
+            "clearLogsOnRestart": false
         },
         "MessageTranslate": {
             "enabled": false
@@ -1344,7 +1346,8 @@
             "restoreFileDownloadButton": false,
             "noModalAnimation": false,
             "noBulletPoints": false,
-            "disableAdoptTagPrompt": true
+            "disableAdoptTagPrompt": true,
+            "jsonGateway": false
         },
         "WebContextMenus": {
             "enabled": true
@@ -1498,12 +1501,17 @@
             "apngToGif": false,
             "autoCopy": true,
             "disableFallbacks": false,
-            "autoSend": false,
+            "autoSend": true,
             "autoFormat": false,
             "interceptDiscordUpload": false,
             "interceptDiscordUploadOnlyOverLimit": true,
             "uploadTimeoutMs": 300000,
-            "catboxUserhash": "ee5451f2519d46e4dd375da9f"
+            "catboxUserhash": "ee5451f2519d46e4dd375da9f",
+            "embedProxyEnabled": false,
+            "corsProxyUrl": "https://cors.keiran0.workers.dev",
+            "preserveOriginalFilename": true,
+            "nestToken": "",
+            "autoUploadPastedFiles": false
         },
         "MessagePeek": {
             "enabled": false
@@ -1561,6 +1569,21 @@
         },
         "EquibopStreamFixes": {
             "enabled": false
+        },
+        "CollapsibleUI": {
+            "enabled": false
+        },
+        "CustomStatusTimeouts": {
+            "enabled": false
+        },
+        "CancelFriendRequest": {
+            "enabled": false
+        },
+        "SilenceUsers": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -1574,7 +1597,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1776389680588
+        "settingsSyncVersion": 1777574466941
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

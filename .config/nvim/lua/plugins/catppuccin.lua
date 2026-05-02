@@ -3,7 +3,10 @@ return {
   name = 'catppuccin',
   priority = 1000,
   config = function()
-    require 'catppuccin'
+    require('catppuccin').setup({
+      auto_integrations = true,
+      term_colors = true,
+    })
     vim.cmd.colorscheme 'catppuccin'
   end,
 }

@@ -4,23 +4,26 @@ return {
   {
     'nvim-mini/mini.nvim',
     version = false,
+    lazy = false,
     config = function()
       require('mini.ai').setup { n_lines = 500 }
 
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = vim.g.have_nerd_font }
+
+      ---@diagnostic disable-next-line: duplicate-set-field
       statusline.section_location = function() return '%2l:%-2v' end
 
-      require('mini.icons').setup {}
+      require('mini.icons').setup()
       MiniIcons.mock_nvim_web_devicons()
 
-      require('mini.pairs').setup {}
+      require('mini.pairs').setup()
 
-      require('mini.splitjoin').setup {
+      require('mini.splitjoin').setup({
         mappings = {
           toggle = 'gs'
         }
-      }
+      })
     end,
   },
 }

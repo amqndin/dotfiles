@@ -1,6 +1,6 @@
 prefer-no-csd
 
-spawn-at-startup "zen-browser"
+spawn-at-startup "firefox"
 spawn-at-startup "foot"
 spawn-at-startup "~/dotfiles/scripts/internal/startup.sh"
 
@@ -12,7 +12,7 @@ environment {
     QT_QPA_PLATFORMTHEME "qt5ct"
     EDITOR "nvim"
     VISUAL "nvim"
-    BROWSER "zen-browser"
+    BROWSER "firefox"
 }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

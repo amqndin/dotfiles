@@ -169,7 +169,7 @@
             "toolbarDevMenu": false
         },
         "ExpressionCloner": {
-            "enabled": false
+            "enabled": true
         },
         "F8Break": {
             "enabled": false
@@ -451,7 +451,8 @@
             "enabled": false
         },
         "Summaries": {
-            "enabled": false
+            "enabled": true,
+            "summaryExpiryThresholdDays": 3
         },
         "SendTimestamps": {
             "enabled": false,
@@ -1511,7 +1512,9 @@
             "corsProxyUrl": "https://cors.keiran0.workers.dev",
             "preserveOriginalFilename": true,
             "nestToken": "",
-            "autoUploadPastedFiles": false
+            "autoUploadPastedFiles": false,
+            "bypassDiscordUpload": true,
+            "bypassDiscordUploadOnlyOverLimit": true
         },
         "MessagePeek": {
             "enabled": false
@@ -1584,6 +1587,9 @@
         },
         "ConcatenatedComponentExtractor": {
             "enabled": true
+        },
+        "ConcatenatedModules": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -1597,7 +1603,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1777574466941
+        "settingsSyncVersion": 1777747878887
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

@@ -69,7 +69,9 @@ local state = {
 }
 
 local function toggle_terminal()
-  if not vim.api.nvim_buf_is_valid(state.buf) then state.buf = vim.api.nvim_create_buf(false, true) end
+  if not vim.api.nvim_buf_is_valid(state.buf) then 
+    state.buf = vim.api.nvim_create_buf(false, true) 
+  end
 
   if vim.api.nvim_win_is_valid(state.win) then
     vim.api.nvim_win_hide(state.win)
@@ -86,7 +88,15 @@ local function toggle_terminal()
       border = 'rounded',
     })
 
-    if vim.bo[state.buf].buftype ~= 'terminal' then vim.cmd.term() end
+    if vim.bo[state.buf].buftype ~= 'terminal' then
+      vim.cmd.term()
+
+      local venv_path = vim.fn.getcwd() .. "/.venv/bin/activate.fish"
+      if vim.fn.filereadable(venv_path) == 1 then
+        local cmd = "source " .. venv_path .. "\n"
+        vim.api.nvim_chan_send(vim.bo[state.buf].channel, cmd)
+      end
+    end
     vim.cmd 'startinsert'
   end
 end

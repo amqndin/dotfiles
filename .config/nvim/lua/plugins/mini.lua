@@ -6,7 +6,14 @@ return {
     version = false,
     lazy = false,
     config = function()
-      require('mini.ai').setup { n_lines = 500 }
+      local gen_ai_spec = require('mini.extra').gen_ai_spec
+
+      require('mini.ai').setup {
+        n_lines = 100,
+        custom_textobjects = {
+          e = gen_ai_spec.buffer()
+        },
+      }
 
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = vim.g.have_nerd_font }
@@ -27,4 +34,3 @@ return {
     end,
   },
 }
--- vim: ts=2 sts=2 sw=2 et

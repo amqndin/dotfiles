@@ -644,7 +644,7 @@
         "ViewRaw": {
             "enabled": true,
             "clickMethod": "Left",
-            "messageContextMenu": false
+            "messageContextMenu": true
         },
         "VoiceDownload": {
             "enabled": false
@@ -675,7 +675,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
             "enabled": true
@@ -1590,6 +1591,9 @@
         },
         "ConcatenatedModules": {
             "enabled": true
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1603,7 +1607,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1777747878887
+        "settingsSyncVersion": 1778045484675
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

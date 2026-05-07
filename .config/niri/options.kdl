@@ -1,12 +1,11 @@
 prefer-no-csd
 
 spawn-at-startup "firefox"
-spawn-at-startup "foot"
+spawn-at-startup "kitty"
 spawn-at-startup "~/dotfiles/scripts/internal/startup.sh"
 
 environment {
-    TERMINAL "foot"
-    TERM "foot"
+    TERMINAL "kitty"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_QPA_PLATFORM "wayland;xcb"
     QT_QPA_PLATFORMTHEME "qt5ct"

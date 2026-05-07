@@ -50,7 +50,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="foot" at-startup=true
+    match app-id="kitty" at-startup=true
     open-on-workspace "terminal"
 }
 

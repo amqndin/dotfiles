@@ -88,6 +88,8 @@ local function toggle_terminal()
       border = 'rounded',
     })
 
+    vim.wo[state.win].winblend = 10
+
     if vim.bo[state.buf].buftype ~= 'terminal' then
       vim.cmd.term()
 
@@ -95,6 +97,7 @@ local function toggle_terminal()
       if vim.fn.filereadable(venv_path) == 1 then
         local cmd = "source " .. venv_path .. "\n"
         vim.api.nvim_chan_send(vim.bo[state.buf].channel, cmd)
+        vim.api.nvim_chan_send(vim.bo[state.buf].channel, "clear\n")
       end
     end
     vim.cmd 'startinsert'

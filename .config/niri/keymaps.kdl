@@ -1,7 +1,7 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Alt+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+N { spawn "neovide"; }
 

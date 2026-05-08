@@ -1132,7 +1132,8 @@
             "enabled": false
         },
         "Questify": {
-            "enabled": false
+            "enabled": false,
+            "migrationVersion": 1
         },
         "QuestionMarkReplacement": {
             "enabled": false
@@ -1607,7 +1608,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1778045484675
+        "settingsSyncVersion": 1778238660085
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

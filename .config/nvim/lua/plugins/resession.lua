@@ -13,10 +13,10 @@ return {
       local name = vim.fn.fnamemodify(path, ":t")
       if name then resession.save(name) end
     end)
-    vim.keymap.set('n', '<leader>sS', resession.save)
-    vim.keymap.set('n', '<leader>sf', resession.load)
-    vim.keymap.set('n', '<leader>sl', function() resession.load 'last' end)
-    vim.keymap.set('n', '<leader>sd', resession.delete)
+    vim.keymap.set('n', '<leader>sS', resession.save, { desc = 'Save session'})
+    vim.keymap.set('n', '<leader>sl', resession.load, { desc = 'Load session' })
+    vim.keymap.set('n', '<leader>sr', function() resession.load 'last' end, { desc = 'Restore session' })
+    vim.keymap.set('n', '<leader>sd', resession.delete, { desc = 'Delete session' })
 
     vim.api.nvim_create_autocmd("VimLeavePre", {
       callback = function()

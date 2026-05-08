@@ -7,7 +7,8 @@ return {
       'nvim-treesitter/nvim-treesitter-textobjects', opts = {}
     },
     version = false,
-    lazy = false,
+    -- lazy = false,
+    event = 'VimEnter',
     config = function()
       local gen_ai_spec = require('mini.extra').gen_ai_spec
       local spec_treesitter = require('mini.ai').gen_spec.treesitter

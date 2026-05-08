@@ -10,7 +10,7 @@ return {
       preset = {
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('smart')" },
-          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+          { icon = " ", key = "n", desc = "New File", action = ":ene" },
           { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = " ", key = "l", desc = "Restore Session", action = ":lua require('resession').load('last')" },
           { icon = " ", key = "s", desc = "Load Session", action = ":lua require('resession').load()" },

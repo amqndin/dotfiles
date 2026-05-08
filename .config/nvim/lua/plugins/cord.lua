@@ -10,6 +10,7 @@ end
 return {
   "vyfor/cord.nvim",
   build = ":Cord update",
+  event = 'VimEnter',
   opts = {
     enabled = true,
     log_level = vim.log.levels.INFO,

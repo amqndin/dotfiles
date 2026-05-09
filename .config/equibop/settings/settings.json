@@ -252,7 +252,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 2.7999999999999994,
+            "zoom": 1,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -1050,7 +1050,16 @@
             "clearLogsOnRestart": false
         },
         "MessageTranslate": {
-            "enabled": false
+            "enabled": false,
+            "targetLanguage": "en",
+            "confidenceRequirement": 0.8,
+            "autoTranslate": true,
+            "skipOwnMessages": true,
+            "skipBotMessages": false,
+            "ignoredGuilds": "",
+            "ignoredChannels": "",
+            "ignoredUsers": "",
+            "showIndicator": true
         },
         "MoreCommands": {
             "enabled": false
@@ -1263,7 +1272,11 @@
             "enabled": false
         },
         "Translate+": {
-            "enabled": false
+            "enabled": false,
+            "target": "en",
+            "toki": true,
+            "sitelen": true,
+            "shavian": true
         },
         "UnitConverter": {
             "enabled": false
@@ -1595,6 +1608,12 @@
         },
         "NoMiddleClickPaste": {
             "enabled": false
+        },
+        "ProfileSectionsAPI": {
+            "enabled": false
+        },
+        "VoiceStats": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1608,7 +1627,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1778238660085
+        "settingsSyncVersion": 1778317885517
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
@@ -1625,10 +1644,10 @@
         },
         "messagePopoverButtons": {
             "Translate": {
-                "enabled": false
+                "enabled": true
             },
             "ViewRaw": {
-                "enabled": false
+                "enabled": true
             }
         }
     },

@@ -56,6 +56,9 @@ return {
 
           map('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
 
+          -- Hover and signature help with rounded borders
+          map('K', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover')
+
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed

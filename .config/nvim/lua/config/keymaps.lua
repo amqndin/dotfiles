@@ -16,34 +16,32 @@ vim.diagnostic.config {
   jump = { float = true },
 }
 
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = 'Show diagnostic under cursor' })
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.hl.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function() vim.hl.on_yank() end,
-})
-
+-- leader
 vim.keymap.set('n', '<Leader>w', '<Cmd>write<CR>', { desc = 'Write buffer' })
 vim.keymap.set('n', '<Leader>d', '<Cmd>quit<CR>', { desc = 'Quit buffer' })
 
 -- convenience
 vim.keymap.set('v', 'g/', [[/\%V]], { desc = 'Search in selection' })
 vim.keymap.set({ 'i', 't', 'c' }, '<C-BS>', '<C-w>')
+vim.keymap.set('c', '<C-j>', '<C-n>')
+vim.keymap.set('c', '<C-k>', '<C-p>')
+
+-- visual lines
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', '$', 'g$')
+vim.keymap.set('n', '0', 'g0')
+vim.keymap.set('n', '^', 'g^')
 
+-- terminal
 local terminal = require('config.terminal')
 vim.keymap.set({ 'n', 't' }, '<A-j>', terminal.toggle_floating)
 vim.keymap.set({ 'n', 't' }, '<A-k>', terminal.toggle_normal_mode)

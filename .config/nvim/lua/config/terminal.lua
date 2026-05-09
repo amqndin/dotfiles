@@ -25,8 +25,6 @@ function M.toggle_floating()
       border = 'rounded',
     })
 
-    vim.wo[state.win].winblend = 10
-
     if vim.bo[state.buf].buftype ~= 'terminal' then
       vim.cmd.term()
 

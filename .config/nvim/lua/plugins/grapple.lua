@@ -10,10 +10,10 @@ return {
     { "<leader>jd", "<cmd>Grapple toggle_tags<cr>", desc = "Toggle tags menu" },
     { "<leader>js", "<cmd>Grapple reset<cr>", desc = "Reset all tags" },
 
-    { "<A-S-J>", "<cmd>Grapple select index=1<cr>", desc = "Select first tag" },
-    { "<A-S-K>", "<cmd>Grapple select index=2<cr>", desc = "Select second tag" },
-    { "<A-S-L>", "<cmd>Grapple select index=3<cr>", desc = "Select third tag" },
-    { "<A-S-:>", "<cmd>Grapple select index=4<cr>", desc = "Select fourth tag" },
+    { "<A-J>", "<cmd>Grapple select index=1<cr>", desc = "Select first tag" },
+    { "<A-K>", "<cmd>Grapple select index=2<cr>", desc = "Select second tag" },
+    { "<A-L>", "<cmd>Grapple select index=3<cr>", desc = "Select third tag" },
+    { "<A-:>", "<cmd>Grapple select index=4<cr>", desc = "Select fourth tag" },
 
     { "<leader>jj", "<cmd>Grapple cycle_tags next<cr>", desc = "Go to next tag" },
     { "<leader>jk", "<cmd>Grapple cycle_tags prev<cr>", desc = "Go to previous tag" },

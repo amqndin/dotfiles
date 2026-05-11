@@ -31,8 +31,8 @@ vim.keymap.set('n', '<Leader>d', '<Cmd>quit<CR>', { desc = 'Quit buffer' })
 -- convenience
 vim.keymap.set('v', 'g/', [[/\%V]], { desc = 'Search in selection' })
 vim.keymap.set({ 'i', 't', 'c' }, '<C-BS>', '<C-w>')
-vim.keymap.set('c', '<C-j>', '<C-n>')
-vim.keymap.set('c', '<C-k>', '<C-p>')
+vim.keymap.set('c', '<C-j>', '<C-n>', { remap = true })
+vim.keymap.set('c', '<C-k>', '<C-p>', { remap = true })
 
 -- visual lines
 vim.keymap.set('n', 'j', 'gj')

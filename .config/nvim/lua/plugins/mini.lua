@@ -31,6 +31,13 @@ return {
 
       ---@diagnostic disable-next-line: duplicate-set-field
       statusline.section_location = function() return '%2l:%-2v' end
+      statusline.section_filename = function()
+        local result = vim.fn.expand('%:t')
+        if vim.bo.modified then
+          result = "  " .. result
+        end
+        return result
+      end
 
       require('mini.icons').setup()
       MiniIcons.mock_nvim_web_devicons()

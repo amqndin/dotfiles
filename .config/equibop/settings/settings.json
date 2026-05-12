@@ -451,7 +451,7 @@
             "enabled": false
         },
         "Summaries": {
-            "enabled": true,
+            "enabled": false,
             "summaryExpiryThresholdDays": 3
         },
         "SendTimestamps": {
@@ -1614,6 +1614,9 @@
         },
         "VoiceStats": {
             "enabled": false
+        },
+        "Streaks": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1627,7 +1630,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1778317885517
+        "settingsSyncVersion": 1778615565247
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

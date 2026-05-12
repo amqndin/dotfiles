@@ -1,6 +1,7 @@
 return {
   'stevearc/resession.nvim',
-  event = 'VimEnter',
+  -- event = 'VimEnter',
+  lazy = false,
   opts = {
     autosave = { enabled = true, interval = 60, notify = false },
   },
@@ -26,6 +27,32 @@ return {
           resession.save(name)
           resession.save('last')
         end
+      end,
+    })
+
+    vim.api.nvim_create_autocmd("VimEnter", {
+      callback = function()
+        local launched_without_arguments = vim.fn.argc(-1) == 0
+        local path = vim.fn.getcwd()
+
+        if path == vim.fn.expand("~") then
+          return
+        end
+
+        local name = vim.fn.fnamemodify(path, ":t")
+
+        if launched_without_arguments and not vim.g.using_stdin then
+          require("snacks").notifier.notify("Found a session in this directory")
+          resession.load(name)
+        end
+      end,
+      nested = true,
+    })
+
+    vim.api.nvim_create_autocmd('StdinReadPre', {
+      callback = function()
+        -- Store this for later
+        vim.g.using_stdin = true
       end,
     })
   end,

@@ -30,22 +30,4 @@ return {
     { '<leader>no', ':Obsidian quick_switch<cr>', desc = 'obsidian [o]pen quickswitch' },
     { '<leader>nO', ':Obsidian<cr>', desc = 'obsidian [O]pen in app' },
   },
-  -- config = function(_, opts)
-  --   require('obsidian').setup(opts)
-  --
-  --   vim.api.nvim_create_autocmd('FileType', {
-  --     pattern = 'markdown',
-  --     callback = function()
-  --       local is_obsidian = vim.fs.find('.obsidian', { 
-  --         upward = true, 
-  --         stop = vim.uv.os_homedir(),
-  --         path = vim.fn.expand('%:p:h') 
-  --       })[1]
-  --
-  --       if is_obsidian then
-  --         vim.opt_local.columns = 100
-  --       end
-  --     end,
-  --   })
-  -- end
 }

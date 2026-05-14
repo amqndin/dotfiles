@@ -42,8 +42,7 @@ return {
         local name = vim.fn.fnamemodify(path, ":t")
 
         if launched_without_arguments and not vim.g.using_stdin then
-          require("snacks").notifier.notify("Found a session in this directory")
-          resession.load(name)
+          resession.load(name, { silence_errors = true })
         end
       end,
       nested = true,

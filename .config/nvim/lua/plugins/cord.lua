@@ -74,14 +74,6 @@ return {
         url = 'https://github.com/funcfusion/mc-dp-icons',
       }
     },
-    hooks = {
-      pre_activity = function(opts)
-        if opts.filetype == 'toggleterm' then
-          local ft = opts.filename:match '^%d+:([^%s;]+)'
-          if ft and ft ~= '' then opts.force_filetype = ft end
-        end
-      end,
-    },
     advanced = {
       discord = {
         sync = {
@@ -89,20 +81,12 @@ return {
         }
       }
     },
-    plugins = nil,
-    -- assets = {
-    --   jmc = {
-    --     type = "language",
-    --     name = "JMC",
-    --     icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/jmc.png?raw=true",
-    --     tooltip = "JMC",
-    --   },
-    --   mcfunction = {
-    --     type = "language",
-    --     name = "MCFunction",
-    --     icon = "https://github.com/amqndin/dotfiles/blob/main/.config/nvim/assets/presence/mcfunction.png?raw=true",
-    --     tooltip = "MCFunction",
-    --   },
-    -- },
+    extensions = {
+      resolver = {
+        sources = {
+          oil = true,
+        },
+      },
+    },
   },
 }

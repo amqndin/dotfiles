@@ -74,13 +74,6 @@ return {
         url = 'https://github.com/funcfusion/mc-dp-icons',
       }
     },
-    advanced = {
-      discord = {
-        sync = {
-          interval = 15000
-        }
-      }
-    },
     extensions = {
       resolver = {
         sources = {

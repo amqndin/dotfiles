@@ -6,7 +6,15 @@ return {
     status = false,
   },
   keys = {
-    { "<leader>jf", "<cmd>Grapple toggle<cr>", desc = "Tag a file" },
+    {
+      "<leader>jf",
+      function()
+        require('grapple').toggle()
+        vim.notify("Tagged")
+      end,
+      desc = "Tag a file"
+    },
+
     { "<leader>jd", "<cmd>Grapple toggle_tags<cr>", desc = "Toggle tags menu" },
     { "<leader>js", "<cmd>Grapple reset<cr>", desc = "Reset all tags" },
 

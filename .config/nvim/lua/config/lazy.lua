@@ -15,4 +15,16 @@ require('lazy').setup({
   spec = { import = 'plugins' },
   install = { colorscheme = { 'catppuccin' } },
   checker = { enabled = false },
+	performance = {
+		cache = { enabled = true },
+		rtp = {
+			disabled_plugins = {
+				'netrwPlugin',
+				'gzip',
+				'tarPlugin',
+				'tohtml',
+				'tutor',
+			},
+		},
+	},
 })

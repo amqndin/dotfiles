@@ -6,6 +6,10 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
+    big_file = {
+      enabled = true,
+      notify = true,
+    },
     dashboard = {
       preset = {
         keys = {

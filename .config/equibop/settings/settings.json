@@ -1617,6 +1617,12 @@
         },
         "Streaks": {
             "enabled": false
+        },
+        "DownloadAllAttachments": {
+            "enabled": false
+        },
+        "MarkdownTables": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1630,7 +1636,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1778764632449
+        "settingsSyncVersion": 1779256505136
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,
@@ -1657,5 +1663,6 @@
     "enableOnlineThemes": true,
     "pinnedThemes": [],
     "mainWindowFrameless": false,
-    "themeActivationModes": {}
+    "themeActivationModes": {},
+    "windowsMaterial": "none"
 }

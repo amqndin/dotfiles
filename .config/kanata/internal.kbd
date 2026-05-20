@@ -1,0 +1,61 @@
+(deftemplate disabled-keys ()
+  bspc XX
+  esc XX
+  left XX
+  up XX
+  down XX
+)
+
+(deftemplate homerow-mods ()
+  a (t! tap-holdy a lmet)
+  s (t! tap-holdy s lalt)
+  d (t! tap-holdy d lsft)
+  f (t! mod-layer f lctl f-down)
+
+  j (t! tap-holdy j rctl)
+  k (t! tap-holdy k rsft)
+  l (t! tap-holdy l lalt)
+  ; (t! tap-holdy ; rmet)
+)
+
+(deftemplate layers ()
+  spc (t! layer spc spc-down)
+  m (t! layer m m-down)
+  v (t! layer v v-down)
+  e (t! layer e e-down)
+  i (t! layer i i-down)
+)
+
+(deftemplate focus-workspaces ()
+  j (t! niri focus-workspace 1)
+  k (t! niri focus-workspace 2)
+  l (t! niri focus-workspace 3)
+  ; (t! niri focus-workspace 4)
+  i (t! niri focus-workspace 5)
+  u (t! niri focus-workspace 6)
+  o (t! niri focus-workspace 7)
+  m (t! niri focus-workspace 8)
+  , (t! niri focus-workspace 9)
+  . (t! niri focus-workspace 10)
+)
+
+(deftemplate power-control ()
+  (tap-dance 300 (
+    (cmd systemctl suspend)
+    (cmd systemctl reboot)
+    (cmd systemctl poweroff)
+  ))
+)
+
+(deftemplate move-to-workspaces ()
+  j (t! niri move-column-to-workspace 1)
+  k (t! niri move-column-to-workspace 2)
+  l (t! niri move-column-to-workspace 3)
+  ; (t! niri move-column-to-workspace 4)
+  i (t! niri move-column-to-workspace 5)
+  u (t! niri move-column-to-workspace 6)
+  o (t! niri move-column-to-workspace 7)
+  m (t! niri move-column-to-workspace 8)
+  , (t! niri move-column-to-workspace 9)
+  . (t! niri move-column-to-workspace 10)
+)

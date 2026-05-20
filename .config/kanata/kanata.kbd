@@ -2,61 +2,23 @@
   process-unmapped-keys yes
   danger-enable-cmd yes
   allow-hardware-repeat false
-  concurrent-tap-hold yes
+  ;; concurrent-tap-hold yes
   log-layer-changes no
 )
 
+(include helpers.kbd)
+(include internal.kbd)
+
 (defsrc)
 
-(defvar
-  repress-timeout 180
-  hold-delay 180
-)
-
-(deftemplate layer (tap-action layer-name)
-  (tap-hold-release $repress-timeout $hold-delay $tap-action (layer-while-held $layer-name))
-)
-
-(deftemplate tap-holdy (tap-action hold-action)
-  (tap-hold-release $repress-timeout $hold-delay $tap-action $hold-action)
-)
-
-(deftemplate niri (action argument)
-  (cmd "niri" "msg" "action" $action $argument)
-)
-
 (deflayermap (base)
+  (t! layers)
+  (t! disabled-keys)
+  (t! homerow-mods)
+
   rmet (t! tap-holdy (layer-switch empty) rmet)
-
-  spc (t! layer spc spc-down)
-  m (t! layer m m-down)
-  v (t! layer v v-down)
-  e (t! layer e e-down)
-  i (t! layer i i-down)
-
-  bspc XX
-  esc XX
-  left XX
-  up XX
-  down XX
-
   caps esc
-
-  a (t! tap-holdy a lmet)
-  s (t! tap-holdy s lalt)
-  d (t! tap-holdy d lsft)
-  f (t! tap-holdy f lctl)
-
-  j (t! tap-holdy j rctl)
-  k (t! tap-holdy k rsft)
-  l (t! tap-holdy l lalt)
-  ; (t! tap-holdy ; rmet)
-
-  right (tap-dance 300 (
-    (cmd systemctl suspend)
-    (cmd systemctl reboot)
-    (cmd systemctl poweroff)
-  ))
+  right (t! power-control)
 )
 
 (deflayermap (i-down)
@@ -77,17 +39,18 @@
   i (cmd ddcutil --model "LG FULL HD" setvcp 10 + 10)
 )
 
+(deflayermap (f-down)
+  e (t! tap-holdy e (t! two-layers e-down ef-down))
+)
+
 (deflayermap (e-down)
-  j (t! niri focus-workspace 1)
-  k (t! niri focus-workspace 2)
-  l (t! niri focus-workspace 3)
-  ; (t! niri focus-workspace 4)
-  i (t! niri focus-workspace 5)
-  u (t! niri focus-workspace 6)
-  o (t! niri focus-workspace 7)
-  m (t! niri focus-workspace 8)
-  , (t! niri focus-workspace 9)
-  . (t! niri focus-workspace 10)
+  f (t! tap-holdy f (t! two-layers f-down ef-down))
+
+  (t! focus-workspaces)
+)
+
+(deflayermap (ef-down)
+  (t! move-to-workspaces)
 )
 
 (deflayermap (empty)

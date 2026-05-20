@@ -1,0 +1,26 @@
+(defvar
+  repress-timeout 180
+  hold-delay 180
+)
+
+(deftemplate tap-holdy (tap-action hold-action)
+  (tap-hold-release $repress-timeout $hold-delay $tap-action $hold-action)
+)
+
+(deftemplate layer (tap-action layer-name)
+  (t! tap-holdy $tap-action (layer-while-held $layer-name))
+)
+
+(deftemplate mod-layer (tap-action modifier layer-name)
+  (t! tap-holdy $tap-action (multi $modifier (layer-while-held $layer-name)))
+)
+
+(deftemplate two-layers (layer-name1 layer-name2)
+  ;; (t! tap-holdy $tap-action (multi (layer-while-held $layer-name1) (layer-while-held $layer-name2)))
+  (multi (layer-while-held $layer-name1) (layer-while-held $layer-name2))
+)
+
+(deftemplate niri (action argument)
+  (cmd "niri" "msg" "action" $action $argument)
+)
+

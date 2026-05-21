@@ -16,7 +16,8 @@ fish_config theme choose "Catppuccin Mocha"
 set fish_cursor_insert block
 set -U fish_greeting ""
 
-alias e="nvim"
+# alias e="nvim"
+alias e="neovide --fork"
 alias ff="fastfetch"
 alias gg="lazygit"
 alias cat="bat"

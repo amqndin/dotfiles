@@ -1,6 +1,8 @@
 return {
   {
-    "amqndin/vim-bolt-highlight", opts = {}
+    "amqndin/vim-bolt-highlight",
+    ft = { "bolt", "mcfunction" },
+    opts = {}
   },
   -- {
   --   "bbfh-dev/tree-sitter-mcfunction",

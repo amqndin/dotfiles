@@ -1,9 +1,14 @@
 return {
   'stevearc/resession.nvim',
-  -- event = 'VimEnter',
-  lazy = false,
   opts = {
-    autosave = { enabled = true, interval = 60, notify = false },
+    autosave = {
+      enabled = true,
+      interval = 60,
+      notify = false
+    },
+    extensions = {
+      quickfix = {},
+    },
   },
   config = function(_, opts)
     local resession = require 'resession'
@@ -15,7 +20,7 @@ return {
       if name then resession.save(name) end
     end)
     vim.keymap.set('n', '<leader>sS', resession.save, { desc = 'Save session'})
-    vim.keymap.set('n', '<leader>sl', resession.load, { desc = 'Load session' })
+    vim.keymap.set('n', '<leader>sl', function() resession.load(nil, { reset = false }) end , { desc = 'Load session' })
     vim.keymap.set('n', '<leader>sr', function() resession.load 'last' end, { desc = 'Restore session' })
     vim.keymap.set('n', '<leader>sd', resession.delete, { desc = 'Delete session' })
 
@@ -41,18 +46,11 @@ return {
 
         local name = vim.fn.fnamemodify(path, ":t")
 
-        if launched_without_arguments and not vim.g.using_stdin then
+        if launched_without_arguments then
           resession.load(name, { silence_errors = true })
         end
       end,
       nested = true,
-    })
-
-    vim.api.nvim_create_autocmd('StdinReadPre', {
-      callback = function()
-        -- Store this for later
-        vim.g.using_stdin = true
-      end,
     })
   end,
 }

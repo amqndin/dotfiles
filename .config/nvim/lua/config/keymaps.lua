@@ -28,11 +28,19 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<Leader>w', '<Cmd>write<CR>', { desc = 'Write buffer' })
 vim.keymap.set('n', '<Leader>d', '<Cmd>quit<CR>', { desc = 'Quit buffer' })
 
+-- buffers
+vim.keymap.set('n', '<Leader>bd', '<Cmd>bd<CR>')
+vim.keymap.set('n', '<Leader>bn', '<Cmd>bn<CR>')
+vim.keymap.set('n', '<Leader>bp', '<Cmd>bp<CR>')
+vim.keymap.set('n', '<Leader>bo', '<Cmd>%bd|e#<CR>')
+
 -- convenience
 vim.keymap.set('v', 'g/', [[/\%V]], { desc = 'Search in selection' })
 vim.keymap.set({ 'i', 't', 'c' }, '<C-BS>', '<C-w>')
 vim.keymap.set('c', '<C-j>', '<C-n>', { remap = true })
 vim.keymap.set('c', '<C-k>', '<C-p>', { remap = true })
+vim.keymap.set('n', '[t', '<Cmd>tabp<CR>')
+vim.keymap.set('n', ']t', '<Cmd>tabn<CR>')
 
 -- visual lines
 vim.keymap.set('n', 'j', 'gj')

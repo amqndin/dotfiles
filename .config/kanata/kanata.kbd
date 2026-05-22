@@ -35,8 +35,8 @@
   k (cmd fish -c "~/dotfiles/scripts/internal/toggle-nightlight.fish")
   j (cmd fnottctl dismiss-with-default-action)
   m (cmd fnottctl dismiss)
-  u (cmd ddcutil --model "LG FULL HD" setvcp 10 - 10)
-  i (cmd ddcutil --model "LG FULL HD" setvcp 10 + 10)
+  u (cmd fish -c "brightness.fish -d 10")
+  i (cmd fish -c "brightness.fish -i 10")
 )
 
 (deflayermap (f-down)

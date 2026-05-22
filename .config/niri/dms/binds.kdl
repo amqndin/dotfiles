@@ -68,10 +68,10 @@ binds {
 
     // === Brightness Controls ===
     XF86MonBrightnessUp allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
+       spawn "brightness.fish" "-i" "10";
     }
     XF86MonBrightnessDown allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
+       spawn "brightness.fish" "-d" "10";
     }
 
     // === Window Management ===

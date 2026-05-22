@@ -5,6 +5,7 @@ spawn-at-startup "kitty"
 spawn-at-startup "~/dotfiles/scripts/internal/startup.sh"
 
 environment {
+    XDG_CURRENT_DESKTOP "niri"
     TERMINAL "kitty"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_QPA_PLATFORM "wayland;xcb"
@@ -24,6 +25,16 @@ overview {
 
 hotkey-overlay {
     skip-at-startup
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+config-notification {
+    disable-failed
 }
 
 cursor {

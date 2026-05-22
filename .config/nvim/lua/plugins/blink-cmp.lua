@@ -7,6 +7,7 @@ return {
     version = '1.*',
     dependencies = {
       -- Snippet Engine
+      { "Exafunction/codeium.nvim" },
       {
         'L3MON4D3/LuaSnip',
         version = '2.*',
@@ -79,7 +80,10 @@ return {
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'codeium' },
+        providers = {
+          codeium = { name = 'Codeium', module = 'codeium.blink', async = true },
+        },
       },
 
       snippets = { preset = 'luasnip' },

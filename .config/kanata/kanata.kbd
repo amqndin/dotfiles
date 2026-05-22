@@ -32,7 +32,7 @@
 )
 
 (deflayermap (v-down)
-  k (cmd fish -c "~/dotfiles/scripts/internal/toggle-nightlight.fish")
+  k (cmd fish -c "dms ipc call night toggle")
   j (cmd fnottctl dismiss-with-default-action)
   m (cmd fnottctl dismiss)
   u (cmd fish -c "brightness.fish -d 10")

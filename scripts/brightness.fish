@@ -8,10 +8,10 @@ function change_brightness
     or return 1
 
     if set -q _flag_inc
-        dms ipc call brightness increment $_flag_inc $BKLIGHT
+        # dms ipc call brightness increment $_flag_inc $BKLIGHT
         dms ipc call brightness increment $_flag_inc $DDC_MON
     else if set -q _flag_dec
-        dms ipc call brightness decrement $_flag_dec $BKLIGHT
+        # dms ipc call brightness decrement $_flag_dec $BKLIGHT
         dms ipc call brightness decrement $_flag_dec $DDC_MON
     else
         echo "Error: Need argument"

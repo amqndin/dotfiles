@@ -7,7 +7,7 @@ return {
     version = '1.*',
     dependencies = {
       -- Snippet Engine
-      { "Exafunction/codeium.nvim" },
+      { "Exafunction/codeium.nvim", lazy = true },
       {
         'L3MON4D3/LuaSnip',
         version = '2.*',

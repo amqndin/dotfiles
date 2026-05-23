@@ -1,0 +1,57 @@
+{
+  "dankLauncherKeys": {
+    "enabled": true
+  },
+  "bongoCat": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "",
+    "calcEngine": "qalc",
+    "noTrigger": true
+  },
+  "niriWindows": {
+    "enabled": true,
+    "trigger": "w "
+  },
+  "displayMirror": {
+    "enabled": false
+  },
+  "niriDS": {
+    "enabled": true
+  },
+  "displayManager": {
+    "enabled": true,
+    "brightness_eDP-1": 50
+  },
+  "gitmojiLauncher": {
+    "enabled": false
+  },
+  "powerOptions": {
+    "enabled": false
+  },
+  "dmsPass": {
+    "enabled": false
+  },
+  "obsidianSearch": {
+    "enabled": true,
+    "trigger": "ob",
+    "vaultPath": "/home/amandin/src/github/amqndin/notes"
+  },
+  "dankQuickSearch": {
+    "enabled": true,
+    "trigger": "s"
+  },
+  "converter": {
+    "enabled": false
+  },
+  "emojiLauncher": {
+    "enabled": true,
+    "trigger": ":",
+    "recentEmojis": "😭"
+  },
+  "notifFollow": {
+    "enabled": true
+  }
+}

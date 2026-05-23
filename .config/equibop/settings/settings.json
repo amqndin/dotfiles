@@ -548,7 +548,8 @@
                     "replace": "",
                     "onlyIfIncludes": "",
                     "scope": "myMessages",
-                    "id": "d8668254-0808-4f9d-9a1a-4bb4d7fa24a2"
+                    "id": "d8668254-0808-4f9d-9a1a-4bb4d7fa24a2",
+                    "name": ""
                 }
             ],
             "regexRules": [
@@ -557,21 +558,24 @@
                     "replace": "https://rxddit.com",
                     "onlyIfIncludes": "",
                     "scope": "allMessages",
-                    "id": "6f464869-05c0-4ad6-b792-cd538bfd715a"
+                    "id": "6f464869-05c0-4ad6-b792-cd538bfd715a",
+                    "name": ""
                 },
                 {
                     "find": "/https?:\\/\\/(www\\.)?(twitter|x)\\.com/",
                     "replace": "https://fixupx.com",
                     "onlyIfIncludes": "",
                     "scope": "allMessages",
-                    "id": "f3726bf0-454e-46af-bf6b-8d29a959220e"
+                    "id": "f3726bf0-454e-46af-bf6b-8d29a959220e",
+                    "name": ""
                 },
                 {
                     "find": "",
                     "replace": "",
                     "onlyIfIncludes": "",
                     "scope": "myMessages",
-                    "id": "2140cfaa-63e6-4c1c-84d9-e51b69b627f6"
+                    "id": "2140cfaa-63e6-4c1c-84d9-e51b69b627f6",
+                    "name": ""
                 }
             ]
         },
@@ -1636,7 +1640,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1779300284022
+        "settingsSyncVersion": 1779508085564
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

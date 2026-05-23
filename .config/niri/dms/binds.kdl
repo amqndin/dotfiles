@@ -77,7 +77,7 @@ binds {
     // === Window Management ===
     Mod+D { close-window; }
     Mod+G { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+G { switch-focus-between-floating-and-tiling; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+W { toggle-column-tabbed-display; }

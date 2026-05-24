@@ -28,13 +28,15 @@ layout {
     }
 }
 
+workspace "game" {}
+
 workspace "terminal" {}
 
 workspace "discord" {}
 
 workspace "browser" {}
 
-workspace "game" {}
+// workspace "game" {}
 
 window-rule {
     match app-id=r#"^org\.gnome\."#

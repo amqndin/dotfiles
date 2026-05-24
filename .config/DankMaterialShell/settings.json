@@ -98,7 +98,8 @@
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 50
+      "width": 50,
+      "deviceName": "ddc:i2c-3"
     },
     {
       "id": "wifi",
@@ -479,12 +480,23 @@
       ],
       "centerWidgets": [
         "music",
-        "clock",
-        "weather"
+        {
+          "id": "clock",
+          "enabled": true,
+          "clockCompactMode": false
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
         {
           "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "keyboard_layout_name",
           "enabled": true
         },
         {
@@ -496,11 +508,12 @@
           "showVpnIcon": false,
           "showBrightnessIcon": false,
           "showMicIcon": false,
-          "showMicPercent": false
+          "showMicPercent": false,
+          "showScreenSharingIcon": false
         }
       ],
       "spacing": 0,
-      "innerPadding": 4,
+      "innerPadding": 8,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
@@ -521,7 +534,7 @@
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
-      "fontScale": 1.4,
+      "fontScale": 1.35,
       "iconScale": 1.2,
       "autoHide": false,
       "autoHideDelay": 250,

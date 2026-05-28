@@ -53,15 +53,15 @@ window-rule {
     open-floating false
 }
 
-window-rule {
-    match app-id=r#"^org\.gnome\.Calculator$"#
-    match app-id=r#"^gnome-calculator$"#
-    match app-id=r#"^galculator$"#
-    match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^xdg-desktop-portal$"#
-    open-floating true
-}
+// window-rule {
+//     match app-id=r#"^org\.gnome\.Calculator$"#
+//     match app-id=r#"^gnome-calculator$"#
+//     match app-id=r#"^galculator$"#
+//     match app-id=r#"^blueman-manager$"#
+//     match app-id=r#"^org\.gnome\.Nautilus$"#
+//     match app-id=r#"^xdg-desktop-portal$"#
+//     open-floating true
+// }
 
 window-rule {
     match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
@@ -86,11 +86,11 @@ window-rule {
     draw-border-with-background false
 }
 
-window-rule {
-    match app-id=r#"org.quickshell$"#
-    match app-id=r#"com.danklinux.dms$"#
-    open-floating true
-}
+// window-rule {
+//     match app-id=r#"org.quickshell$"#
+//     match app-id=r#"com.danklinux.dms$"#
+//     open-floating true
+// }
 
 window-rule {
     match app-id="kitty" at-startup=true
@@ -100,6 +100,7 @@ window-rule {
 window-rule {
     match app-id="equibop"
     match app-id="discord"
+    match app-id="telegram"
     open-on-workspace "discord"
 }
 

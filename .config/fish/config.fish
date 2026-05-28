@@ -17,6 +17,7 @@ set fish_cursor_insert block
 set -U fish_greeting ""
 
 # alias e="nvim"
+alias nv="nvim"
 alias e="neovide --fork"
 alias ff="fastfetch"
 alias gg="lazygit"

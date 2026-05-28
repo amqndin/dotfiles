@@ -217,7 +217,7 @@
             "enabled": true
         },
         "FriendInvites": {
-            "enabled": true
+            "enabled": false
         },
         "FriendsSince": {
             "enabled": false
@@ -532,7 +532,7 @@
             "enabled": false
         },
         "StickerPaste": {
-            "enabled": true
+            "enabled": false
         },
         "StreamerModeOnStream": {
             "enabled": false
@@ -597,9 +597,10 @@
         "TypingIndicator": {
             "enabled": true,
             "includeCurrentChannel": true,
-            "includeMutedChannels": true,
+            "includeMutedChannels": false,
             "includeBlockedUsers": true,
-            "indicatorMode": 3
+            "indicatorMode": 3,
+            "includeIgnoredUsers": false
         },
         "TypingTweaks": {
             "enabled": true,
@@ -737,7 +738,7 @@
             "enabled": false
         },
         "BetterActivities": {
-            "enabled": true,
+            "enabled": false,
             "memberList": false,
             "iconSize": 15,
             "specialFirst": true,
@@ -754,7 +755,7 @@
             "enabled": false
         },
         "BetterBlockedUsers": {
-            "enabled": true
+            "enabled": false
         },
         "BetterCommands": {
             "enabled": false
@@ -1219,7 +1220,8 @@
             "IconLocation": "toolbar"
         },
         "SplitLargeMessages": {
-            "enabled": false
+            "enabled": true,
+            "maxLength": 0
         },
         "SpotifyActivityToggle": {
             "enabled": false
@@ -1535,7 +1537,8 @@
             "nestToken": "",
             "autoUploadPastedFiles": false,
             "bypassDiscordUpload": true,
-            "bypassDiscordUploadOnlyOverLimit": true
+            "bypassDiscordUploadOnlyOverLimit": true,
+            "fallbackOrder": "zipline,ezhost,nest,s3,catbox,0x0,litterbox,gofile,tmpfiles,buzzheavier,tempsh,filebin,pixelvault,pixeldrain,sharex"
         },
         "MessagePeek": {
             "enabled": false
@@ -1553,7 +1556,7 @@
             "enabled": false
         },
         "MiddleClickTweaks": {
-            "enabled": true,
+            "enabled": false,
             "pasteScope": "always",
             "pasteThreshold": 100,
             "openScope": "none"
@@ -1642,7 +1645,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1779947625917
+        "settingsSyncVersion": 1779991892637
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

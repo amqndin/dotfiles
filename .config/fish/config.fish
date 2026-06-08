@@ -25,8 +25,6 @@ alias cat="bat"
 alias grep="rg"
 alias cava-mic="cava -p ~/.config/cava/config_mic"
 alias refish="source ~/.config/fish/config.fish"
-alias cp="cp -i"
-alias mv="mv -i"
 alias ls="eza --icons --color=always --group-directories-first"
 
 set -l session_name "main"

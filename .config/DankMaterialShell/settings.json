@@ -99,7 +99,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": "ddc:i2c-3"
+      "deviceName": "ddc:i2c-2"
     },
     {
       "id": "wifi",
@@ -229,7 +229,7 @@
   "dankLauncherV2BorderThickness": 2,
   "dankLauncherV2BorderColor": "primary",
   "dankLauncherV2ShowFooter": true,
-  "dankLauncherV2UnloadOnClose": false,
+  "dankLauncherV2UnloadOnClose": true,
   "useAutoLocation": false,
   "weatherEnabled": true,
   "networkPreference": "wifi",
@@ -290,7 +290,9 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
+  "brightnessDevicePins": {
+    "HDMI-A-2": "ddc:i2c-2"
+  },
   "wifiNetworkPins": {},
   "bluetoothDevicePins": {},
   "audioInputDevicePins": {},

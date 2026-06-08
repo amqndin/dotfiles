@@ -515,13 +515,16 @@
             "chatIconRightClickAction": "global",
             "hideChatBoxTypingIndicators": false,
             "chatContextMenu": true,
-            "enabledGlobally": true
+            "enabledGlobally": true,
+            "temporaryEnableThresholdDirectMessages": 0,
+            "temporaryEnableThresholdServers": 0,
+            "alwaysEnableInActiveVoiceChat": false
         },
         "SpotifyControls": {
             "enabled": false
         },
         "SpotifyCrack": {
-            "enabled": true,
+            "enabled": false,
             "noSpotifyAutoPause": true,
             "keepSpotifyActivityOnIdle": false
         },
@@ -1030,7 +1033,7 @@
             "cacheMessagesFromServers": true,
             "ignoreBots": true,
             "ignoreWebhooks": true,
-            "ignoreSelf": true,
+            "ignoreSelf": false,
             "ignoreMutedGuilds": false,
             "ignoreMutedCategories": false,
             "ignoreMutedChannels": false,
@@ -1041,7 +1044,7 @@
             "messagesToDisplayAtOnceInLogs": 100,
             "messageLimit": 200,
             "attachmentSizeLimitInMegabytes": 12,
-            "attachmentFileExtensions": "png,jpg,jpeg,gif,webp,mp4,webm,mp3,ogg,wav",
+            "attachmentFileExtensions": "none",
             "cacheLimit": 1000,
             "whitelistedIds": "",
             "blacklistedIds": "",
@@ -1632,6 +1635,15 @@
         },
         "MarkdownTables": {
             "enabled": false
+        },
+        "BetterGifLoad": {
+            "enabled": false
+        },
+        "ClipUpload": {
+            "enabled": false
+        },
+        "LimitlessScreenshare": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1645,7 +1657,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1779991892637
+        "settingsSyncVersion": 1780682089341
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

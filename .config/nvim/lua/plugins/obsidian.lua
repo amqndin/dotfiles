@@ -18,9 +18,10 @@ return {
       },
     },
     frontmatter = { enabled = false },
+    ui = { enable = false },
     picker = {
       name = 'snacks.pick'
-    }
+    },
   },
   keys = {
     { '<leader>nb', ':Obsidian backlinks<cr>', desc = 'obsidian [b]acklinks' },

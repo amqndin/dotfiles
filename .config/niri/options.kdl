@@ -33,6 +33,10 @@ gestures {
     }
 }
 
+clipboard {
+    disable-primary
+}
+
 config-notification {
     disable-failed
 }

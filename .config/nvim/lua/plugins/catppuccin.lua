@@ -6,6 +6,7 @@ return {
     require('catppuccin').setup({
       auto_integrations = true,
       term_colors = true,
+      no_italic = true,
     })
     vim.cmd.colorscheme 'catppuccin'
   end,

@@ -13,6 +13,8 @@ return {
       -- local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
       -- require('nvim-treesitter').install(parsers)
 
+      vim.treesitter.language.register("nim", "bolt")
+
       ---@param buf integer
       ---@param language string
       local function treesitter_try_attach(buf, language)
@@ -58,9 +60,5 @@ return {
       })
     end,
   },
-  -- {
-  --   "quellerz/vim-mcfunction-highlighter",
-  --   opts = {}
-  -- }
 }
 -- vim: ts=2 sts=2 sw=2 et

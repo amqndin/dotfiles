@@ -1541,7 +1541,24 @@
             "autoUploadPastedFiles": false,
             "bypassDiscordUpload": true,
             "bypassDiscordUploadOnlyOverLimit": true,
-            "fallbackOrder": "zipline,ezhost,nest,s3,catbox,0x0,litterbox,gofile,tmpfiles,buzzheavier,tempsh,filebin,pixelvault,pixeldrain,sharex"
+            "fallbackOrder": "zipline,ezhost,nest,encryptinghost,s3,catbox,0x0,litterbox,gofile,tmpfiles,buzzheavier,tempsh,filebin,pixelvault,pixeldrain,sharex",
+            "ezHostKey": "",
+            "encryptingHostKey": "",
+            "encryptingHostUrlStyle": "query",
+            "encryptingHostDomains": "[\"offensive\"]",
+            "encryptingHostTitle": "",
+            "encryptingHostColor": "",
+            "encryptingHostFakelink": "",
+            "s3Endpoint": "",
+            "s3Bucket": "",
+            "s3Region": "auto",
+            "s3AccessKeyId": "",
+            "s3SecretAccessKey": "",
+            "s3SessionToken": "",
+            "s3PublicUrl": "",
+            "s3Prefix": "",
+            "s3ForcePathStyle": true,
+            "litterboxExpiry": "24h"
         },
         "MessagePeek": {
             "enabled": false
@@ -1657,7 +1674,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1780682089341
+        "settingsSyncVersion": 1781002249432
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

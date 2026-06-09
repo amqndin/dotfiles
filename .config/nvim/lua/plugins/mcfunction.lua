@@ -29,7 +29,7 @@ return {
         },
       })
 
-      vim.treesitter.language.register("mcfunction", "bolt")
+      -- vim.treesitter.language.register("mcfunction", "bolt")
     end,
   }
   -- {

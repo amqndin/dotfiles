@@ -6,9 +6,6 @@
   log-layer-changes no
 )
 
-(include helpers.kbd)
-(include internal.kbd)
-
 (defsrc)
 
 (deflayermap (base)
@@ -69,3 +66,6 @@
   r lrld
   e caps
 )
+
+(include helpers.kbd)
+(include internal.kbd)

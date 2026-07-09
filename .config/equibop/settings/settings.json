@@ -5,9 +5,8 @@
     "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
-        "midnight-catppuccin-mocha.theme.css",
-        "clean.theme.css",
-        "catppuccin-mocha.theme.css"
+        "ctp.theme.css",
+        "clean.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -141,7 +140,9 @@
             "enabled": false
         },
         "CrashHandler": {
-            "enabled": true
+            "enabled": true,
+            "attemptToPreventCrashes": true,
+            "attemptToNavigateToHome": false
         },
         "CtrlEnterSend": {
             "enabled": false
@@ -252,7 +253,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 3.4000000000000004,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -506,7 +507,7 @@
             "showIcon": false,
             "contextMenu": true,
             "hideMembersListTypingIndicators": false,
-            "chatIcon": true,
+            "chatIcon": false,
             "defaultHidden": true,
             "enabledLocations": "",
             "disabledLocations": "1158448966510334022, 1201859678196203570",
@@ -800,7 +801,12 @@
             "enabled": false
         },
         "CommandPalette": {
-            "enabled": false
+            "enabled": true,
+            "hotkey": [
+                "alt",
+                "k"
+            ],
+            "closeAfterExecute": true
         },
         "ContentWarning": {
             "enabled": false
@@ -874,9 +880,6 @@
             "enabled": true
         },
         "FontLoader": {
-            "enabled": false
-        },
-        "ForwardAnywhere": {
             "enabled": false
         },
         "Freaky": {
@@ -1224,7 +1227,10 @@
         },
         "SplitLargeMessages": {
             "enabled": true,
-            "maxLength": 0
+            "maxLength": 0,
+            "disableFileConversion": true,
+            "hardSplit": false,
+            "sendDelay": 1
         },
         "SpotifyActivityToggle": {
             "enabled": false
@@ -1337,7 +1343,7 @@
             "enabled": false
         },
         "WhosWatching": {
-            "enabled": false
+            "enabled": true
         },
         "WigglyText": {
             "enabled": false
@@ -1438,7 +1444,13 @@
             "enabled": false
         },
         "KeyboardNavigation": {
-            "enabled": false
+            "enabled": false,
+            "hotkey": [
+                "shift",
+                "control",
+                "p"
+            ],
+            "allowMouseControl": false
         },
         "AutoZipper": {
             "enabled": false
@@ -1533,7 +1545,7 @@
             "interceptDiscordUpload": false,
             "interceptDiscordUploadOnlyOverLimit": true,
             "uploadTimeoutMs": 300000,
-            "catboxUserhash": "ee5451f2519d46e4dd375da9f",
+            "catboxUserhash": "",
             "embedProxyEnabled": false,
             "corsProxyUrl": "https://cors.keiran0.workers.dev",
             "preserveOriginalFilename": true,
@@ -1558,7 +1570,9 @@
             "s3PublicUrl": "",
             "s3Prefix": "",
             "s3ForcePathStyle": true,
-            "litterboxExpiry": "24h"
+            "litterboxExpiry": "24h",
+            "gofileToken": "",
+            "uploadAllowedFileTypes": ""
         },
         "MessagePeek": {
             "enabled": false
@@ -1615,7 +1629,16 @@
             "enabled": false
         },
         "EquibopStreamFixes": {
-            "enabled": false
+            "enabled": false,
+            "unlockQualityOptions": true,
+            "removeResolutionCap": true,
+            "forceEncoderSettings": true,
+            "preventDownscale": true,
+            "keyframeInterval": 5000,
+            "minBitrate": 500,
+            "raiseBitrateCaps": true,
+            "preventFramerateReduction": true,
+            "bitsPerPixelPct": 8
         },
         "CollapsibleUI": {
             "enabled": false
@@ -1661,6 +1684,21 @@
         },
         "LimitlessScreenshare": {
             "enabled": false
+        },
+        "BetterForwards": {
+            "enabled": false
+        },
+        "GifMaker": {
+            "enabled": false
+        },
+        "StopAutoUnread": {
+            "enabled": false
+        },
+        "SedEnhanced": {
+            "enabled": false
+        },
+        "SurfaceClassesAPI": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1674,7 +1712,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1781002249432
+        "settingsSyncVersion": 1783591343317
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

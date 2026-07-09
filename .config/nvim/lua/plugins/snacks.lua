@@ -28,6 +28,16 @@ return {
       },
     },
     picker = {
+      sources = {
+        files = {
+          ignored = true,
+          hidden = true
+        },
+        smart = {
+          ignored = true,
+          hidden = true
+        }
+      },
       win = {
         input = {
           keys = {
@@ -78,7 +88,7 @@ return {
     { "<leader>sp", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec" },
     { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
     { "<leader>s<space>", function() Snacks.picker.resume() end, desc = "Resume" },
-    { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
+    -- { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
     -- notify
     { "<c-m>", function() Snacks.notifier.hide() end, desc = "Hide notifications"}
   }

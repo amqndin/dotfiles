@@ -9,7 +9,7 @@ set -gx FZF_DEFAULT_OPTS "\
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
 set -x PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD 1
-set -x CHROME_PATH (which chromium)
+# set -x CHROME_PATH (which chromium)
 
 fish_vi_key_bindings
 fish_config theme choose "Catppuccin Mocha"

@@ -20,11 +20,20 @@
 
 (deftemplate layers ()
   spc (t! layer spc spc-down)
+  ;; spc (t! layer spc space)
   m (t! layer m m-down)
   v (t! layer v v-down)
   e (t! layer e e-down)
   i (t! layer i i-down)
 )
+
+;; (deflayermap (space)
+;;     s (movemouse-accel-left  5 200 1 1)
+;;     d (movemouse-accel-down  5 210 1 9)
+;;     e (movemouse-accel-up    5 210 1 9)
+;;     f (movemouse-accel-right 5 210 1 9)
+;;     r lrld
+;; )
 
 (deftemplate focus-workspaces ()
   ;; j (t! niri focus-workspace 1)

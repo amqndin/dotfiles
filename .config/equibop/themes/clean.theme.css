@@ -9,6 +9,16 @@
 @import url(https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css);
 
 /**
+ * @name Font change
+*/
+
+:root {
+  --font-display: "Inter" !important;
+  --font-primary: "Inter" !important;
+  --font-code: "JetBrainsMono Nerd Font" !important;
+}
+
+/**
  * @name Clean input box
 */
 

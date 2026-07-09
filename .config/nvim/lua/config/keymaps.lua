@@ -35,7 +35,7 @@ vim.keymap.set('n', '<Leader>bp', '<Cmd>bp<CR>')
 vim.keymap.set('n', '<Leader>bo', '<Cmd>%bd|e#<CR>')
 
 -- convenience
-vim.keymap.set('v', 'g/', [[/\%V]], { desc = 'Search in selection' })
+vim.keymap.set('v', 'g/', [[<Esc>/\%V]], { desc = 'Search in selection' })
 vim.keymap.set({ 'i', 't', 'c' }, '<C-BS>', '<C-w>')
 vim.keymap.set('c', '<C-j>', '<C-n>', { remap = true })
 vim.keymap.set('c', '<C-k>', '<C-p>', { remap = true })

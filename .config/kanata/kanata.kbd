@@ -19,7 +19,7 @@
 )
 
 (deflayermap (i-down)
-  f (cmd wl-kbptr)
+  f (cmd fish -c mousefree)
 )
 
 (deflayermap (m-down)

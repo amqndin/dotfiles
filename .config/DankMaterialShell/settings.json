@@ -635,10 +635,6 @@
       ],
       "rightWidgets": [
         {
-          "id": "capsLockIndicator",
-          "enabled": true
-        },
-        {
           "id": "systemTray",
           "enabled": true
         },

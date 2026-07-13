@@ -3,6 +3,10 @@
   hold-delay 180
 )
 
+(deftemplate run (command)
+  (cmd fish -c $command)
+)
+
 (deftemplate tap-holdy (tap-action hold-action)
   (tap-hold-release $repress-timeout $hold-delay $tap-action $hold-action)
 )

@@ -29,14 +29,8 @@ return {
     },
     picker = {
       sources = {
-        files = {
-          ignored = true,
-          hidden = true
-        },
-        smart = {
-          ignored = true,
-          hidden = true
-        }
+        files = {},
+        smart = {}
       },
       win = {
         input = {

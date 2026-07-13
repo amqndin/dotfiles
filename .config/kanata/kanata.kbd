@@ -19,7 +19,7 @@
 )
 
 (deflayermap (i-down)
-  f (cmd fish -c mousefree)
+  f (t! run "stochos")
 )
 
 (deflayermap (m-down)

@@ -18,6 +18,9 @@ layout {
     border {
         on
         width 2
+        active-color "#b4befe"
+        inactive-color "#6c7086"
+        urgent-color "#f38ba8"
     }
 
     focus-ring {
@@ -47,7 +50,7 @@ workspace "browser" {}
 
 animations {
     workspace-switch {
-        spring damping-ratio=0.80 stiffness=2000 epsilon=0.0001
+        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
     }
 
     window-open {

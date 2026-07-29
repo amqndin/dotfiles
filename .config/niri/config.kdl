@@ -1,3 +1,4 @@
+include "noctalia.kdl"
 include "input.kdl"
 include "layout.kdl"
 include "rules.kdl"
@@ -5,4 +6,3 @@ include "binds.kdl"
 include "options.kdl"
 
 spawn-at-startup "noctalia"
-include "noctalia.kdl"

@@ -43,25 +43,25 @@ config-notification {
 
 cursor {
     xcursor-theme "Bibata-Modern-Classic"
-    xcursor-size 20
-
+    xcursor-size 24
     hide-when-typing
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 506
 }
 
 debug {
-  honor-xdg-activation-with-invalid-serial
+    honor-xdg-activation-with-invalid-serial
 }
 
-
 output "HDMI-A-2" {
-    // off
     mode "1920x1080@74.973"
     scale 1.0
-    transform "normal"
+    position x=1600 y=0
     focus-at-startup
 }
 
 output "eDP-1" {
     off
+    mode "1600x900@60.011"
+    scale 1
+    position x=0 y=180
 }

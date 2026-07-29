@@ -1,6 +1,7 @@
 layout {
     background-color "transparent"
     center-focused-column "never"
+    gaps 10
 
     preset-column-widths {
         proportion 0.5
@@ -17,128 +18,36 @@ layout {
     border {
         on
         width 2
-        // active-color "#89b4fa"
-        active-color "#b4befe"
-        inactive-color "#6c7086"
-        urgent-color "#f38ba8"
     }
 
     focus-ring {
         off
+        width 2
+    }
+
+    shadow {
+        color "#11111b70"
+    }
+
+    tab-indicator {
+        active-color   "#212121"
+        inactive-color "#555555"
+        urgent-color   "#f38ba8"
+    }
+
+    insert-hint {
+        color "#cba6f780"
     }
 }
 
 workspace "game" {}
-
 workspace "terminal" {}
-
 workspace "discord" {}
-
 workspace "browser" {}
-
-window-rule {
-    match app-id=r#"^org\.gnome\."#
-    draw-border-with-background false
-    geometry-corner-radius 12
-    clip-to-geometry true
-}
-
-window-rule {
-    match app-id=r#"^gnome-control-center$"#
-    match app-id=r#"^pavucontrol$"#
-    match app-id=r#"^nm-connection-editor$"#
-    default-column-width { proportion 0.5; }
-    open-floating false
-}
-
-// window-rule {
-//     match app-id=r#"^org\.gnome\.Calculator$"#
-//     match app-id=r#"^gnome-calculator$"#
-//     match app-id=r#"^galculator$"#
-//     match app-id=r#"^blueman-manager$"#
-//     match app-id=r#"^org\.gnome\.Nautilus$"#
-//     match app-id=r#"^xdg-desktop-portal$"#
-//     open-floating true
-// }
-
-window-rule {
-    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
-    open-focused false
-}
-
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id="zoom"
-    open-floating true
-    default-floating-position x=32 y=32 relative-to="top-right"
-    open-focused false
-}
-
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    match app-id="Alacritty"
-    match app-id="zen"
-    match app-id="com.mitchellh.ghostty"
-    match app-id="kitty"
-    draw-border-with-background false
-}
-
-// window-rule {
-//     match app-id=r#"org.quickshell$"#
-//     match app-id=r#"com.danklinux.dms$"#
-//     open-floating true
-// }
-
-window-rule {
-    match app-id="kitty" at-startup=true
-    open-on-workspace "terminal"
-}
-
-window-rule {
-    match app-id="equibop"
-    match app-id="discord"
-    match app-id="telegram"
-    open-on-workspace "discord"
-}
-
-window-rule {
-    match app-id="firefox"
-    open-on-workspace "browser"
-}
-
-window-rule {
-    match app-id="Minecraft"
-    match app-id="Hytale"
-    match app-id="prismlauncher"
-    match app-id="lunarclient"
-    match app-id="Lunar Client"
-    open-on-workspace "game"
-}
-
-window-rule {
-    geometry-corner-radius 16
-    clip-to-geometry true
-}
-
-layer-rule {
-    match namespace="^notifications$"
-    block-out-from "screencast"
-}
-
-layer-rule {
-    match namespace="awww-daemon"
-    place-within-backdrop true
-}
-
-layer-rule {
-    match namespace="^quickshell$"
-    place-within-backdrop true
-}
 
 animations {
     workspace-switch {
-        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
+        spring damping-ratio=0.80 stiffness=2000 epsilon=0.0001
     }
 
     window-open {
@@ -174,5 +83,11 @@ animations {
 
     overview-open-close {
         spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
+    }
+}
+
+recent-windows {
+    highlight {
+        corner-radius 12
     }
 }

@@ -3,76 +3,32 @@ binds {
     Mod+O repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    // === Noctalia ===
+    Alt+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+
+    // === Audio ===
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+
+    // === Brightness ===
+    XF86MonBrightnessUp allow-when-locked=true {
+       spawn-sh "noctalia msg brightness-up 5";
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+       spawn-sh "noctalia msg brightness-down 5";
+    }
+
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
-    Alt+D hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
-    }
-    Mod+V hotkey-overlay-title="Clipboard Manager" {
-        spawn "dms" "ipc" "call" "clipboard" "toggle";
-    }
-    Mod+M hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
-    }
     Mod+N hotkey-overlay-title="Launch Neovide" { spawn "neovide"; }
-
-    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
-    Mod+Comma hotkey-overlay-title="Settings" {
-        spawn "dms" "ipc" "call" "settings" "focusOrToggle";
-    }
-    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
-        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
-    }
-    Mod+Shift+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    Mod+Y hotkey-overlay-title="Random Wallpaper" { spawn-sh "noctalia msg wallpaper-random"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
-        spawn "dms" "ipc" "call" "lock" "lock";
+        spawn-sh "noctalia msg session lock";
     }
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
-    }
-
-    // === Audio Controls ===
-    XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "increment" "5";
-    }
-    XF86AudioLowerVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "decrement" "5";
-    }
-    XF86AudioMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "mute";
-    }
-    XF86AudioMicMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "micmute";
-    }
-    XF86AudioPause allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "playPause";
-    }
-    XF86AudioPlay allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "playPause";
-    }
-    XF86AudioPrev allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "previous";
-    }
-    XF86AudioNext allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "next";
-    }
-    Ctrl+XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "increment" "3";
-    }
-    Ctrl+XF86AudioLowerVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "mpris" "decrement" "3";
-    }
-
-    // === Brightness Controls ===
-    XF86MonBrightnessUp allow-when-locked=true {
-       spawn "brightness.fish" "-i" "10";
-    }
-    XF86MonBrightnessDown allow-when-locked=true {
-       spawn "brightness.fish" "-d" "10";
-    }
 
     // === Window Management ===
     Mod+D { close-window; }
@@ -81,7 +37,6 @@ binds {
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+W { toggle-column-tabbed-display; }
-    Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
 
     // === Focus Navigation ===
     Mod+H { focus-column-left-or-last; }
@@ -122,11 +77,6 @@ binds {
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
     Mod+Ctrl+I         { move-column-to-workspace-up; }
-
-    // === Workspace Management ===
-    // Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" {
-    //     spawn "dms" "ipc" "call" "workspace-rename" "open";
-    // }
 
     // === Move Workspaces ===
     Mod+Shift+Page_Down { move-workspace-down; }

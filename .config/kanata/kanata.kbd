@@ -29,11 +29,9 @@
 )
 
 (deflayermap (v-down)
-  k (cmd fish -c "dms ipc call night toggle")
-  j (cmd dms ipc call notif-follow follow)
-  m (cmd dms ipc call notifications dismissAllPopups)
-  u (cmd fish -c "brightness.fish -d 10")
-  i (cmd fish -c "brightness.fish -i 10")
+  k (cmd noctalia msg nightlight-toggle)
+  j (cmd noctalia msg notification-invoke-latest)
+  m (cmd noctalia msg notification-clear-active)
 )
 
 (deflayermap (f-down)

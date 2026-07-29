@@ -36,8 +36,6 @@ workspace "discord" {}
 
 workspace "browser" {}
 
-// workspace "game" {}
-
 window-rule {
     match app-id=r#"^org\.gnome\."#
     draw-border-with-background false

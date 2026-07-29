@@ -5,8 +5,8 @@
     "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
-        "ctp.theme.css",
-        "clean.theme.css"
+        "clean.theme.css",
+        "ctp.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -253,7 +253,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 3.4000000000000004,
+            "zoom": 1,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -271,9 +271,6 @@
             "enabled": false
         },
         "KeepCurrentChannel": {
-            "enabled": false
-        },
-        "LastFMRichPresence": {
             "enabled": false
         },
         "LoadingQuotes": {
@@ -481,7 +478,9 @@
         "ShowConnections": {
             "enabled": true,
             "iconSpacing": 1,
-            "iconSize": 32
+            "iconSize": 32,
+            "showOnModal": true,
+            "showGithubOrgs": true
         },
         "ShowHiddenChannels": {
             "enabled": false
@@ -898,7 +897,8 @@
             "enabled": false
         },
         "FriendshipRanks": {
-            "enabled": true
+            "enabled": true,
+            "showFriendsInChat": false
         },
         "FullVCPFP": {
             "enabled": false
@@ -1699,6 +1699,18 @@
         },
         "SurfaceClassesAPI": {
             "enabled": false
+        },
+        "TenorGifSearch": {
+            "enabled": false
+        },
+        "AdvancedPermissions": {
+            "enabled": false
+        },
+        "ShowRolesInChat": {
+            "enabled": false
+        },
+        "MusicRichPresence": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1712,7 +1724,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1783591343317
+        "settingsSyncVersion": 1785357830166
     },
     "enabledThemeLinks": [],
     "ignoreResetWarning": false,

@@ -84,6 +84,6 @@ return {
     { "<leader>s<space>", function() Snacks.picker.resume() end, desc = "Resume" },
     -- { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
     -- notify
-    { "<c-m>", function() Snacks.notifier.hide() end, desc = "Hide notifications"}
+    { "<A-m>", function() Snacks.notifier.hide() end, desc = "Hide notifications"}
   }
 }

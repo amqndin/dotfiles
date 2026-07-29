@@ -10,3 +10,5 @@ include "options.kdl"
 include "dms/cursor.kdl"
 include "dms/alttab.kdl"
 include "dms/outputs.kdl"
+
+spawn-at-startup "noctalia"

@@ -71,3 +71,7 @@ end
 starship init fish | source
 zoxide init fish --cmd cd | source
 fzf --fish | source
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/amandin/.local/bin" $PATH

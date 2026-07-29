@@ -49,7 +49,7 @@
   "emojiLauncher": {
     "enabled": true,
     "trigger": ":",
-    "recentEmojis": ",😭"
+    "recentEmojis": "⊕,❌,,😭"
   },
   "notifFollow": {
     "enabled": true

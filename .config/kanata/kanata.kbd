@@ -29,7 +29,7 @@
 )
 
 (deflayermap (v-down)
-  k (cmd noctalia msg nightlight-toggle)
+  k (cmd noctalia msg nightlight-force-toggle)
   j (cmd noctalia msg notification-invoke-latest)
   m (cmd noctalia msg notification-clear-active)
 )

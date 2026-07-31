@@ -32,6 +32,7 @@ binds {
     Mod+N hotkey-overlay-title="Launch Neovide" { spawn "neovide"; }
     Mod+V hotkey-overlay-title="Clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+Y hotkey-overlay-title="Wallpapers" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+Shift+Y hotkey-overlay-title="Wallhaven" { spawn-sh "noctalia msg panel-toggle noctalia/wallhaven:browser"; }
     Super+X hotkey-overlay-title="Power Menu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // === Security ===

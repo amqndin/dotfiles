@@ -254,7 +254,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 497.5631768953068,
-            "zoom": 1,
+            "zoom": 4,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -1734,7 +1734,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1785501329086
+        "settingsSyncVersion": 1785662659658
     },
     "enabledThemeLinks": [
         "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/macchiato.theme.css"

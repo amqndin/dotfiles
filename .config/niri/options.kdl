@@ -1,6 +1,7 @@
 prefer-no-csd
 
 spawn-at-startup "firefox"
+spawn-at-startup "gsr-ui"
 spawn-at-startup "kitty"
 spawn-at-startup "~/dotfiles/scripts/internal/startup.sh"
 

@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate plugin.json
+        run: python3 -c "import json; json.load(open('plugin.json'))"
+
+      - name: Run tests
+        run: bash test.sh
+
+  release:
+    name: Release
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Auto-tag release
+        id: tag
+        run: |
+          VERSION="v$(jq -r .version plugin.json)"
+          if git tag -l "$VERSION" | grep -q . || git ls-remote --tags origin "$VERSION" | grep -q .; then
+            echo "Tag $VERSION already exists, skipping."
+            echo "created=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Creating tag $VERSION"
+            git tag "$VERSION"
+            git push origin "$VERSION"
+            echo "created=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub Release
+        if: steps.tag.outputs.created == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "v$(jq -r .version plugin.json)" --generate-notes

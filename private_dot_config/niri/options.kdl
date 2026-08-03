@@ -1,0 +1,68 @@
+prefer-no-csd
+
+spawn-at-startup "firefox"
+spawn-at-startup "gsr-ui"
+spawn-at-startup "kitty"
+spawn-at-startup "~/scripts/internal/startup.sh"
+
+environment {
+    XDG_CURRENT_DESKTOP "niri"
+    TERMINAL "kitty"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland;xcb"
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    EDITOR "nvim"
+    VISUAL "nvim"
+    BROWSER "firefox"
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+overview {
+    workspace-shadow {
+        off
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+clipboard {
+    disable-primary
+}
+
+config-notification {
+    disable-failed
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 24
+    hide-when-typing
+    hide-after-inactive-ms 506
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+output "HDMI-A-2" {
+    mode "1920x1080@74.973"
+    scale 1.0
+    position x=1600 y=0
+    focus-at-startup
+}
+
+output "eDP-1" {
+    off
+    mode "1600x900@60.011"
+    scale 1
+    position x=0 y=180
+}

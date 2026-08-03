@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "configurations": [
+    {
+      "id": "profile_1779446308885_13moj7",
+      "name": "main",
+      "outputs": {
+        "eDP-1": {
+          "mode": "1600x900@60.011",
+          "position": {
+            "x": 0,
+            "y": 180
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": true,
+          "niri": {}
+        },
+        "HDMI-A-2": {
+          "mode": "1920x1080@74.973",
+          "position": {
+            "x": 1600,
+            "y": 0
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {
+            "focusAtStartup": true
+          }
+        }
+      }
+    }
+  ]
+}

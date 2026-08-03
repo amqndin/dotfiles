@@ -1,0 +1,139 @@
+font_size = 2
+
+[grid]
+hints = [
+    "a",
+    "s",
+    "d",
+    "f",
+    "j",
+    "k",
+    "l",
+    ";",
+    "g",
+    "h",
+    "q",
+    "w",
+    "e",
+    "r",
+    "t",
+    "y",
+    "u",
+    "i",
+    "o",
+    "p",
+]
+sub_hints = [
+    "a",
+    "s",
+    "d",
+    "f",
+    "j",
+    "k",
+    "l",
+    ";",
+]
+sub_rows = 2
+sub_cols = 4
+
+[bisect]
+hints = [
+    "s",
+    "d",
+    "f",
+
+    "j",
+    "k",
+    "l",
+]
+rows = 2
+cols = 3
+min_cell_size = 16
+
+[keys]
+normal = "n"
+bisect = "b"
+hint = "c"
+free_mode = "v"
+click = "space"
+double_click = "enter"
+triple_click = "m"
+close = "escape"
+undo = "backspace"
+macro_menu = "tab"
+macro_record = "`"
+right_click = "delete"
+middle_click = "8"
+scroll_up = "up"
+scroll_down = "down"
+scroll_left = "left"
+scroll_right = "right"
+
+[colors]
+cell_normal = "#00000066"
+cell_drag = "#40004088"
+cell_highlight = "#143014AA"
+text_first = "#FFDC00FF"
+text_second = "#50BEFFFF"
+text_highlight = "#50FF50FF"
+text_dim = "#666666AA"
+sub_cell_normal = "#001030AA"
+sub_bg = "#00103099"
+panel_bg = "#000C18EE"
+text_white = "#FFFFFFFF"
+text_grey = "#888888FF"
+selected_bg = "#205030FF"
+rec_bg = "#CC0000FF"
+border = "#FFA500FF"
+border_dragging = "#FF00FFFF"
+crosshair = "#FFA500FF"
+hint_chip_bg = "#1E1E2EEE"
+hint_text = "#FFCC00FF"
+hint_text_typed = "#50FF50FF"
+hint_dim = "#66666688"
+
+[macros]
+playback_speed = 1.0
+
+[free]
+left = "h"
+down = "j"
+up = "k"
+right = "l"
+fast = "i"
+slow = "u"
+base_speed = 10
+fast_multiplier = 3.0
+slow_multiplier = 3.0
+min_speed = 1
+max_speed = 500
+
+[hint]
+detector = "auto"
+alphabet = [
+    "a",
+    "s",
+    "d",
+    "f",
+    "j",
+    "k",
+    "l",
+    ";",
+    "g",
+    "h",
+    "q",
+    "w",
+    "e",
+    "r",
+    "t",
+    "y",
+    "u",
+    "i",
+    "o",
+    "p",
+]
+max_label_len = 3
+auto_click = false
+downscale_longest = 1280
+edge_low_threshold = 50
+edge_high_threshold = 150

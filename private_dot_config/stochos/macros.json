@@ -1,0 +1,13 @@
+[
+  {
+    "name": "macro 1",
+    "actions": [
+      {
+        "kind": {
+          "Click": "fh"
+        }
+      }
+    ],
+    "bind_key": "k"
+  }
+]

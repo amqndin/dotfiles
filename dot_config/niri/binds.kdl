@@ -162,12 +162,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
 
-    // === No noctalia equivalent (kept for reference) ===
-    // Mod+M hotkey-overlay-title="Task Manager" { spawn-sh "noctalia msg ..."; }
-    // Mod+Shift+N hotkey-overlay-title="Notification Center" { spawn-sh "noctalia msg ..."; }
-    // Mod+Shift+W hotkey-overlay-title="Create Window Rule" { spawn-sh "noctalia msg ..."; }
-    // Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { spawn-sh "noctalia msg ..."; }
-    // Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" { spawn-sh "noctalia msg ..."; }
+    Mod+Shift+N hotkey-overlay-title="Notification Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
 }
 
 recent-windows {

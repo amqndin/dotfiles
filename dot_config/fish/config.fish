@@ -43,27 +43,27 @@ function cdn
     mkdir -p $argv[1]; and cd $argv[1]
 end
 
-if not set -q TMUX
-    set -l unattached_session (
-        tmux list-sessions -F "#{session_name} #{session_attached}" 2>/dev/null \
-        | string match -r '.* 0$' \
-        | head -n 1 \
-        | string split " " -f 1
-    )
-
-    if test -n "$unattached_session"
-        exec tmux attach-session -t "$unattached_session"
-    else
-        set -l session_count (tmux list-sessions 2>/dev/null | count)
-        
-        if test "$session_count" -eq 0
-            exec tmux new-session -s "main"
-        else
-            set -l session_id "sesh_$fish_pid"
-            exec tmux new-session -s "$session_id" \; set-option destroy-unattached on
-        end
-    end
-end
+# if not set -q TMUX
+#     set -l unattached_session (
+#         tmux list-sessions -F "#{session_name} #{session_attached}" 2>/dev/null \
+#         | string match -r '.* 0$' \
+#         | head -n 1 \
+#         | string split " " -f 1
+#     )
+#
+#     if test -n "$unattached_session"
+#         exec tmux attach-session -t "$unattached_session"
+#     else
+#         set -l session_count (tmux list-sessions 2>/dev/null | count)
+#
+#         if test "$session_count" -eq 0
+#             exec tmux new-session -s "main"
+#         else
+#             set -l session_id "sesh_$fish_pid"
+#             exec tmux new-session -s "$session_id" \; set-option destroy-unattached on
+#         end
+#     end
+# end
 
 starship init fish | source
 zoxide init fish --cmd cd | source

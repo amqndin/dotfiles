@@ -827,7 +827,11 @@
             "enabled": false
         },
         "CustomTimestamps": {
-            "enabled": false
+            "enabled": true,
+            "formats": {
+                "tooltipFormat": "HH:mm:ss • [relative]",
+                "compactFormat": "HH:mm:ss"
+            }
         },
         "CustomUserColors": {
             "enabled": false,
@@ -1734,7 +1738,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1785925299039
+        "settingsSyncVersion": 1785942679774
     },
     "enabledThemeLinks": [
         "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/macchiato.theme.css"

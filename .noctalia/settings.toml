@@ -6,7 +6,6 @@ enable_sounds = true
 [bar.default]
 capsule = true
 concave_edge_corners = false
-end = [ "tray", "keyboard_layout", "cat" ]
 margin_ends = 0
 position = "right"
 start = [ "workspaces", "taskbar" ]
@@ -76,13 +75,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
 position_vertical = "bottom_right"
 
 [plugins]
-enabled = [
-    "noctalia/translator",
-    "noctalia/wallhaven",
-    "radimous/prismlauncher-instances",
-    "noctalia/bongocat",
-    "icefish/phone-connect"
-]
+enabled = [ "noctalia/translator", "noctalia/wallhaven", "radimous/prismlauncher-instances", "icefish/phone-connect" ]
 
 [shell]
 clipboard_auto_paste = "off"
@@ -121,9 +114,6 @@ transition_on_startup = true
     palette_source = "community"
     path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
     theme_mode = "dark"
-
-[widget.cat]
-type = "noctalia/bongocat:cat"
 
 [widget.date]
 format = "{:%d}"

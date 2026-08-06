@@ -1738,7 +1738,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1785942679774
+        "settingsSyncVersion": 1786025844204
     },
     "enabledThemeLinks": [
         "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/macchiato.theme.css"

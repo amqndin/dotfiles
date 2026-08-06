@@ -1,0 +1,9 @@
+ignore = [
+    "stor.toml",
+    ".git",
+    ".gitignore",
+    ".stowrc",
+    "README.md",
+    "scripts",
+    "wallpaper",
+]

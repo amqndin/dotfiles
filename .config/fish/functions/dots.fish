@@ -1,12 +1,12 @@
 function dots
     if test (count $argv) -eq 0
-        echo "usage: dots (apply|unapply|push|pull|status|diff)" >&2
+        echo "usage: dots (apply|remove|push|pull|status|diff)" >&2
         return 1
     end
     switch $argv[1]
         case apply
             stor -f -R ~/dotfiles -t ~
-        case unapply
+        case remove
             stor -D ~/dotfiles -t ~
         case push
             cd ~/dotfiles
@@ -19,7 +19,7 @@ function dots
         case diff
             dots_diff
         case '*'
-            echo "usage: dots (apply|unapply|push|pull|status|diff)" >&2
+            echo "usage: dots (apply|remove|push|pull|status|diff)" >&2
             return 1
     end
 end

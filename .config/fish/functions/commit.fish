@@ -12,9 +12,9 @@ function commit
     set -l modified_list
     set -l deleted_list
     for line in (git diff --cached --name-status --no-renames)
-        set -l status (string sub -l 1 -- $line)
+        set -l st (string sub -l 1 -- $line)
         set -l path (string replace -r '^[AMD]\s+' '' -- $line)
-        switch $status
+        switch $st
             case A
                 set -a added_list $path
             case M

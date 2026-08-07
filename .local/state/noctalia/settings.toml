@@ -122,6 +122,5 @@ only_active_workspace = true
 
 [widget.workspaces]
 display = "none"
-focused_color = "on_surface_variant"
+focused_color = "primary"
 hide_when_empty = true
-occupied_color = "#696B83"

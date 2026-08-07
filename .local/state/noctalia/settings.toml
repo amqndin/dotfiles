@@ -3,9 +3,6 @@ config_version = 8
 [audio]
 enable_sounds = true
 
-[backdrop]
-enabled = true
-
 [bar.default]
 capsule = true
 concave_edge_corners = false

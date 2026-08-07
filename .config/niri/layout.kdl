@@ -1,7 +1,7 @@
+workspace "game" {}
 workspace "terminal" {}
 workspace "discord" {}
 workspace "browser" {}
-workspace "game" {}
 
 layout {
     background-color "transparent"

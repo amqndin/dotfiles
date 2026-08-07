@@ -8,10 +8,34 @@ function commit
     else
         git add -A
     end
-    set msg (git diff --cached --name-status --no-renames | string replace -r '^M\s+' 'modified:' | string replace -r '^D\s+' 'deleted:' | string replace -r '^A\s+' 'added:' | string join ' ')
-    if test -z "$msg"
+    set -l added_list
+    set -l modified_list
+    set -l deleted_list
+    for line in (git diff --cached --name-status --no-renames)
+        set -l status (string sub -l 1 -- $line)
+        set -l path (string replace -r '^[AMD]\s+' '' -- $line)
+        switch $status
+            case A
+                set -a added_list $path
+            case M
+                set -a modified_list $path
+            case D
+                set -a deleted_list $path
+        end
+    end
+    set -l parts
+    if test (count $added_list) -gt 0
+        set -a parts "added:" $added_list
+    end
+    if test (count $modified_list) -gt 0
+        set -a parts "modified:" $modified_list
+    end
+    if test (count $deleted_list) -gt 0
+        set -a parts "deleted:" $deleted_list
+    end
+    if test (count $parts) -eq 0
         echo "nothing to commit" >&2
         return 1
     end
-    git commit -m "$msg"
+    git commit -m (string join ' ' -- $parts)
 end

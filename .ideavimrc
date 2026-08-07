@@ -1,0 +1,23 @@
+" base config recreated 2026-08-07 (originals lost to accidental stor -f -R . in $HOME)
+set number
+set relativenumber
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set clipboard=unnamedplus
+set scrolloff=5
+set sidescrolloff=5
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set mapleader=space
+inoremap jk <Esc>
+vnoremap < <gv
+vnoremap > >gv
+nnoremap <Leader>w <C-w>w
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l

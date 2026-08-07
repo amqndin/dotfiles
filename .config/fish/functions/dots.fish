@@ -9,9 +9,13 @@ function dots
         case remove
             stor -D ~/dotfiles -t ~
         case push
+            set -l _dots_cwd (pwd)
             cd ~/dotfiles
             and commit
             and git push
+            set -l _dots_status $status
+            cd $_dots_cwd
+            return $_dots_status
         case pull
             git -C ~/dotfiles pull
         case status

@@ -8,7 +8,7 @@ function commit
     else
         git add -A
     end
-    set msg (git diff --cached --name-status | string replace -r '^M' 'modified:' | string replace -r '^D' 'deleted:' | string replace -r '^A' 'added:' | string replace -r '^R' 'renamed:' | string join ' ')
+    set msg (git diff --cached --name-status --no-renames | string replace -r '^M\s+' 'modified:' | string replace -r '^D\s+' 'deleted:' | string replace -r '^A\s+' 'added:' | string join ' ')
     if test -z "$msg"
         echo "nothing to commit" >&2
         return 1

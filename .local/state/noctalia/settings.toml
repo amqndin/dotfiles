@@ -3,6 +3,9 @@ config_version = 8
 [audio]
 enable_sounds = true
 
+[backdrop]
+enabled = true
+
 [bar.default]
 capsule = true
 concave_edge_corners = false
@@ -94,26 +97,22 @@ font_family = "Inter"
 builtin = "Catppuccin"
 community_palette = "Catppuccin Lavender"
 mode = "dark"
+source = "community"
 wallpaper_scheme = "m3-content"
 
 [wallpaper]
-directory = "/home/amandin/Downloads/wallpaper"
+directory = "/home/amandin/dotfiles/wallpaper"
+transition = [ "disc" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.last]
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
-
-    [[wallpaper.favorite]]
-    community_palette = "Catppuccin Lavender"
-    palette_source = "community"
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
-    theme_mode = "dark"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
 [widget.date]
 format = "{:%d}"

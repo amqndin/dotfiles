@@ -106,12 +106,6 @@ transition_on_startup = true
     [wallpaper.monitors.HDMI-A-2]
     path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
 
-    [[wallpaper.favorite]]
-    community_palette = "Catppuccin Lavender"
-    palette_source = "community"
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
-    theme_mode = "dark"
-
 [widget.date]
 format = "{:%d}"
 

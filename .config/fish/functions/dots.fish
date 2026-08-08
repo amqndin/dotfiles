@@ -1,6 +1,6 @@
 function dots
     if test (count $argv) -eq 0
-        echo "usage: dots (apply|remove|push|pull|status|diff)" >&2
+        echo "usage: dots (apply|remove|push|pull|status|diff|git)" >&2
         return 1
     end
     switch $argv[1]
@@ -22,8 +22,10 @@ function dots
             git -C ~/dotfiles status
         case diff
             git -C ~/dotfiles diff
+        case git
+            lazygit -p ~/dotfiles
         case '*'
-            echo "usage: dots (apply|remove|push|pull|status|diff)" >&2
+            echo "usage: dots (apply|remove|push|pull|status|diff|git)" >&2
             return 1
     end
 end

@@ -5,7 +5,6 @@ enable_sounds = true
 
 [bar.default]
 capsule = true
-concave_edge_corners = false
 margin_ends = 0
 position = "right"
 start = [ "workspaces", "taskbar" ]
@@ -72,7 +71,6 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
         show_weather = true
 
 [osd]
-background_opacity = 0.99999997764825821
 position_vertical = "bottom_right"
 
 [plugins]

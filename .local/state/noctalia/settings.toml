@@ -16,6 +16,9 @@ start = [ "workspaces", "taskbar" ]
 [brightness]
 enable_ddcutil = true
 
+[control_center.calendar]
+show_events_card = false
+
 [desktop_widgets]
 schema_version = 2
 widget_order = []
@@ -85,6 +88,7 @@ font_family = "Inter"
     compact = false
 
     [shell.panel]
+    control_center_position = "center"
     session_placement = "floating"
     session_position = "center"
 
@@ -101,13 +105,13 @@ transition = [ "disc" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
+    path = "/home/amandin/dotfiles/wallpaper/cat-waves.png"
 
     [wallpaper.last]
-    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
+    path = "/home/amandin/dotfiles/wallpaper/cat-waves.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
+    path = "/home/amandin/dotfiles/wallpaper/cat-waves.png"
 
 [widget.date]
 format = "{:%d}"

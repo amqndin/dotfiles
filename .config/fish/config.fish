@@ -1,3 +1,17 @@
+set -gx XDG_DATA_HOME "$HOME/.local/share"
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+set -gx XDG_STATE_HOME "$HOME/.local/state"
+set -gx XDG_CACHE_HOME "$HOME/.cache"
+
+set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
+set -gx RUSTUP_HOME "$XDG_DATA_HOME/rustup"
+set -gx GOPATH "$XDG_DATA_HOME/go"
+set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
+set -gx PARALLEL_HOME "$XDG_CONFIG_HOME/parallel"
+set -gx GRIPHOME "$XDG_CONFIG_HOME/grip"
+set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
+set -gx _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
+
 if not status is-interactive
     return
 end

@@ -99,6 +99,10 @@ mode = "dark"
 source = "community"
 wallpaper_scheme = "m3-content"
 
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "qt" ]
+    community_ids = [ "prismlauncher" ]
+
 [wallpaper]
 directory = "/home/amandin/dotfiles/wallpaper"
 transition = [ "disc" ]

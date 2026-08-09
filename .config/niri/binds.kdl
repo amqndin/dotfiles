@@ -156,7 +156,7 @@ binds {
     // === Screenshots ===
     Mod+S { screenshot show-pointer=false; }
     Mod+Ctrl+S { screenshot-screen; }
-    Mod+Shift+S { spawn "~/scripts/internal/screenshot.fish"; }
+    Mod+Shift+S { spawn "~/dotfiles/scripts/internal/screenshot.fish"; }
 
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }

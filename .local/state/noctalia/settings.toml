@@ -104,18 +104,17 @@ wallpaper_scheme = "m3-content"
     community_ids = [ "prismlauncher" ]
 
 [wallpaper]
-directory = "/home/amandin/dotfiles/wallpaper"
 transition = [ "disc" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/amandin/dotfiles/wallpaper/cat-waves.png"
+    path = "/home/amandin/Downloads/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.last]
-    path = "/home/amandin/dotfiles/wallpaper/cat-waves.png"
+    path = "/home/amandin/Downloads/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/amandin/dotfiles/wallpaper/cat-waves.png"
+    path = "/home/amandin/Downloads/wallpaper/wallhaven-6lylmw.png"
 
 [widget.date]
 format = "{:%d}"

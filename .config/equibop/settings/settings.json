@@ -2,12 +2,12 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [
-        "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/macchiato.theme.css"
-    ],
+    "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
-        "clean.theme.css"
+        "catppuccin-mocha.theme.css",
+        "clean.theme.css",
+        "ctp.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -1235,7 +1235,8 @@
             "maxLength": 0,
             "disableFileConversion": true,
             "hardSplit": false,
-            "sendDelay": 1
+            "sendDelay": 1,
+            "splitInSlowmode": false
         },
         "SpotifyActivityToggle": {
             "enabled": false
@@ -1725,6 +1726,9 @@
         },
         "NoticesAPI": {
             "enabled": true
+        },
+        "AutoJumpToMessage": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -1738,11 +1742,9 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1786025844204
+        "settingsSyncVersion": 1786382418611
     },
-    "enabledThemeLinks": [
-        "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/macchiato.theme.css"
-    ],
+    "enabledThemeLinks": [],
     "ignoreResetWarning": false,
     "userCssVars": {},
     "themeNames": {},

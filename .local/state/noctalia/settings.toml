@@ -89,8 +89,10 @@ font_family = "Inter"
 
     [shell.panel]
     control_center_position = "center"
-    session_placement = "floating"
     session_position = "center"
+
+    [shell.session]
+    grid_columns = 1
 
 [theme]
 builtin = "Catppuccin"
@@ -104,17 +106,18 @@ wallpaper_scheme = "m3-content"
     community_ids = [ "prismlauncher" ]
 
 [wallpaper]
+directory = "/home/amandin/dotfiles/wallpaper"
 transition = [ "disc" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/amandin/Downloads/wallpaper/wallhaven-6lylmw.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.last]
-    path = "/home/amandin/Downloads/wallpaper/wallhaven-6lylmw.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/amandin/Downloads/wallpaper/wallhaven-6lylmw.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
 [widget.date]
 format = "{:%d}"

@@ -162,7 +162,8 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
 
-    Mod+Shift+N hotkey-overlay-title="Notification Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+N hotkey-overlay-title="Notifications" { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+    Mod+Shift+C hotkey-overlay-title="Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
 }
 
 recent-windows {

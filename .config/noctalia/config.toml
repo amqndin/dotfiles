@@ -4,13 +4,20 @@ enable_sounds = true
 [bar.default]
 capsule = true
 center = [ "clock", "date", "weather" ]
-concave_edge_corners = false
 end = [ "tray", "keyboard_layout" ]
+margin_ends = 0
 position = "right"
 start = [ "workspaces", "taskbar" ]
 
+    [bar.default.dead_zone.actions]
+    scroll_down = "workspace-switch next"
+    scroll_up = "workspace-switch prev"
+
 [brightness]
 enable_ddcutil = true
+
+[control_center.calendar]
+show_events_card = false
 
 [desktop_widgets]
 schema_version = 2
@@ -67,11 +74,10 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
         show_weather = true
 
 [osd]
-position = "bottom_center"
 position_vertical = "bottom_right"
 
 [plugins]
-enabled = [ "noctalia/translator", "noctalia/wallhaven", "radimous/prismlauncher-instances", "noctalia/bongocat" ]
+enabled = [ "noctalia/translator", "noctalia/wallhaven", "radimous/prismlauncher-instances", "icefish/phone-connect" ]
 
 [shell]
 clipboard_auto_paste = "off"
@@ -79,35 +85,44 @@ font_family = "Inter"
 
     [shell.launcher]
     auto_paste = "off"
-    categories = false
-    compact = true
+    compact = false
 
     [shell.panel]
-    session_placement = "floating"
+    control_center_position = "center"
     session_position = "center"
+
+    [shell.session]
+    grid_columns = 1
 
 [theme]
 builtin = "Catppuccin"
-community_palette = "Catppuccin Lavender"
+community_palette = "Catppuccin Mocha Lavender"
 mode = "dark"
-source = "community"
-wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "qt" ]
+    community_ids = [ "prismlauncher" ]
 
 [wallpaper]
-directory = "/home/amandin/Downloads/wallpaper"
+directory = "/home/amandin/dotfiles/wallpaper"
+transition = [ "disc" ]
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.last]
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/amandin/Downloads/wallpaper/cat-waves.png"
+    path = "/home/amandin/dotfiles/wallpaper/wallhaven-6lylmw.png"
 
 [widget.date]
 format = "{:%d}"
+
+[widget.lock_keys]
+color = "shadow"
+icon_color = "secondary"
 
 [widget.taskbar]
 only_active_workspace = true
@@ -115,5 +130,7 @@ only_active_workspace = true
 [widget.workspaces]
 focused_color = "on_surface_variant"
 hide_when_empty = true
+focused_color = "primary"
+label_source = "id"
 show_labels = false
 occupied_color = "#696B83"

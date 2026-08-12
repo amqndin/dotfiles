@@ -6,6 +6,8 @@ spawn-at-startup "kitty"
 spawn-at-startup "~/scripts/internal/startup.sh"
 
 environment {
+    PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD "1"
+
     XDG_CURRENT_DESKTOP "niri"
     TERMINAL "kitty"
     ELECTRON_OZONE_PLATFORM_HINT "auto"

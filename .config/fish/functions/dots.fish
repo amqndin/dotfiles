@@ -1,9 +1,11 @@
 function dots
     if test (count $argv) -eq 0
-        echo "usage: dots (apply|remove|push|pull|status|diff|git)" >&2
+        echo "usage: dots (apply|remove|push|pull|status|diff|git|noctalia-sync)" >&2
         return 1
     end
     switch $argv[1]
+        case noctalia-sync
+            noctalia config export merged > ~/dotfiles/.config/noctalia/config.toml
         case apply
             stor -f -R ~/dotfiles -t ~
         case remove
@@ -25,7 +27,7 @@ function dots
         case git
             lazygit -p ~/dotfiles
         case '*'
-            echo "usage: dots (apply|remove|push|pull|status|diff|git)" >&2
+            echo "usage: dots (apply|remove|push|pull|status|diff|git|noctalia-sync)" >&2
             return 1
     end
 end

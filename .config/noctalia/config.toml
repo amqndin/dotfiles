@@ -128,7 +128,6 @@ icon_color = "secondary"
 only_active_workspace = true
 
 [widget.workspaces]
-focused_color = "on_surface_variant"
 hide_when_empty = true
 focused_color = "primary"
 label_source = "id"

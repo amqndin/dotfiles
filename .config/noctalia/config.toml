@@ -113,7 +113,7 @@ format = "{:%d}"
 only_active_workspace = true
 
 [widget.workspaces]
-display = "none"
 focused_color = "on_surface_variant"
 hide_when_empty = true
+show_labels = false
 occupied_color = "#696B83"

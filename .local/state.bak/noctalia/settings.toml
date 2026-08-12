@@ -5,11 +5,11 @@ enable_sounds = true
 
 [bar.default]
 capsule = true
+center = [ "clock", "date", "weather" ]
+end = [ "tray", "keyboard_layout" ]
 margin_ends = 0
 position = "right"
 start = [ "workspaces", "taskbar" ]
-center = [ "clock", "date", "weather" ]
-end = [ "tray", "keyboard_layout" ]
 
     [bar.default.dead_zone.actions]
     scroll_down = "workspace-switch next"
@@ -133,5 +133,5 @@ only_active_workspace = true
 
 [widget.workspaces]
 focused_color = "primary"
-hide_when_empty = true
+label_source = "id"
 show_labels = false

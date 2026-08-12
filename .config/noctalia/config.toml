@@ -128,8 +128,8 @@ icon_color = "secondary"
 only_active_workspace = true
 
 [widget.workspaces]
-hide_when_empty = true
 focused_color = "primary"
+hide_when_empty = true
 label_source = "id"
-show_labels = false
 occupied_color = "#696B83"
+show_labels = false

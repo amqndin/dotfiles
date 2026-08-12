@@ -5,7 +5,13 @@ function dots
     end
     switch $argv[1]
         case noctalia-sync
-            noctalia config export merged > ~/dotfiles/.config/noctalia/config.toml
+            set -l _tmp (mktemp)
+            noctalia config export merged > $_tmp
+            if test -s $_tmp
+                cp $_tmp ~/dotfiles/.config/noctalia/config.toml
+                rm -f ~/.local/state/noctalia/settings.toml
+            end
+            rm -f $_tmp
         case apply
             stor -f -R ~/dotfiles -t ~
         case remove

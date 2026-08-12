@@ -8,6 +8,8 @@ capsule = true
 margin_ends = 0
 position = "right"
 start = [ "workspaces", "taskbar" ]
+center = [ "clock", "date", "weather" ]
+end = [ "tray", "keyboard_layout" ]
 
     [bar.default.dead_zone.actions]
     scroll_down = "workspace-switch next"

@@ -76,6 +76,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
         show_weather = true
 
 [osd]
+position = "bottom_center"
 position_vertical = "bottom_right"
 
 [plugins]

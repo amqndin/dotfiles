@@ -1,4 +1,4 @@
-config_version = 8
+config_version = 12
 
 [audio]
 enable_sounds = true
@@ -130,6 +130,6 @@ icon_color = "secondary"
 only_active_workspace = true
 
 [widget.workspaces]
-display = "none"
 focused_color = "primary"
 hide_when_empty = true
+show_labels = false

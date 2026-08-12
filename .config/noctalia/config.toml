@@ -4,6 +4,7 @@ enable_sounds = true
 [bar.default]
 capsule = true
 center = [ "clock", "date", "weather" ]
+concave_edge_corners = false
 end = [ "tray", "keyboard_layout" ]
 margin_ends = 0
 position = "right"
@@ -31,6 +32,7 @@ widget_order = []
     [desktop_widgets.widget]
 
 [dock]
+concave_edge_corners = false
 reserve_space = false
 
 [location]
@@ -85,6 +87,7 @@ font_family = "Inter"
 
     [shell.launcher]
     auto_paste = "off"
+    categories = false
     compact = false
 
     [shell.panel]
@@ -98,6 +101,7 @@ font_family = "Inter"
 builtin = "Catppuccin"
 community_palette = "Catppuccin Mocha Lavender"
 mode = "dark"
+source = "community"
 
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "qt" ]

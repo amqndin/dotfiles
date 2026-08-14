@@ -1,0 +1,11 @@
+[Unit]
+Description=OmniRoute server
+After=network-online.target
+
+[Service]
+ExecStart=/home/amandin/.local/bin/omniroute serve
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

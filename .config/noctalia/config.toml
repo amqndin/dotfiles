@@ -93,6 +93,7 @@ font_family = "Inter"
 
     [shell.panel]
     control_center_position = "center"
+    session_placement = "floating"
     session_position = "center"
 
     [shell.session]

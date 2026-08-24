@@ -12,10 +12,6 @@ set -gx GRIPHOME "$XDG_CONFIG_HOME/grip"
 set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
 set -gx _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 
-set -gx JAVA_HOME "$HOME/.local/jdk"
-set -gx ANDROID_HOME "$HOME/.local/android-sdk"
-fish_add_path -g "$HOME/.local/flutter/bin"
-
 if not status is-interactive
     return
 end

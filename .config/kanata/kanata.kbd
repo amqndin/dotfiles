@@ -36,6 +36,7 @@
 
 (deflayermap (f-down)
   e (t! tap-holdy e (t! two-layers e-down ef-down))
+  w (t! tap-holdy w (t! two-layers w-down fw-down))
 )
 
 (deflayermap (e-down)
@@ -46,6 +47,16 @@
 
 (deflayermap (ef-down)
   (t! move-to-workspaces)
+)
+
+(deflayermap (w-down)
+  f (t! tap-holdy f (t! two-layers f-down fw-down))
+
+  (t! focus-columns)
+)
+
+(deflayermap (fw-down)
+  (t! move-to-indices)
 )
 
 (deflayermap (empty)

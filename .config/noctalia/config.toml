@@ -39,7 +39,8 @@ reserve_space = false
 auto_locate = true
 
 [lockscreen]
-enabled = false
+enabled = true
+lock_before_suspend = false
 
 [lockscreen_widgets]
 enabled = false
@@ -52,11 +53,13 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2"]
-    box_height = 229.0
+    box_height = 196.0
     box_width = 810.0
     cx = 960.0
     cy = 881.5
     output = "HDMI-A-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "login_box"
 
@@ -73,6 +76,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
         show_login_button = true
         show_media = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
 [osd]
@@ -129,6 +133,7 @@ format = "{:%d}"
 [widget.lock_keys]
 color = "shadow"
 icon_color = "secondary"
+show_num_lock = false
 
 [widget.taskbar]
 only_active_workspace = true

@@ -3,6 +3,7 @@ enable_sounds = true
 
 [bar.default]
 capsule = true
+capsule_radius = 10
 center = [ "clock", "date", "weather" ]
 concave_edge_corners = false
 end = [ "tray", "keyboard_layout" ]

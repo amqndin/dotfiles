@@ -7,8 +7,10 @@ capsule_radius = 10
 center = [ "clock", "date", "weather" ]
 concave_edge_corners = false
 end = [ "tray", "keyboard_layout" ]
-margin_ends = 0
+margin_ends = 10
 position = "right"
+radius_bottom_right = 0
+radius_top_right = 0
 start = [ "workspaces", "taskbar" ]
 
     [bar.default.dead_zone.actions]

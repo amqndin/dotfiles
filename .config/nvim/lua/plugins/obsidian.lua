@@ -20,7 +20,7 @@ return {
     frontmatter = { enabled = false },
     ui = { enable = false },
     picker = {
-      name = 'snacks.pick'
+      name = 'snacks.picker'
     },
   },
   keys = {

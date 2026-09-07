@@ -9,6 +9,6 @@ return {
       lsp = { enabled = true },
       blink = { enabled = true },
     },
-    render_modes = { 'n', 'c', 't', 'i' },
+    render_modes = { 'n', 'v', 'c', 't', 'i' },
   },
 }

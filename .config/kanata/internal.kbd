@@ -6,11 +6,26 @@
   down XX
 )
 
+;; Release-cleanup table (https://axlefublr.github.io/kanata-layers/)
+;; For each component key, the any-* vkey that on tap releases *every* layer
+;; containing it: its own base layer plus every composite it is a member of.
+;; Releasing an enterer key taps any-<key> so no stale composite can linger.
+(deftemplate mk-any (name l1 l2 l3 l4)
+  (defvirtualkeys $name (multi
+    (release-layer $l1)
+    (if-not-equal $l2 - (release-layer $l2))
+    (if-not-equal $l3 - (release-layer $l3))
+    (if-not-equal $l4 - (release-layer $l4))))
+)
+(t! mk-any any-e e-down ef-down - -)
+(t! mk-any any-f f-down ef-down fw-down -)
+(t! mk-any any-w w-down fw-down - -)
+
 (deftemplate homerow-mods ()
   a (t! tap-holdy a lmet)
   s (t! tap-holdy s lalt)
   d (t! tap-holdy d lsft)
-  f (t! mod-layer f lctl f-down)
+  f (t! enter-mod f any-f lctl (multi (layer-while-held f-down)))
 
   j (t! tap-holdy j rctl)
   k (t! tap-holdy k rsft)
@@ -23,9 +38,9 @@
   ;; spc (t! layer spc space)
   m (t! layer m m-down)
   v (t! layer v v-down)
-  e (t! layer e e-down)
+  e (t! enter e any-e (multi (layer-while-held e-down)))
   i (t! layer i i-down)
-  w (t! layer w w-down)
+  w (t! enter w any-w (multi (layer-while-held w-down)))
 )
 
 ;; (deflayermap (space)

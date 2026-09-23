@@ -154,13 +154,16 @@ binds {
     Mod+Shift+J { set-window-height "+10%"; }
 
     // === Screenshots ===
-    Mod+S { screenshot show-pointer=false; }
-    Mod+Ctrl+S { screenshot-screen; }
-    Mod+Shift+S { spawn "~/dotfiles/scripts/internal/screenshot.fish"; }
+    Mod+S { spawn-sh "noctalia msg screenshot-region"; }
+    Mod+Ctrl+S { spawn-sh "noctalia msg screenshot-fullscreen"; }
+    Mod+Shift+S { spawn-sh "noctalia msg annotate"; }
 
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
+
+    // === Display ===
+    Alt+Shift+Ctrl+I hotkey-overlay-title="Toggle Laptop Screen" { spawn-sh "~/scripts/internal/toggle-laptop-screen.sh"; }
 
     Mod+Shift+N hotkey-overlay-title="Notifications" { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
     Mod+Shift+C hotkey-overlay-title="Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }

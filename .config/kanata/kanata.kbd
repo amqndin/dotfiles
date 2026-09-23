@@ -35,12 +35,12 @@
 )
 
 (deflayermap (f-down)
-  e (t! tap-holdy e (t! two-layers e-down ef-down))
-  w (t! tap-holdy w (t! two-layers w-down fw-down))
+  e (t! enter e any-e (multi (layer-while-held e-down) (layer-while-held ef-down)))
+  w (t! enter w any-w (multi (layer-while-held w-down) (layer-while-held fw-down)))
 )
 
 (deflayermap (e-down)
-  f (t! tap-holdy f (t! two-layers f-down ef-down))
+  f (t! enter f any-f (multi (layer-while-held f-down) (layer-while-held ef-down)))
 
   (t! focus-workspaces)
 )
@@ -50,7 +50,7 @@
 )
 
 (deflayermap (w-down)
-  f (t! tap-holdy f (t! two-layers f-down fw-down))
+  f (t! enter f any-f (multi (layer-while-held f-down) (layer-while-held fw-down)))
 
   (t! focus-columns)
 )

@@ -95,6 +95,11 @@ enabled = [ "noctalia/translator", "noctalia/wallhaven", "radimous/prismlauncher
 clipboard_auto_paste = "off"
 font_family = "Inter"
 
+    [shell.screenshot]
+    annotate = true
+    save_to_file = true
+    copy_to_clipboard = true
+
     [shell.launcher]
     auto_paste = "off"
     categories = false

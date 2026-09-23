@@ -15,13 +15,16 @@
   (t! tap-holdy $tap-action (layer-while-held $layer-name))
 )
 
-(deftemplate mod-layer (tap-action modifier layer-name)
-  (t! tap-holdy $tap-action (multi $modifier (layer-while-held $layer-name)))
+;; Enterer kit (https://axlefublr.github.io/kanata-layers/)
+;; Hold: add the layers given in `held` (component layer + composites on the way).
+;; Release: tap the any-* vkey, which leaves every layer that logically requires
+;; this key, no matter which enterer originally added it to the stack.
+(deftemplate enter (key vkey-name held)
+  (t! tap-holdy $key (multi $held (on-release tap-vkey $vkey-name)))
 )
 
-(deftemplate two-layers (layer-name1 layer-name2)
-  ;; (t! tap-holdy $tap-action (multi (layer-while-held $layer-name1) (layer-while-held $layer-name2)))
-  (multi (layer-while-held $layer-name1) (layer-while-held $layer-name2))
+(deftemplate enter-mod (key vkey-name modifier held)
+  (t! tap-holdy $key (multi $modifier $held (on-release tap-vkey $vkey-name)))
 )
 
 (deftemplate niri (action argument)

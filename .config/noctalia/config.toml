@@ -50,7 +50,7 @@ lock_before_suspend = true
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-login-box@HDMI-A-2" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
@@ -84,6 +84,33 @@ widget_order = [ "lockscreen-login-box@HDMI-A-2" ]
         show_unlock_hint = true
         show_weather = true
 
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 800.0
+    cy = 718.0
+    output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
 [osd]
 position = "bottom_center"
 position_vertical = "bottom_right"
@@ -95,11 +122,6 @@ enabled = [ "noctalia/translator", "noctalia/wallhaven", "radimous/prismlauncher
 clipboard_auto_paste = "off"
 font_family = "Inter"
 
-    [shell.screenshot]
-    annotate = true
-    save_to_file = true
-    copy_to_clipboard = true
-
     [shell.launcher]
     auto_paste = "off"
     categories = false
@@ -110,6 +132,11 @@ font_family = "Inter"
     control_center_position = "center"
     session_placement = "floating"
     session_position = "center"
+
+    [shell.screenshot]
+    annotate = true
+    copy_to_clipboard = true
+    save_to_file = true
 
     [shell.session]
     grid_columns = 1

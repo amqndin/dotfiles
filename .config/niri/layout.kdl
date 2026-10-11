@@ -49,8 +49,32 @@ layout {
 }
 
 animations {
+    // Workspace switch. Two knobs, in plain terms:
+    //   stiffness      = speed. Higher = everything happens sooner and the
+    //                    target is on screen earlier. Downside: the move
+    //                    always takes the same time no matter how far it
+    //                    goes, so more stiffness makes multi-workspace
+    //                    jumps look faster / blurrier.
+    //   damping-ratio  = bounce. 1.0 is none. Lower is bouncier, and a
+    //                    bouncier spring gets the target on screen a bit
+    //                    EARLIER: it arrives, sails a bit past, settles back.
+    //
+    // Only ONE `spring` line is allowed per animation, so swap the line
+    // inside the block for whichever preset you want.
+    //
+    // "lands" = the target workspace is basically on screen.
+    // "done"  = the last pixel has stopped moving.
+    // Bounce px are per workspace crossed (~900px here), so a 3-workspace
+    // jump overshoots about 3x that far.
+    //
+    //   0.70 / 900    lots of bounce (~41px). Lands 110ms, done 440ms.
+    //   0.75 / 900    clear bounce (~26px).   Lands 122ms, done 409ms.
+    //   0.82 / 900    BUTTERY (~10px).        Lands 148ms, done 374ms.
+    //   0.85 / 900    barely a hint (~6px).   Lands 164ms, done 361ms.
+    //   1.0  / 1800   no bounce at all, and snappiest overall because there
+    //                 is no wobble to fade out. Lands 156ms, done 217ms.
     workspace-switch {
-        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
+        spring damping-ratio=0.82 stiffness=900 epsilon=0.0001
     }
 
     window-open {

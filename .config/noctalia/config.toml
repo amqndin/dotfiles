@@ -126,6 +126,7 @@ font_family = "Inter"
     auto_paste = "off"
     categories = false
     compact = false
+    layout = "simple"
     show_app_actions = true
 
     [shell.panel]

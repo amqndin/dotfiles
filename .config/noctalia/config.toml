@@ -46,6 +46,7 @@ auto_locate = true
 [lockscreen]
 enabled = true
 lock_before_suspend = true
+transition = [ "disc", "fade", "wipe", "zoom" ]
 
 [lockscreen_widgets]
 enabled = false
@@ -154,7 +155,7 @@ source = "community"
 
 [wallpaper]
 directory = "/home/amandin/dotfiles/wallpaper"
-transition = [ "disc" ]
+transition = [ "disc", "wipe", "zoom" ]
 transition_on_startup = true
 
     [wallpaper.default]

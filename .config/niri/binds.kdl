@@ -154,9 +154,9 @@ binds {
     Mod+Shift+J { set-window-height "+10%"; }
 
     // === Screenshots ===
-    Mod+S { spawn-sh "noctalia msg screenshot-region"; }
-    Mod+Ctrl+S { spawn-sh "noctalia msg screenshot-fullscreen"; }
-    Mod+Shift+S { spawn-sh "noctalia msg annotate"; }
+    Mod+S { screenshot show-pointer=false; }
+    Mod+Ctrl+S { screenshot-screen; }
+    Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
 
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }

@@ -17,14 +17,8 @@ return {
     ---@type conform.setupOpts
     opts = {
       notify_on_error = false,
-      -- C/C++ must match .clang-format exactly, so format on save.
-      -- Scoped to C-like filetypes; Lua behaviour is left unchanged.
-      format_on_save = function(bufnr)
-        if vim.bo[bufnr].filetype:match '^(c|cpp|objc)$' then
-          return { timeout_ms = 500 }
-        end
-        return nil
-      end,
+      -- Format on save intentionally disabled; format manually with <leader>lf.
+      format_on_save = false,
       formatters_by_ft = {
         lua = { 'stylua' },
         c = { 'clang_format' },

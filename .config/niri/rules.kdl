@@ -71,6 +71,7 @@ window-rule {
 window-rule {
     match app-id="equibop"
     match app-id="discord"
+    match app-id="fluxer"
     match app-id="telegram"
     open-on-workspace "discord"
 }
